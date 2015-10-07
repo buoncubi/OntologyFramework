@@ -1,0 +1,156 @@
+REMEMBER TO PUT ALL INDIVIDUAL DISJOINT BETWEEN EACH OTHER !!!!!!!!!!!!!
+
+PERPENDICULARITY (not for sphere)
+
+Directionable(?a), Directionable(?b),   DifferentFrom (?a, ?b), hasPerpendicularTh(Th_param, ?e), 
+hasPrimitiveAxisDirection_x(?a, ?ax), hasPrimitiveAxisDirection_y(?a, ?ay), hasPrimitiveAxisDirection_z(?a, ?az),
+hasPrimitiveAxisDirection_x(?b, ?bx),  hasPrimitiveAxisDirection_y(?b, ?by),  hasPrimitiveAxisDirection_z(?b, ?bz),
+multiply(?p1, ?ax, ?bx), multiply(?p2, ?ay, ?by), multiply(?p3, ?az, ?bz),
+add(?q, ?p3, ?p2), add(?q2, ?p1, ?q),  abs(?qs, ?q2),
+lessThanOrEqual(?qs, ?e)
+-> isPerpendicularTo(?a, ?b)
+
+
+PARALLELITY (not for sphere)
+
+Directionable(?a), Directionable(?b), DifferentFrom (?a, ?b), hasParallelTh(Th_param, ?e),
+hasPrimitiveAxisDirection_x(?a, ?ax), hasPrimitiveAxisDirection_y(?a, ?ay),  hasPrimitiveAxisDirection_z(?a, ?az), 
+hasPrimitiveAxisDirection_x(?b, ?bx), hasPrimitiveAxisDirection_y(?b, ?by), hasPrimitiveAxisDirection_z(?b, ?bz), 
+multiply(?p11, ?ay, ?bz), multiply(?p12, ?az, ?by), 
+multiply(?p21, ?az, ?bx), multiply(?p22, ?ax, ?bz), 
+multiply(?p31, ?ax, ?by), multiply(?p32, ?ay, ?bx),
+subtract(?q1, ?p11, ?p12), subtract(?q2, ?p21, ?p22), subtract(?q3, ?p31, ?p32),
+abs(?q1s, ?q1), abs(?q2s, ?q2), abs(?q3s, ?q3),
+lessThanOrEqual(?q1s, ?e), lessThanOrEqual(?q2s, ?e), lessThanOrEqual(?q3s, ?e)  
+-> isParallelTo(?a, ?b)
+
+
+COAXIALITY (not for sphere)
+
+Directionable(?a), Directionable(?b), isParallelTo(?a, ?b), DifferentFrom (?a, ?b), hasCoaxialTh(Th_param, ?e), multiply(?e2, ?e, ?e), 
+hasPrimitiveAxisDirection_x(?a, ?ax), hasPrimitiveAxisDirection_y(?a, ?ay), hasPrimitiveAxisDirection_z(?a, ?az),
+hasPrimitiveGeometricCenter_x(?a, ?gax), hasPrimitiveGeometricCenter_y(?a, ?gay), hasPrimitiveGeometricCenter_z(?a, ?gaz),
+hasPrimitiveGeometricCenter_x(?b, ?gbx), hasPrimitiveGeometricCenter_y(?b, ?gby), hasPrimitiveGeometricCenter_z(?b, ?gbz), 
+subtract(?gabx, ?gbx, ?gax), subtract(?gaby, ?gby, ?gay), subtract(?gabz, ?gbz, ?gaz), 
+multiply(?ggx, ?ax, ?gabx), multiply(?ggy, ?ay, ?gaby), multiply(?ggz, ?az, ?gabz),
+add(?gg1, ?ggy, ?ggz), add(?gg2, ?ggx, ?gg1),
+multiply(?a2x, ?ax, ?ax), multiply(?a2y, ?ay, ?ay), multiply(?a2z, ?az, ?az),
+add(?a2yz, ?a2y, ?a2z), add(?a2, ?a2yz, ?a2x),
+divide(?t, ?gg2, ?a2), 
+multiply(?tax, ?t, ?ax), multiply(?tay, ?t, ?ay), multiply(?taz, ?t, ?az),
+subtract(?tgx, ?tax, ?gbx), subtract(?tgy, ?tay, ?gby), subtract(?tgz, ?taz, ?gbz),
+add(?tabx, ?gax, ?tgx), add(?taby, ?gay, ?tgy), add(?tabz, ?gaz, ?tgz),
+multiply(?tabx2, ?tabx, ?tabx), multiply(?taby2, ?taby, ?taby), multiply(?tabz2, ?tabz, ?tabz), 
+add(?d, ?taby2, ?tabz2), add(?d2, ?tabx2, ?d), 
+lessThanOrEqual(?d2, ?e2) 
+-> isCoaxialWith(?a, ?b)
+
+
+COAXIALITY (for sphere)
+
+Sphere(?b), Directionable(?a), DifferentFrom (?a, ?b), hasCoaxialTh(Th_param, ?e), multiply(?e2, ?e, ?e), 
+hasPrimitiveAxisDirection_x(?a, ?ax), hasPrimitiveAxisDirection_y(?a, ?ay), hasPrimitiveAxisDirection_z(?a, ?az),
+hasPrimitiveGeometricCenter_x(?a, ?gax), hasPrimitiveGeometricCenter_y(?a, ?gay), hasPrimitiveGeometricCenter_z(?a, ?gaz),
+hasPrimitiveGeometricCenter_x(?b, ?gbx), hasPrimitiveGeometricCenter_y(?b, ?gby), hasPrimitiveGeometricCenter_z(?b, ?gbz), 
+subtract(?gabx, ?gbx, ?gax), subtract(?gaby, ?gby, ?gay), subtract(?gabz, ?gbz, ?gaz), 
+multiply(?ggx, ?ax, ?gabx), multiply(?ggy, ?ay, ?gaby), multiply(?ggz, ?az, ?gabz),
+add(?gg1, ?ggy, ?ggz), add(?gg2, ?ggx, ?gg1),
+multiply(?a2x, ?ax, ?ax), multiply(?a2y, ?ay, ?ay), multiply(?a2z, ?az, ?az),
+add(?a2yz, ?a2y, ?a2z), add(?a2, ?a2yz, ?a2x),
+divide(?t, ?gg2, ?a2), 
+multiply(?tax, ?t, ?ax), multiply(?tay, ?t, ?ay), multiply(?taz, ?t, ?az),
+subtract(?tgx, ?tax, ?gbx), subtract(?tgy, ?tay, ?gby), subtract(?tgz, ?taz, ?gbz),
+add(?tabx, ?gax, ?tgx), add(?taby, ?gay, ?tgy), add(?tabz, ?gaz, ?tgz),
+multiply(?tabx2, ?tabx, ?tabx), multiply(?taby2, ?taby, ?taby), multiply(?tabz2, ?tabz, ?tabz), 
+add(?d, ?taby2, ?tabz2), add(?d2, ?tabx2, ?d), 
+lessThanOrEqual(?d2, ?e2) 
+-> isCoaxialWith(?a, ?b)
+
+
+ALONG AXIS X
+
+Primitive(?a), Primitive(?b), DifferentFrom(?a,?b), hasAlongYTh(Th_param, ?ey),  hasAlongZTh(Th_param, ?ez),
+hasPrimitiveGeometricCenter_y(?a, ?ay), hasPrimitiveGeometricCenter_z(?a, ?az),
+hasPrimitiveGeometricCenter_y(?b, ?by), hasPrimitiveGeometricCenter_z(?b, ?bz),
+subtract(?aby, ?ay, ?by), abs(?absy, ?aby), lessThanOrEqual(?absy, ?ey),
+subtract(?abz, ?az, ?bz), abs(?absz, ?abz), lessThanOrEqual(?absz, ?ez)
+-> isAlong_x(?a, ?b)
+
+
+ALONG AXIS Y
+
+Primitive(?a), Primitive(?b), DifferentFrom(?a,?b), hasAlongXTh(Th_param, ?ex),  hasAlongZTh(Th_param, ?ez),
+hasPrimitiveGeometricCenter_x(?a, ?ax), hasPrimitiveGeometricCenter_z(?a, ?az),
+hasPrimitiveGeometricCenter_x(?b, ?bx), hasPrimitiveGeometricCenter_z(?b, ?bz),
+subtract(?abx, ?ax, ?bx), abs(?absx, ?abx), lessThanOrEqual(?absx, ?ex),
+subtract(?abz, ?az, ?bz), abs(?absz, ?abz), lessThanOrEqual(?absz, ?ez)
+-> isAlong_y(?a, ?b)
+
+
+ALONG AXIS Z
+
+Primitive(?a), Primitive(?b), DifferentFrom(?a,?b), hasAlongXTh(Th_param, ?ex),  hasAlongYTh(Th_param, ?ey),
+hasPrimitiveGeometricCenter_x(?a, ?ax), hasPrimitiveGeometricCenter_y(?a, ?ay),
+hasPrimitiveGeometricCenter_x(?b, ?bx), hasPrimitiveGeometricCenter_y(?b, ?by),
+subtract(?abx, ?ax, ?bx), abs(?absx, ?abx), lessThanOrEqual(?absx, ?ex),
+subtract(?aby, ?ay, ?by), abs(?absy, ?aby), lessThanOrEqual(?absy, ?ey)
+-> isAlong_z(?a, ?b)
+
+
+COMPLANAR x-y  
+
+Primitive(?a), Primitive(?b), DifferentFrom (?a, ?b),
+isAlong_x(?a, ?b)
+-> isCoplanar_xy(?a, ?b)
+
+Primitive(?a), Primitive(?b), DifferentFrom (?a, ?b),
+isAlong_y(?a, ?b)
+-> isCoplanar_xy(?a, ?b)
+
+
+COMPLANAR x-z  
+
+Primitive(?a), Primitive(?b), DifferentFrom (?a, ?b),
+isAlong_x(?a, ?b)
+-> isCoplanar_xz(?a, ?b)
+
+Primitive(?a), Primitive(?b), DifferentFrom (?a, ?b),
+isAlong_z(?a, ?b)
+-> isCoplanar_xz(?a, ?b)
+
+
+COMPLANAR y-z  
+
+Primitive(?a), Primitive(?b), DifferentFrom (?a, ?b),
+isAlong_y(?a, ?b)
+-> isCoplanar_yz(?a, ?b)
+
+Primitive(?a), Primitive(?b), DifferentFrom (?a, ?b),
+isAlong_z(?a, ?b)
+-> isCoplanar_yz(?a, ?b)
+
+
+IS ON THE RIGTH OF (left is the inverse)
+
+Primitive(?a), Primitive(?b), hasAlongXTh(Th_param, ?e), DifferentFrom (?a, ?b),
+hasPrimitiveGeometricCenter_x(?a, ?ax), hasPrimitiveGeometricCenter_x(?b, ?bx), 
+subtract(?ab, ?bx, ?ax), greaterThan(?ab, ?e)
+-> isRightOf(?b, ?a)
+
+IS ON FRONT OF  (behind is the inverse)
+
+Primitive(?a), Primitive(?b), hasAlongYTh(Th_param, ?e), DifferentFrom (?a, ?b),
+hasPrimitiveGeometricCenter_y(?a, ?ay), hasPrimitiveGeometricCenter_y(?b, ?by), 
+subtract(?ab, ?by, ?ay), greaterThan(?ab, ?e)
+-> isBehindOf(?b, ?a)
+
+IS ABOVE OF (below is the inverse)
+
+Primitive(?a), Primitive(?b), hasAlongZTh(Th_param, ?e), DifferentFrom (?a, ?b),
+hasPrimitiveGeometricCenter_z(?a, ?az), hasPrimitiveGeometricCenter_z(?b, ?bz), 
+subtract(?ab, ?bz, ?az), greaterThan(?ab, ?e)
+-> isAboveOf(?b, ?a)
+
+IS THE RIGHTEST (is the lefstest is he inverse)
+….
+

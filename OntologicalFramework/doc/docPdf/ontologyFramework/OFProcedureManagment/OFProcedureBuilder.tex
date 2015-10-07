@@ -1,0 +1,147 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.OFProcedureBuilder (noch nicht fertig). 
+\section[OFProcedureBuilder]{Klasse \ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}{ontologyFramework.OFProcedureManagment.OFProcedureBuilder}}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}
+\subsection{Übersicht}
+This class is design to initialize (build) a Procedure
+ object with respect to the ontology into the framework. It
+ will build an HashMap between the name of an ontological individual 
+ and a \noprint{@link:OFProcedureInterface}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}{OFProcedureInterface}}.
+ This map will be available than into the static map manager: 
+ \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}.
+ 
+ By definition the individual which reflect the building mechanism 
+ used in this implementation is:
+ {\ttfamily
+\mbox{ }	\verb!B_OFProcedureBuilder € OFBuilder !\mbox{ }\mbox{ }\mbox{}\newline
+\mbox{ }		\verb!hasTypeName "ontologyFramework.OFProcedureManagment.OFProcedureBuilder"^^string!\mbox{}\newline
+\mbox{ }		\verb!buildList "ProcedureList"^^string!\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{}\newline
+\mbox{ }		\verb!hasTypeKeyWord "OFProcedure hasOFProcedureCheckerFrequencyInMilliSeconds!\mbox{ }\mbox{}\newline
+\mbox{ }			\verb!hasOFProcedureScheduler hasOFProcedureEvent hasOFProcedureTrigger!\mbox{}\newline
+\mbox{ }			\verb!hasOFProcedureConcurrentPoolSize hasOFProcedureSynchronisationWith"^^string!\mbox{ }\mbox{}\newline
+\mbox{ }}
+
+ Where the first key word is relate to the name of the ontological
+ class to looking for procedure individuals. While the other are
+ the name of Object Property which link an individual to its
+ properties.  
+ This basically means that to define an individual which will be 
+ one to one relate with a Procedure object just create it as:
+ {\ttfamily
+\mbox{ }	\verb!P_Procedure1 € OFProcedure!\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{}\newline
+\mbox{ }		\verb![1] hasTypeName "fullQualifier.ToImplementationOF.OFJobAbstract"!\mbox{}\newline
+\mbox{ }		\verb![2] hasOFProcedureConcurrentPoolSize "4"^^integer![]\mbox{}\newline
+\mbox{ }		\verb![3] hasOFProcedureCheckerFrequencyInMillisecond "200"^^long!\mbox{}\newline
+\mbox{ }		\verb![4] hasOFProcedureTimeTrigger TT_TriggerNow!\mbox{}\newline
+\mbox{ }		\verb![5] hasOFProcedureEvent Ev_EventTrue!\mbox{}\newline
+\mbox{ }		\verb![6] hasOFProcedureSynchronizationWith P_ReasonerUpdater!	\mbox{ }\mbox{}\newline
+\mbox{ }}
+
+ Where [1] refer to the full Java qualifier to the object that
+ actually implements an procedure; it should extend the class \noprint{@link:ontologyFramework.OFProcedureManagment.OFProcedureImplementation.OFJobAbstract}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureImplementation.OFJobAbstract-class}{OFJobAbstract}}.
+ [2] defines the maximum number of instance of the same procedure that 
+ can run at the same time. Moreover, [3] indicates the running period of the
+ checker object, aimed to synchronize the individual P\_Procedure1 between its
+ ontological representation and a relate istance of \noprint{@link:OFProcedureInterface}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}{OFProcedureInterface}}.
+ [4] and [5] define the only individual that, in turns, defines the TimeTrigger,
+ and Event respectively associate to this procedure. Finally, [5] define if
+ a procedure should wait the end of another befaure to run.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder()}{OFProcedureBuilder}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.getInitialisedClasses()}{getInitialisedClasses}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.getInitialisedClasses()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runAllProcedure()}{runAllProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runAllProcedure()}}]
+~ It will call \noprint{@link:OFProcedureInterface#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}} for all the classes
+ Initialized during the last building time.
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runAllProcedure(java.util.Map<java.lang.String,java.lang.Object>)}{runAllProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runAllProcedure(java.util.Map<java.lang.String,java.lang.Object>)}}]
+~ It will call \noprint{@link:OFProcedureInterface#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}} for all the 
+ individual given as an input parameter
+ \verb!Map< String, OFProcedureInterface>!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[toRun]
+map of procedure to run.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runProcedure(java.lang.String)}{runProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runProcedure(java.lang.String)}}]
+~ It will look by keys over the last builded
+ map to find the relate procedure to run.
+ Than it will call \noprint{@link:OFProcedureInterface#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+key name of the class OFProcedureInterface to run.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runProcedure(java.lang.String,java.util.Map<java.lang.String,java.lang.Object>)}{runProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.runProcedure(java.lang.String,java.util.Map<java.lang.String,java.lang.Object>)}}]
+~ It will look by keys over the 
+ map given as input parameter to find the relate procedure to run.
+ Than it will call \noprint{@link:OFProcedureInterface#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+key of the procedure to run.
+\item[toRun]
+map between string (name) and OFProcedureInterface.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopAllProcedure()}{stopAllProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopAllProcedure()}}]
+~ It will call \noprint{@link:OFProcedureInterface#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}} for all the classes
+ Initialized during the last building time.
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopAllProcedure(java.util.Map<java.lang.String,java.lang.Object>)}{stopAllProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopAllProcedure(java.util.Map<java.lang.String,java.lang.Object>)}}]
+~ It will call \noprint{@link:OFProcedureInterface#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}} for all the 
+ individual given as an input parameter \verb!Map< String, OFProcedureInterface>!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[toStop]
+map of procedure to stop.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopProcedure(java.lang.String)}{stopProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopProcedure(java.lang.String)}}]
+~ It will look by keys over the last builded
+ map to find the relate procedure to stop.
+ Than it will call \noprint{@link:OFProcedureInterface#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+key name of the class OFProcedureInterface to stop.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopProcedure(java.lang.String,java.util.Map<java.lang.String,java.lang.Object>)}{stopProcedure}\label{ontologyFramework.OFProcedureManagment.OFProcedureBuilder.stopProcedure(java.lang.String,java.util.Map<java.lang.String,java.lang.Object>)}}]
+~ It will look by keys over the 
+ map given as input parameter to find the relate procedure to stop.
+ Than it will call \noprint{@link:OFProcedureInterface#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+key of the procedure to stop.
+\item[toStop]
+map between string (name) and OFProcedureInterface.
+\end{description}
+\end{description}
+\end{description}

@@ -1,0 +1,62 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.OFSchedulingBuilder (noch nicht fertig). 
+\section[OFSchedulingBuilder]{Klasse \ltdHypertarget{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder-class}{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder}}\label{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder-class}
+\subsection{Übersicht}
+This class is design to initialize (build) a Quartz scheduler
+ object with respect to the ontology into the framework. It
+ will build an HashMap between the name of an ontological individual 
+ and a \noprint{@link:org.quartz.Scheduler}\texttt{Scheduler} which is given by:
+ \verb!sch = new StdSchedulerFactory( propertyPath).getScheduler();!.
+ This map will be available than into the static map manager: 
+ \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}.
+ 
+ By definition the individual which reflect the building mechanism 
+ used in this implementation is:
+ {\ttfamily
+\mbox{ }	\verb!B_SchedulerBuilding € OFBuilder !\mbox{ }\mbox{ }\mbox{}\newline
+\mbox{ }		\verb!hasTypeName "ontologyFramework.OFProcedureManagment.OFSchedulingBuilder"^^string!\mbox{}\newline
+\mbox{ }		\verb!buildList "SchedulerList"^^string!\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{}\newline
+\mbox{ }		\verb!hasTypeKeyWord "QuartzScheduler hasQuartzSchedulerProperty"^^string!\mbox{ }\mbox{}\newline
+\mbox{ }}
+
+ Where the first key word is relate to the name of the ontological
+ class to looking for scheduling individuals. While the second is
+ the name of Object Property which link an individual to its
+ .properties file.  
+ This basically means that to define an individual which will be 
+ one to one relate with a Quartz scheduler object just create it as:
+ {\ttfamily
+\mbox{ }	\verb!S_Scheduler1 € QuartzScheduler !\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{}\newline
+\mbox{ }		\verb!hasQuartzSchedulerProperty exactly 1 FileInd!\mbox{}\newline
+\mbox{ }			where:\verb!FileInd € File!\mbox{}\newline
+\mbox{ }					\verb!KeyFileInd hasTypeFile "/src/sempleSch.property"^^string!\mbox{ }\mbox{}\newline
+\mbox{ }}
+
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder()}{OFSchedulingBuilder}\label{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}\label{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder.getInitialisedClasses()}{getInitialisedClasses}\label{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder.getInitialisedClasses()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder.shotDownAllScheduler()}{shotDownAllScheduler}\label{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder.shotDownAllScheduler()}}]
+~ shouts down (\verb!scheduler.shoutdown()!) all the scheduler builded from
+ this class during previous building time.
+\end{description}

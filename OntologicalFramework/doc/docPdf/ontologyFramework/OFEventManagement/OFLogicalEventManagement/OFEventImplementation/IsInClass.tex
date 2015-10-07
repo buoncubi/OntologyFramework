@@ -1,0 +1,48 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass (noch nicht fertig). 
+\section[IsInClass]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass-class}{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass}}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass-class}
+\subsection{Übersicht}
+This class implement the event that takes as input : \verb!...( OWLNamedIndividual ind, OWLClass cl)!.
+ Which return true if the individual belongs to the class and false otherwise. In the ontology 
+ an event must be defined which belongs to the class \verb!"OFEvent"! thus has the properties:
+ {\ttfamily
+\mbox{ }\mbox{}\newline
+\mbox{ }	\verb!implementsOFEventName "ontologyFramework.OFEventManagement.OFEventImplementation.OFEventProcedure.IsInClass"^^string!\mbox{}\newline
+\mbox{ }\mbox{ }\verb!&!\mbox{}\newline
+\mbox{ }\mbox{ }\verb!hasEvent definition 
+  		"in:ontologyFramework.OFEventManagement.OFEventParameter.
+			 ?a @ontoName(S1-3) Exception.AsOWLClass
+			 ?b @ontoName exc.AsOWLIndividual
+			 !r IsInClass(?b ?a)"^^strign!\mbox{}\newline
+\mbox{ }}
+
+ So, \noprint{@link:#isCorrectInput(List)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}} return true if \verb!ts.get(0).getParameter() instanceof OWLNamedIndividual!
+ and \verb!inputs.get( 1).getParameter() instanceof OWLClass!, \verb!inputs.get(1).getOntoRef() != null! and \verb!inputs.get(0).getOntoRef() != null!, are true.
+ The \noprint{@link:#evaluateEvent(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}} just ask to the reasoner of the ontology named
+ \verb!"ontoName(S1-3)"! if in the class \textquotedbl Exception\textquotedbl  exist an individual called \textquotedbl exc\textquotedbl  and propagates the
+ answare.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass()}{IsInClass}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.IsInClass.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\end{description}

@@ -1,0 +1,137 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation (noch nicht fertig). 
+\section[OFProcedureSynchronisation]{Klasse \ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation-class}{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation}}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation-class}
+\subsection{Übersicht}
+This class contains, for a given procedure individual name,
+ a list of names related to other ontological individuals that represent
+ procedures. In particular,
+ the list represents the name of ontological procedures that
+ have to finish its computation before to run this particular
+ procedure.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation(java.lang.String)}{OFProcedureSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation(java.lang.String)}}]
+~ Create a new synchronization object relate to an procedure
+ individual.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+of the ontological procedure for this instance.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation(java.lang.String,java.util.Set<org.semanticweb.owlapi.model.OWLNamedIndividual>)}{OFProcedureSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation(java.lang.String,java.util.Set<org.semanticweb.owlapi.model.OWLNamedIndividual>)}}]
+~ Create a new synchronization object relate to a procedure
+ individual. Also it initializes it with some synchronization relations
+ with respect to other procedure. Practically this method
+ will call \verb!this.addSynchronisation( i)! for all \verb!i!
+ into the parameter \verb!synchInd!. 
+ If this class has been already created for the procedure 
+ defined by individualName, than this method does not create 
+ a new instance and update the synchronization individuals 
+ to the already existing one, avoiding to duplicate data.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+of the ontological procedure for this instance.
+\item[synchInd]
+set of individual to synchronize
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.addSynchronisation(org.semanticweb.owlapi.model.OWLNamedIndividual)}{addSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.addSynchronisation(org.semanticweb.owlapi.model.OWLNamedIndividual)}}]
+~ Add an individual to the synchronization list. This means that the
+ procedure with the individual name defined by \noprint{@link:#getSyncName()}\texttt{getSyncName}
+ before to run has to wait until also the procedure refereed to the individual
+ given as parameter ends it work.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+procedure individual to be synchronized with.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.addSynchronisation(java.util.Set<org.semanticweb.owlapi.model.OWLNamedIndividual>)}{addSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.addSynchronisation(java.util.Set<org.semanticweb.owlapi.model.OWLNamedIndividual>)}}]
+~ It calls \noprint{@link:#addSynchronisation(OWLNamedIndividual)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.addSynchronisation(org.semanticweb.owlapi.model.OWLNamedIndividual)}{addSynchronisation}} 
+ for all component inside the set given as input parameter.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+set of procedure individual to be synchronized with.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getSynchIndividuals()}{getSynchIndividuals}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getSynchIndividuals()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the actual list of synchronization individuals
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.toString()}{toString}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.toString()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getAllInstances()}{getAllInstances}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getAllInstances()}}]
+~ static method that returns all instance of this class created by
+ the framework. Those are collected in an HashMap with keys equal to the
+ ontological name of the procedure.
+\begin{description}
+\item[Rückgabewert] 
+all created instance of this class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getOFProcedureSynchronisation(java.lang.String)}{getOFProcedureSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getOFProcedureSynchronisation(java.lang.String)}}]
+~ It looks inside the returning value of \noprint{@link:#getAllInstances()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.getAllInstances()}{getAllInstances}}
+ and return an istance of this class in accord with its name inside the map.
+ Basically it just return; 
+ \verb!OFProcedureSynchronisation.getAllInstances.get( referenceName)!
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[referenceName]
+the individual name of the procedure for 
+ which refer to its synchronization list.
+\end{description}
+\item[Rückgabewert] 
+an instance of this class relate to the procedure defined by
+ an individual with name: \verb!referenceName!
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.removeSynchronisation(java.lang.String)}{removeSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.removeSynchronisation(java.lang.String)}}]
+~ It remove the instance with individual name equal to the input
+ parameter from the map that collect all the active instance of
+ this class. Practically, it just call:
+ \verb!OFProcedureSynchronisation.getAllInstances.remove( synchName)!
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[synchName]
+individualName for which the instance of this 
+ class must be removed.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.removeSynchronisation(ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation)}{removeSynchronisation}\label{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation.removeSynchronisation(ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation)}}]
+~ It remove the instance given as input parameter
+ from the map that collect all the active instance of
+ this class. Practically, it just call:
+ \verb!OFProcedureSynchronisation.getAllInstances.remove( synchObj.getSyncName())!
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[synchObj]
+
+\end{description}
+\end{description}
+\end{description}

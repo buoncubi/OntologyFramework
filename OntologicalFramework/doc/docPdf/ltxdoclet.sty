@@ -1,0 +1,193 @@
+%%
+%% This is file `ltxdoclet.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ltxdoclet.dtx  (with options: `package')
+%% 
+%%  (C) 2010 Paul Ebermann
+%%
+%%   Package ltxdoclet - Dokumentation von Java-Paketen.
+%%
+%%   Die Datei ltxdoclet.dtx sowie die dazugehörige
+%%   ltxdoclet.ins sowie die damit generierte
+%%   ltxdoclet.sty stehen unter der
+%%   "LaTeX Project Public License" (LPPL, zu finden
+%%   unter http://www.latex-project.org/lppl/, sowie
+%%   auch in den meisten TeX-Distributionen in
+%%   texmf/docs/latex/base/lppl*.txt), Version 1.3b oder
+%%   später (nach Wahl des Verwenders).
+%%
+%%   Der 'maintenance-status' ist (zur Zeit) 'author-maintained'.
+%%
+%%   Das heißt u.a., die Dateien dürfen frei vertrieben werden,
+%%   bei Änderungen (durch andere Personen als Paul Ebermann)
+%%   ist aber der Name der Datei zu ändern.
+\NeedsTeXFormat{LaTeX2e}[2003/12/01]%
+\ProvidesPackage{ltxdoclet}[2010/02/14 v0.0 Dokumentation von Java-Paketen (PE)]
+
+\raggedbottom% Wir wollen nicht den Inhalt der Seiten strecken,
+\newcommand*\noprint[1]{}%
+\DeclareTextCommandDefault{\textlangle}{~\rlap{$\langle$}}
+\DeclareTextCommandDefault{\textrangle}{\llap{$\rangle$}~}
+\def\bl{\mbox{}\newline\mbox{}\newline{}}
+\newcommand{\hide}[2]{%
+  \ifthenelse{\equal{#1}{inherited}}%
+  {}%
+  {}%
+}
+\newcommand{\isep}[0]{%
+\setlength{\itemsep}{-.4ex}
+}
+\newcommand{\sld}[0]{%
+\setlength{\topsep}{0em}
+\setlength{\partopsep}{0em}
+\setlength{\parskip}{0em}
+\setlength{\parsep}{-1em}
+}
+\newcommand{\headref}[3]{%
+\ifthenelse{#1 = 1}{%
+\addcontentsline{toc}{section}{\hspace{\qquad}\protect\numberline{}{#3}}%
+}{}%
+\ifthenelse{#1 = 2}{%
+\addcontentsline{toc}{subsection}{\hspace{\qquad}\protect\numerline{}{#3}}%
+}{}%
+\ifthenelse{#1 = 3}{%
+\addcontentsline{toc}{subsubsection}{\hspace{\qquad}\protect\numerline{}{#3}}%
+}{}%
+\label{#3}%
+\makebox[\textwidth][l]{#2 #3}%
+}%
+\newcommand{\membername}[1]{{\it #1}\linebreak}
+\newcommand{\divideents}[1]{\vskip -1em\indent\rule{2in}{.5mm}}
+\newcommand{\refdefined}[1]{
+\expandafter\ifx\csname r@#1\endcsname\relax
+\relax\else
+{$($ in \ref{#1}, page \pageref{#1}$)$}
+\fi}
+\newcommand{\startsection}[4]{
+\gdef\classname{#2}
+\subsection{\label{#3}{\bf {\sc #1} #2}}{
+\rule[1em]{\hsize}{4pt}\vskip -1em
+\vskip .1in
+#4
+}%
+}
+\newcommand{\startsubsubsection}[2]{
+\subsubsection{\sc #1}{%
+\rule[1em]{\hsize}{2pt}%
+#2}
+}
+\chardef\bslash=`\\
+\newcommand*\clap[1]{%
+  \hb@xt@\z@{\hss#1\hss}
+}
+\providecommand*{\clapon}[2]{%
+  \setbox\@tempboxa\hbox{#2}% Wir merken uns \meta{text2} in einer Box.
+  \hbox to\wd\@tempboxa{% Dann öffnen wir eine Box mit der
+    \hss#1\hss}% \dots und setzen darin \meta{text1}, mit beidseitig
+  \kern-\wd\@tempboxa% Dann gehen wir wieder zurück
+  \unhbox\@tempboxa}% und hier setzen wir \meta{text1},
+
+\providecommand*{\markString}{%
+  \color{blue}}% Strings markieren wir blau.
+\providecommand*{\markNumber}{%
+  \color[named]{ForestGreen}}% Zahlen sind grün.
+\providecommand*{\markLiteralKeyword}{%
+  \color[named]{Brown}}% Und Schlüsselwortliterale wie {\markLiteralKeyword 'null'},
+
+\newenvironment*{sourcecode}%
+{% Einstellungen am Anfang:
+  \par% zuerst beenden wir den Absatz, falls da einer ist.
+  \setlength{\parindent}{0pt}%  Wir wollen keine Paragraphen-Einrückung hier.
+  \ttfamily\small% Alles soll in einer \texttt{nichtproportionalen}
+  %  Schrift und etwas kleiner sein.
+  %
+  \catcode`\ =\active% Leerzeichen wollen wir aktiv machen, und ...
+  %!\expandafter\let\ltd@activeSpace=\ltd@DiscrSpace% ('\let =\ltd@DiscrSpace')
+  %
+  \obeylines% Zeilenumbrüche sollen bitte behalten werden.
+  % (Alternativ könnten wir unseren Quelltext-Formatierer
+  % immer '\par' ausgeben lassen, aber so ist es einfacher.)
+  %
+  \raggedright% das bringt etwas weniger \emph{Overfull hbox}-Meldungen,
+  %  und erlaubt einen gewissen Zeilenumbruch im Quelltext. Wir müssen
+  %  uns da aber noch etwas besseres ausdenken (siehe oben der Versuch
+  % mit den aktiven Leerzeichen.
+  \setlength{\baselineskip}{0.7\baselineskip}% Den Zeilenabstand
+  % setzen wir auch runter, da wir ja eine kleinere Schriftart nehmen.
+  %
+}{% Am Ende der Umgebung muss nicht so viel gemacht werden:
+  \par% wir beenden nur noch den Absatz (und alle Definitionen
+  % von oben werden rückgängig gemahcht, weil die Gruppe endet).
+}%
+\catcode`\ =\active% Wir lassen \verb*' ' aktiv sein, und \dots
+\def\ltd@activeSpace{ }% merken uns in diesem Makro ein aktives Leerzeichen.
+\catcode`\ =10% Hier schalten wir wieder zurück.
+\newcounter{ltxdoclet@indent}
+\providecommand*{\ltdSetIndent}[1]{%
+  \setcounter{ltxdoclet@indent}{#1}%
+}%
+\newlength{\ltxdoclet@indentlen}
+\newcommand*{\ltdIndent}{}%
+\def\ltdIndent#1.{%
+  \settowidth{\ltxdoclet@indentlen}{~}%
+  \multiply\ltxdoclet@indentlen by\value{ltxdoclet@indent}\relax%
+  \leavevmode\kern\ltxdoclet@indentlen
+}
+\providecommand*{\ltdBreak}[1][]{%
+  #1\discretionary{}{\ltdIndent.}{}%
+}
+\def\ltd@DiscrSpace{%
+  \ifx\protect\@typeset@protect%
+    \ifinner%
+        \space%  Wenn wir in einer inneren Box sind, soll das aktive
+    \else%
+      \ifhmode%
+        \unskip% Hmm, ich bin mir nicht ganz sicher, warum dieser
+        \discretionary{% Die »Expansion« dieses '\discretionary'-Objektes:
+        }{\ltdIndent.% Dafür taucht am Anfang der nächsten Zeile
+        }{% Falls kein Umbruch an dieser Stelle erfolgte, ist es
+        }%
+        ~% Jetzt setzen wir noch ein nicht-umbrechbares Leerzeichen. Falls
+      \else%
+        \space% Außerhalb des horizontalen Modus (d.h. im Mathe- und im
+      \fi%
+    \fi%
+    \afterfi{%
+      \ltd@gobbleActiveSpaces}% Am Ende fressen wir alle weiteren
+  \else%
+    \space% Falls wir nicht im Typeset-Modus sind, sondern etwa in eine Datei
+  \fi%
+}%
+\def\afterfi#1#2\fi{\fi#1}
+\def\ltd@gobbleActiveSpaces{%
+  \expandafter\@ifnextchar\ltd@activeSpace% Wir überprüfen, ob das
+  % nächste Token ein aktives Leerzeichen ist.
+  {% Falls ja, \dots
+    \expandafter\ltd@gobbleActiveSpaces\@gobble% entsorgen wir es
+    % mit '\@gobble' und rufen uns dann selbst rekursiv auf.
+  }{}% Im anderen Fall machen wir gar nichts, womit die Rekursion
+  % beendet ist.
+}%
+
+\newcommand*\ltdHypertarget[2]{%
+  \setbox\@tempboxa\hbox{#2}%
+  \@tempdima\ht\@tempboxa
+  \raisebox{1.5\@tempdima}[\@tempdima][0pt]%
+  {%
+    \hypertarget{#1}%
+    {%
+      \raisebox{-1.5\@tempdima}%
+      {%
+        \unhbox\@tempboxa%
+      }%  (raisebox)
+    }%  (hypertarget)
+  }% (raisebox)
+}
+
+
+\endinput
+%%
+%% End of file `ltxdoclet.sty'.

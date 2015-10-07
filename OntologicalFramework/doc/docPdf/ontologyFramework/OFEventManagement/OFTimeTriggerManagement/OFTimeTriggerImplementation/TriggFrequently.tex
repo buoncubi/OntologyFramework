@@ -1,0 +1,49 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently (noch nicht fertig). 
+\section[TriggFrequently]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently-class}{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently}}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently-class}
+\subsection{Übersicht}
+This class create a new Quartz Trigger with particular parameter. 
+ The ontology must contain an individual which as those properties:
+ {\ttfamily
+\mbox{ }\mbox{}\newline
+\mbox{ }	\verb!implementsOFTimeTriggerName "ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently"^^string!\mbox{}\newline
+\mbox{ }\mbox{ }\verb!&!\mbox{}\newline
+\mbox{ }\mbox{ }\verb!in:ontologyFramework.OFEventManagement.OFEventParameter.
+			?frequency 10.AsInteger
+			?couter ^.AsInteger
+			?priority 6.AsInteger
+			!r triggFrequentlyInSeconds( ?frequency ?priority ?couter)"^^strign!\mbox{}\newline
+\mbox{ }}
+ 
+ So the method \noprint{@link:#isCorrectInput(List)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}} returns true only if: \verb!inputs.get(0).getParameter() instanceof Integer!, \verb!inputs.get(1).getParameter() instanceof Integer!
+ and \verb!(inputs.get(2).getParameter() == null) || (inputs.get(2).getParameter() instanceof Integer)! are true.
+ While the method \noprint{@link:#getTrigger(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{getTrigger}} returns a quartz trigger with
+ the specified parameter. If count number is equal to null than, the trigger has 
+ \verb!repeatForever()! property.
+ 
+ if counter is 0 than the trigger is \textquotedbl fired now\textquotedbl  only once
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently()}{TriggFrequently}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{getTrigger}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation.TriggFrequently.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\end{description}

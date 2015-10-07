@@ -1,0 +1,147 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFRunning.OFSystemState (noch nicht fertig). 
+\section[OFSystemState]{Klasse \ltdHypertarget{ontologyFramework.OFRunning.OFSystemState-class}{ontologyFramework.OFRunning.OFSystemState}}\label{ontologyFramework.OFRunning.OFSystemState-class}
+\subsection{Übersicht}
+This class represent the state of the framework.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.OWLREFERENCES_keyWord}{OWLREFERENCES\_keyWord}\label{ontologyFramework.OFRunning.OFSystemState.OWLREFERENCES_keyWord}}]
+~ Key with which the OWLReferences will be added into OFBuildedListInvoker
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.SYNCRHONISERLIST_keyWord}{SYNCRHONISERLIST\_keyWord}\label{ontologyFramework.OFRunning.OFSystemState.SYNCRHONISERLIST_keyWord}}]
+~ Key with which the OFSynchroniserData has been added into OFBuildedListInvoker.
+  Used since OFSynchroniserData not serializable.
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.DATAFORMAT}{DATAFORMAT}\label{ontologyFramework.OFRunning.OFSystemState.DATAFORMAT}}]
+~ Format of folder path in default usage
+\end{description}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,boolean)}{OFSystemState}\label{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,boolean)}}]
+~ It calls \noprint{@link:#OFSystemState(OFBuildedListInvoker, String, Set, Set, String, boolean)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{OFSystemState}}. Where
+ the last three parameter are set to null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[builded]
+map to be serialized
+\item[listInvokerInstanceName]
+name of the Map to be initialized
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.lang.String,boolean)}{OFSystemState}\label{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.lang.String,boolean)}}]
+~ It calls \noprint{@link:#OFSystemState(OFBuildedListInvoker, String, Set, Set, String, boolean)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{OFSystemState}}. Where
+ the two central parameter are set to null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[builded]
+map to be serialized
+\item[listInvokerInstanceName]
+name of the Map to be initialized
+\item[ontoFilePath]
+folder directory in which save the owl file created from the serialization mechanism. Null value loads in a path as: \verb!System.getProperty("user.dir") + "/files/Serialized/" + new SimpleDateFormat( DATAFORMAT).format(date)!$\}$
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,boolean)}{OFSystemState}\label{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,boolean)}}]
+~ It calls \noprint{@link:#OFSystemState(OFBuildedListInvoker, String, Set, Set, String, boolean)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{OFSystemState}}. Where the last
+ parameter is null and the other are propagated.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[builded]
+map to be serialized
+\item[listInvokerInstanceName]
+name of the Map to be initialized
+\item[ontoToSerializeName]
+set of keys belong to Map that will be serialized. Null value loads in a serialization of all the map: \noprint{@link:OFBuildedListInvoker#getMap()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap()}{getMap}}
+\item[listToSerializeName]
+set of keys belong to the OWLReferences map that will be serialized. Null value loads in a serialization of all the map: \noprint{@link:OWLReferences#getAllInstances()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getAllInstances()}{getAllInstances}}
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{OFSystemState}\label{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}}]
+~ Create a new System state relate to informations carried by builded.
+ It ask for serializable representation of non serializable class and store them inside the Map.
+ Than it adds additional data has debugging flags, carried by \noprint{@link:DebuggingClassFlagData}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.DebuggingClassFlagData-class}{DebuggingClassFlagData}};
+ and \noprint{@link:ontologyFramework.OFContextManagement.OWLReferencesSerializable}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferencesSerializable-class}{OWLReferencesSerializable}}. In this last case the frameworks saves ontologies
+ trough \noprint{@link:OWLReferences#getAllSerializableInstances(String, Set, boolean)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getAllSerializableInstances(java.lang.String,java.util.Set<java.lang.String>,boolean)}{getAllSerializableInstances}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[builded]
+map to be serialized
+\item[listInvokerInstanceName]
+name of the Map to be initialized
+\item[ontoToSerializeName]
+set of keys belong to Map that will be serialized. Null value loads in a serialization of all the map: \noprint{@link:OFBuildedListInvoker#getMap()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap()}{getMap}}
+\item[listToSerializeName]
+set of keys belong to the OWLReferences map that will be serialized. Null value loads in a serialization of all the map: \noprint{@link:OWLReferences#getAllInstances()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getAllInstances()}{getAllInstances}}
+\item[ontoFilePath]
+folder directory in which save the owl file created from the serialization mechanism. Null value loads in a path as: \verb!System.getProperty("user.dir") + "/files/Serialized/" + new SimpleDateFormat( DATAFORMAT).format(date)!$\}$
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.getBuilderListName()}{getBuilderListName}\label{ontologyFramework.OFRunning.OFSystemState.getBuilderListName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+builderListName the name of the instance of \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} which can been serialized
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.getSerialMap()}{getSerialMap}\label{ontologyFramework.OFRunning.OFSystemState.getSerialMap()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+serialMap the instance of \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} which can been serialized
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.getOntologyFilePath()}{getOntologyFilePath}\label{ontologyFramework.OFRunning.OFSystemState.getOntologyFilePath()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+ontologyFilePath the folder directory in which the ontologies are saved
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.getSerializableListName()}{getSerializableListName}\label{ontologyFramework.OFRunning.OFSystemState.getSerializableListName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+serializableListName get the keys of the map \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} which are not serializable and need further computations.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.setSerializableListName(java.util.Set<java.lang.String>)}{setSerializableListName}\label{ontologyFramework.OFRunning.OFSystemState.setSerializableListName(java.util.Set<java.lang.String>)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[unserializableName]
+set the keys of the map \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} which are not serializable and need further computations.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSystemState.addToSerializableListName(java.lang.String)}{addToSerializableListName}\label{ontologyFramework.OFRunning.OFSystemState.addToSerializableListName(java.lang.String)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entry]
+add the key of the map \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} which are not serializable and need further computations.
+\end{description}
+\end{description}
+\end{description}

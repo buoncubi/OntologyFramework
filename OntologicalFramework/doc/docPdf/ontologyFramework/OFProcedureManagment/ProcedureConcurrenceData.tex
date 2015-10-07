@@ -1,0 +1,91 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData (noch nicht fertig). 
+\section[ProcedureConcurrenceData]{Klasse \ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData-class}{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData}}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData-class}
+\subsection{Übersicht}
+This class describes a procedure while is running to 
+ manage dead line and concurrent pool monitoring.
+ Base on this information the system is aware about
+ trigger missing and also it helps in concurrency managing 
+ describing a thread pool implementation. This means that every
+ procedure need an integer value to describe how many
+ instances of the same procedure can run concurrently.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\item[Siehe auch] ~
+\noprint, \noprint{@see:ProcedureConcurrenceManager}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager-class}{ProcedureConcurrenceManager}}\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.NAMEID_symbSeparator}{NAMEID\_symbSeparator}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.NAMEID_symbSeparator}}]
+~ 
+\end{description}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData(java.lang.String,java.lang.Integer)}{ProcedureConcurrenceData}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData(java.lang.String,java.lang.Integer)}}]
+~ Create a new Procedure time tracking. Useful just when
+ the procedure is running.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[procedureName]
+name of the ontological individual 
+ wich describe a procedure
+\item[ID]
+an integer number between 0 and the value defined 
+ by a particular concurrent pool size
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getProcedureName()}{getProcedureName}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getProcedureName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the procedureName
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getID()}{getID}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getID()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the procedure ID
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.toString()}{toString}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.toString()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getTriggerNow()}{getTriggerNow}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getTriggerNow()}}]
+~ it just returns \verb!new Date();!
+\begin{description}
+\item[Rückgabewert] 
+the triggerNow
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getDeadline()}{getDeadline}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.getDeadline()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the deadline
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.isDeadlineSetted()}{isDeadlineSetted}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.isDeadlineSetted()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+true if the dead line is set, false otherwise.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.setDeadline(java.util.Date)}{setDeadline}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData.setDeadline(java.util.Date)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[deadline]
+the deadline to set
+\end{description}
+\end{description}
+\end{description}

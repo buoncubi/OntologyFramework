@@ -1,0 +1,120 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater (noch nicht fertig). 
+\section[ReflactionInstanciater]{Klasse \ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater-class}{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater}}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater-class}
+\subsection{Übersicht}
+This is a static class which collects common methods to instantiate OFInterfaces using 
+ Java Reflection. It use neither generic nor dynamic usage of the Reflection API to 
+ decrease the computational complexity.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.REFLACTIONDERDEBUG_individualName}{REFLACTIONDERDEBUG\_individualName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.REFLACTIONDERDEBUG_individualName}}]
+~ Name of an ontological individual which must exist belong to the class \verb!DebuggedClass!
+ and has to have an object property \verb!logsDebuggingData exactly 1 Boolean!
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFDataMapperByName(java.lang.String)}{instanciateOFDataMapperByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFDataMapperByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFDataMapperInterface}\texttt{\hyperlink{ontologyFramework.OFDataMapping.OFDataMapperInterface<OntoEntity extends org.semanticweb.owlapi.model.OWLObject, R>-class}{OFDataMapperInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+mapperInst an new instance of the named class which implements \noprint{@link:OFDataMapperInterface}\texttt{\hyperlink{ontologyFramework.OFDataMapping.OFDataMapperInterface<OntoEntity extends org.semanticweb.owlapi.model.OWLObject, R>-class}{OFDataMapperInterface}}.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFBuilderByName(java.lang.String)}{instanciateOFBuilderByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFBuilderByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+builderInst an new instance of the named class which implements \noprint{@link:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}}.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFExceptionNotifierByName(java.lang.String)}{instanciateOFExceptionNotifierByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFExceptionNotifierByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFExceptionNotifierInterface}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFException.OFExceptionNotifierInterface-class}{OFExceptionNotifierInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+exectNotifyInst an new instance of the named class which implements \noprint{@link:OFExceptionNotifierInterface}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFException.OFExceptionNotifierInterface-class}{OFExceptionNotifierInterface}}.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFEventParameterByName(java.lang.String)}{instanciateOFEventParameterByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFEventParameterByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFEventParameterInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterInterface-class}{OFEventParameterInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+eventParamInst an new instance of the named class which implements \noprint{@link:OFEventParameterInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterInterface-class}{OFEventParameterInterface}}.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFSynchroniseerManagerByName(java.lang.String)}{instanciateOFSynchroniseerManagerByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFSynchroniseerManagerByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFSynchroniserManagmentInterface}\texttt{\hyperlink{ontologyFramework.OFContextManagement.synchronisingManager.OFSynchroniserManagmentInterface-class}{OFSynchroniserManagmentInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+synchInst an new instance of the named class which implements \noprint{@link:OFSynchroniserManagmentInterface}\texttt{\hyperlink{ontologyFramework.OFContextManagement.synchronisingManager.OFSynchroniserManagmentInterface-class}{OFSynchroniserManagmentInterface}}.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFEventByName(java.lang.String)}{instanciateOFEventByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFEventByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+eventInst an new instance of the named class which implements \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}}.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFTimeTriggrtByName(java.lang.String)}{instanciateOFTimeTriggrtByName}\label{ontologyFramework.OFRunning.OFInvokingManager.ReflactionInstanciater.instanciateOFTimeTriggrtByName(java.lang.String)}}]
+~ Given a class name as string it creates a new instances of \noprint{@link:OFTimeTriggerInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface-class}{OFTimeTriggerInterface}},
+ and returns it. It returns null value if an exception is thrown; in this case the message is 
+ handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+full class qualifier
+\end{description}
+\item[Rückgabewert] 
+timeTriggetInst an new instance of the named class which implements \noprint{@link:OFTimeTriggerInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface-class}{OFTimeTriggerInterface}}.
+\end{description}
+\end{description}

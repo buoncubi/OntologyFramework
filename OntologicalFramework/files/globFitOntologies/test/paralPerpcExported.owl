@@ -1,0 +1,1613 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-15 "http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-22#"
+     xml:base="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-22"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-15="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-22"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isCoaxialWith -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-15;isCoaxialWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-15;isCoaxialWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isParallelTo -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-15;isParallelTo">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-15;Primitive"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-15;isParallelTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isPerpendicularTo -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-15;isPerpendicularTo">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-15;Primitive"/>
+        <owl:inverseOf rdf:resource="&untitled-ontology-15;isPerpendicularTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasConeApex_x -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasConeApex_x">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeApex_x"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasConeApex_y -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasConeApex_y">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeApex_y"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasConeApex_z -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasConeApex_z">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeApex_z"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasConeOpeningAngle -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasConeOpeningAngle">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeOpeningAngle"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasCylinderPointAxis_x -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasCylinderPointAxis_x">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasCylinderPointAxis_x"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasCylinderPointAxis_y -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasCylinderPointAxis_y">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasCylinderPointAxis_y"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasCylinderPointAxis_z -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasCylinderPointAxis_z">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasCylinderPointAxis_z"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPlaneCoeff_d -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPlaneCoeff_d">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_d"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPlaneCoeff_nx -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPlaneCoeff_nx">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_nx"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPlaneCoeff_ny -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPlaneCoeff_ny">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_ny"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPlaneCoeff_nz -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPlaneCoeff_nz">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_nz"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_x -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveAxis_x">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_y -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveAxis_y">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_z -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveAxis_z">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_x -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveCentroid_x">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveCentroid_x"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_y -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveCentroid_y">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveCentroid_y"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_z -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveCentroid_z">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveCentroid_z"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveHeigth -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveHeigth">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveHeigth"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveRadios -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasPrimitiveRadios">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveRadios"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasTreshouldParameter -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-15;hasTreshouldParameter">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&untitled-ontology-15;hasTreshouldParameter"/>
+                <owl:someValuesFrom rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Cone -->
+
+    <owl:Class rdf:about="&untitled-ontology-15;Cone">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeApex_x"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeApex_y"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeApex_z"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasConeOpeningAngle"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveHeigth"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-15;Primitive"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-15;Cylinder"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-15;Plane"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-15;Sphere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Cylinder -->
+
+    <owl:Class rdf:about="&untitled-ontology-15;Cylinder">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasCylinderPointAxis_x"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasCylinderPointAxis_y"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasCylinderPointAxis_z"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveHeigth"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveRadios"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-15;Primitive"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-15;Plane"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-15;Sphere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Plane -->
+
+    <owl:Class rdf:about="&untitled-ontology-15;Plane">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_d"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_nx"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_ny"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPlaneCoeff_nz"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-15;Primitive"/>
+        <owl:disjointWith rdf:resource="&untitled-ontology-15;Sphere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Primitive -->
+
+    <owl:Class rdf:about="&untitled-ontology-15;Primitive">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveCentroid_x"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveCentroid_y"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveCentroid_z"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Sphere -->
+
+    <owl:Class rdf:about="&untitled-ontology-15;Sphere">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                                <owl:someValuesFrom rdf:resource="&xsd;float"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&untitled-ontology-15;hasPrimitiveRadios"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;float"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-15;Primitive"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#ConeTest1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;ConeTest1">
+        <rdf:type rdf:resource="&untitled-ontology-15;Cone"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <untitled-ontology-15:hasPrimitiveAxis_y rdf:datatype="&xsd;float">-0.01</untitled-ontology-15:hasPrimitiveAxis_y>
+        <untitled-ontology-15:hasConeApex_y rdf:datatype="&xsd;float">-1.0</untitled-ontology-15:hasConeApex_y>
+        <untitled-ontology-15:hasPrimitiveAxis_z rdf:datatype="&xsd;float">0.001</untitled-ontology-15:hasPrimitiveAxis_z>
+        <untitled-ontology-15:hasConeApex_z rdf:datatype="&xsd;float">0.05</untitled-ontology-15:hasConeApex_z>
+        <untitled-ontology-15:hasPrimitiveHeigth rdf:datatype="&xsd;float">0.5</untitled-ontology-15:hasPrimitiveHeigth>
+        <untitled-ontology-15:hasPrimitiveAxis_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveAxis_x>
+        <untitled-ontology-15:hasConeOpeningAngle rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasConeOpeningAngle>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:hasConeApex_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasConeApex_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype="&xsd;float">2.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+        <untitled-ontology-15:isPerpendicularTo rdf:resource="&untitled-ontology-15;CylinderTest1"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;SphereTest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#ConeTest2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;ConeTest2">
+        <rdf:type rdf:resource="&untitled-ontology-15;Cone"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <untitled-ontology-15:hasPrimitiveAxis_x rdf:datatype="&xsd;float">0.01</untitled-ontology-15:hasPrimitiveAxis_x>
+        <untitled-ontology-15:hasConeApex_y rdf:datatype="&xsd;float">0.2</untitled-ontology-15:hasConeApex_y>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">0.2</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">0.3</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:hasConeApex_x rdf:datatype="&xsd;float">0.3</untitled-ontology-15:hasConeApex_x>
+        <untitled-ontology-15:hasConeApex_z rdf:datatype="&xsd;float">0.3</untitled-ontology-15:hasConeApex_z>
+        <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype="&xsd;float">0.4</untitled-ontology-15:hasPrimitiveCentroid_z>
+        <untitled-ontology-15:hasPrimitiveAxis_y rdf:datatype="&xsd;float">1.1</untitled-ontology-15:hasPrimitiveAxis_y>
+        <untitled-ontology-15:hasConeOpeningAngle rdf:datatype="&xsd;float">1.2</untitled-ontology-15:hasConeOpeningAngle>
+        <untitled-ontology-15:hasPrimitiveHeigth rdf:datatype="&xsd;float">1.2</untitled-ontology-15:hasPrimitiveHeigth>
+        <untitled-ontology-15:hasPrimitiveAxis_z rdf:datatype="&xsd;float">1.2</untitled-ontology-15:hasPrimitiveAxis_z>
+        <untitled-ontology-15:isPerpendicularTo rdf:resource="&untitled-ontology-15;ConeTest1"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;SphereTest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#CylinderTest1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;CylinderTest1">
+        <rdf:type rdf:resource="&untitled-ontology-15;Cylinder"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype="&xsd;float">-0.5</untitled-ontology-15:hasPrimitiveCentroid_z>
+        <untitled-ontology-15:hasPrimitiveAxis_x rdf:datatype="&xsd;float">0.01</untitled-ontology-15:hasPrimitiveAxis_x>
+        <untitled-ontology-15:hasPrimitiveRadios rdf:datatype="&xsd;float">0.03</untitled-ontology-15:hasPrimitiveRadios>
+        <untitled-ontology-15:hasCylinderPointAxis_y rdf:datatype="&xsd;float">0.2</untitled-ontology-15:hasCylinderPointAxis_y>
+        <untitled-ontology-15:hasPrimitiveHeigth rdf:datatype="&xsd;float">0.6</untitled-ontology-15:hasPrimitiveHeigth>
+        <untitled-ontology-15:hasCylinderPointAxis_x rdf:datatype="&xsd;float">0.9</untitled-ontology-15:hasCylinderPointAxis_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPrimitiveAxis_z rdf:datatype="&xsd;float">1.07</untitled-ontology-15:hasPrimitiveAxis_z>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">2.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:hasCylinderPointAxis_z rdf:datatype="&xsd;float">2.0</untitled-ontology-15:hasCylinderPointAxis_z>
+        <untitled-ontology-15:hasPrimitiveAxis_y rdf:datatype="&xsd;float">5.0</untitled-ontology-15:hasPrimitiveAxis_y>
+        <untitled-ontology-15:isPerpendicularTo rdf:resource="&untitled-ontology-15;ConeTest1"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;SphereTest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#ParaPerpThreshould -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;ParaPerpThreshould">
+        <untitled-ontology-15:hasTreshouldParameter rdf:datatype="&xsd;float">0.05</untitled-ontology-15:hasTreshouldParameter>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#PlaneTest1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;PlaneTest1">
+        <rdf:type rdf:resource="&untitled-ontology-15;Plane"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype="&xsd;float">-1.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+        <untitled-ontology-15:hasPlaneCoeff_nx rdf:datatype="&xsd;float">0.01</untitled-ontology-15:hasPlaneCoeff_nx>
+        <untitled-ontology-15:hasPlaneCoeff_d rdf:datatype="&xsd;float">0.2</untitled-ontology-15:hasPlaneCoeff_d>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPlaneCoeff_nz rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPlaneCoeff_nz>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:hasPlaneCoeff_ny rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPlaneCoeff_ny>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;SphereTest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#PlaneTest2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;PlaneTest2">
+        <rdf:type rdf:resource="&untitled-ontology-15;Plane"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype="&xsd;float">-1.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+        <untitled-ontology-15:hasPlaneCoeff_ny rdf:datatype="&xsd;float">0.01</untitled-ontology-15:hasPlaneCoeff_ny>
+        <untitled-ontology-15:hasPlaneCoeff_nz rdf:datatype="&xsd;float">0.01</untitled-ontology-15:hasPlaneCoeff_nz>
+        <untitled-ontology-15:hasPlaneCoeff_d rdf:datatype="&xsd;float">0.03</untitled-ontology-15:hasPlaneCoeff_d>
+        <untitled-ontology-15:hasPlaneCoeff_nx rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPlaneCoeff_nx>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">2.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;SphereTest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#PlaneTest3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;PlaneTest3">
+        <rdf:type rdf:resource="&untitled-ontology-15;Plane"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <untitled-ontology-15:hasPlaneCoeff_nx rdf:datatype="&xsd;float">0.001</untitled-ontology-15:hasPlaneCoeff_nx>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:hasCylinderPointAxis_z rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasCylinderPointAxis_z>
+        <untitled-ontology-15:hasPlaneCoeff_d rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPlaneCoeff_d>
+        <untitled-ontology-15:hasPlaneCoeff_ny rdf:datatype="&xsd;float">1.1</untitled-ontology-15:hasPlaneCoeff_ny>
+        <untitled-ontology-15:hasPlaneCoeff_nz rdf:datatype="&xsd;float">1.1</untitled-ontology-15:hasPlaneCoeff_nz>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;SphereTest1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#SphereTest1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-15;SphereTest1">
+        <rdf:type rdf:resource="&untitled-ontology-15;Primitive"/>
+        <rdf:type rdf:resource="&untitled-ontology-15;Sphere"/>
+        <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype="&xsd;float">-3.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+        <untitled-ontology-15:hasPrimitiveRadios rdf:datatype="&xsd;float">0.02</untitled-ontology-15:hasPrimitiveRadios>
+        <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype="&xsd;float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+        <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype="&xsd;float">2.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;ConeTest1"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;ConeTest2"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;CylinderTest1"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;PlaneTest1"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;PlaneTest2"/>
+        <untitled-ontology-15:isParallelTo rdf:resource="&untitled-ontology-15;PlaneTest3"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment>aaa</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&untitled-ontology-15;Cone"/>
+            <rdf:Description rdf:about="&untitled-ontology-15;Cylinder"/>
+            <rdf:Description rdf:about="&untitled-ontology-15;Plane"/>
+            <rdf:Description rdf:about="&untitled-ontology-15;Sphere"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#b">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#a">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#ax">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#bx">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#ay">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#by">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#az">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#bz">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#e">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#q1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#q2">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p3">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#e1">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p11">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p12">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p21">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p22">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p31">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#p32">
+        <rdf:type rdf:resource="&swrl;Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;isPerpendicularTo"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&untitled-ontology-15;Primitive"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#by"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#az"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                <swrl:builtin rdf:resource="&swrlb;add"/>
+                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                    <rdf:Description rdf:about="urn:swrl#q1"/>
+                                                                                                    <rdf:Description rdf:about="urn:swrl#p1"/>
+                                                                                                    <rdf:Description rdf:about="urn:swrl#p2"/>
+                                                                                                </swrl:arguments>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="&swrlb;greaterThanOrEqual"/>
+                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#q2"/>
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#e1"/>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                        <rdf:first>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p2"/>
+                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#ay"/>
+                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#by"/>
+                                                                                                                                                </swrl:arguments>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                        <rdf:first>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                                                                                                                                                <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                                                                                                                                                <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:first>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                                <rdf:first>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p3"/>
+                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#az"/>
+                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#bz"/>
+                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:first>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p1"/>
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#ax"/>
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#bx"/>
+                                                                                                                                        </swrl:arguments>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                <swrl:arguments>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                        <rdf:first rdf:resource="urn:swrl#e1"/>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                <rdf:first rdf:resource="urn:swrl#e"/>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                        <rdf:first rdf:datatype="&xsd;integer">-1</rdf:first>
+                                                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </swrl:arguments>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                        <swrl:builtin rdf:resource="&swrlb;lessThanOrEqual"/>
+                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                            <rdf:Description rdf:about="urn:swrl#q2"/>
+                                                                                                                            <rdf:Description rdf:about="urn:swrl#e"/>
+                                                                                                                        </swrl:arguments>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                        <swrl:builtin rdf:resource="&swrlb;add"/>
+                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                            <rdf:Description rdf:about="urn:swrl#q2"/>
+                                                                                                            <rdf:Description rdf:about="urn:swrl#q1"/>
+                                                                                                            <rdf:Description rdf:about="urn:swrl#p3"/>
+                                                                                                        </swrl:arguments>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                                        <swrl:argument1 rdf:resource="&untitled-ontology-15;ParaPerpThreshould"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasTreshouldParameter"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#bz"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#ay"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#bx"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#ax"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&untitled-ontology-15;Primitive"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&untitled-ontology-15;Primitive"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#by"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#az"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                <swrl:builtin rdf:resource="&swrlb;greaterThanOrEqual"/>
+                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                    <rdf:Description rdf:about="urn:swrl#p1"/>
+                                                                                                    <rdf:Description rdf:about="urn:swrl#e1"/>
+                                                                                                </swrl:arguments>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                        <swrl:builtin rdf:resource="&swrlb;lessThanOrEqual"/>
+                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                            <rdf:Description rdf:about="urn:swrl#p1"/>
+                                                                                                                            <rdf:Description rdf:about="urn:swrl#e"/>
+                                                                                                                        </swrl:arguments>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                <swrl:builtin rdf:resource="&swrlb;lessThanOrEqual"/>
+                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p2"/>
+                                                                                                                                    <rdf:Description rdf:about="urn:swrl#e"/>
+                                                                                                                                </swrl:arguments>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                <rdf:first>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p11"/>
+                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#ay"/>
+                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#bz"/>
+                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                <rdf:first>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p21"/>
+                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#az"/>
+                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#bx"/>
+                                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:first>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                                        <rdf:first>
+                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                                                <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p32"/>
+                                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#ay"/>
+                                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#bx"/>
+                                                                                                                                                                                                </swrl:arguments>
+                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                        </rdf:first>
+                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                                                                                                                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                                                                                        <rdf:first>
+                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                                                                                                                                                                                                                <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                                                                                                                                                                                                                <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                        </rdf:first>
+                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                <rdf:first>
+                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;subtract"/>
+                                                                                                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p3"/>
+                                                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p31"/>
+                                                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p32"/>
+                                                                                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                </rdf:first>
+                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                        <rdf:first>
+                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                                                                <swrl:builtin rdf:resource="&swrlb;subtract"/>
+                                                                                                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p2"/>
+                                                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p21"/>
+                                                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p22"/>
+                                                                                                                                                                                                                </swrl:arguments>
+                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                        </rdf:first>
+                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                <rdf:first>
+                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;subtract"/>
+                                                                                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p1"/>
+                                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p11"/>
+                                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p12"/>
+                                                                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                </rdf:first>
+                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                <rdf:first>
+                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p31"/>
+                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#ax"/>
+                                                                                                                                                                                            <rdf:Description rdf:about="urn:swrl#by"/>
+                                                                                                                                                                                        </swrl:arguments>
+                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                </rdf:first>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                        <rdf:first>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                                <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p22"/>
+                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#ax"/>
+                                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#bz"/>
+                                                                                                                                                                                </swrl:arguments>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:first>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                        <rdf:first>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                                <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#p12"/>
+                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#az"/>
+                                                                                                                                                                    <rdf:Description rdf:about="urn:swrl#by"/>
+                                                                                                                                                                </swrl:arguments>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:first>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                        <rdf:first>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                                <swrl:builtin rdf:resource="&swrlb;multiply"/>
+                                                                                                                                                <swrl:arguments>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                        <rdf:first rdf:resource="urn:swrl#e1"/>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                <rdf:first rdf:resource="urn:swrl#e"/>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                        <rdf:first rdf:datatype="&xsd;integer">-1</rdf:first>
+                                                                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </swrl:arguments>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:first>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                                        <swrl:builtin rdf:resource="&swrlb;lessThanOrEqual"/>
+                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#p3"/>
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#e"/>
+                                                                                                                                        </swrl:arguments>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="&swrlb;greaterThanOrEqual"/>
+                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#p3"/>
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#e1"/>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="&swrl;BuiltinAtom"/>
+                                                                                                        <swrl:builtin rdf:resource="&swrlb;greaterThanOrEqual"/>
+                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                            <rdf:Description rdf:about="urn:swrl#p2"/>
+                                                                                                            <rdf:Description rdf:about="urn:swrl#e1"/>
+                                                                                                        </swrl:arguments>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                                        <swrl:argument1 rdf:resource="&untitled-ontology-15;ParaPerpThreshould"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasTreshouldParameter"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl#e"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_z"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#bz"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_y"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#ay"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl#bx"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                    </rdf:Description>
+                                </rdf:rest>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;hasPrimitiveAxis_x"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#ax"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&untitled-ontology-15;Primitive"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;isParallelTo"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&swrl;Imp"/>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="&untitled-ontology-15;isParallelTo"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="&swrl;AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="&untitled-ontology-15;Primitive"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&swrl;AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="&untitled-ontology-15;Sphere"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&swrl;AtomList"/>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&swrl;DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#a"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl#b"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

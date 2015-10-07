@@ -1,0 +1,136 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.Algorithm (noch nicht fertig). 
+\section[Algorithm]{Klasse \ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm-class}{ontologyFramework.OFProcedureManagment.Algorithm}}\label{ontologyFramework.OFProcedureManagment.Algorithm-class}
+\subsection{Übersicht}
+This class is an implementation of \noprint{@link:OFProcedureInterface}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}{OFProcedureInterface}}
+ which is designed to run procedure using Quartz API;
+ it works with data initialized from \noprint{@link:OFProcedureBuilder}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}{OFProcedureBuilder}}.
+ It is design with the following behaviors: a Procedure must be
+ linked to a scheduler and a tread pool. Also, it has a 
+ checker job to update the state of the ontology that
+ is describing the procedure. This job is automatically created and
+ runs with a specific frequency defined in the ontology. 
+ The checker implementation is given by \noprint{@link:ontologyFramework.OFProcedureManagment.OFProcedureImplementation.AlgorithmCheckerJob}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureImplementation.AlgorithmCheckerJob-class}{AlgorithmCheckerJob}}.
+ Also, a procedure can contains an Event, if not is considered by 
+ default that the it has an Event always true. Furthermore, a procedure
+ can be synchronized with another individual that describe a procedure.
+ In this last case the event is not considered. When the individual
+ that synchronize this procedure ends, or when an event is true
+ than the procedure is ready to run. Anyway, it will actually run
+ in accord with its TimeTrigger ontological definition that 
+ describe its behavior when the previous consideration 
+ are favorable to run this procedure. Remember that the checker
+ job will always run on background and its frequency affect
+ the velocity of the changes that the system can appreciated.
+ Is recommended to build checker that are not computational
+ complex and make their frequency high enough. Synchronization
+ properties are not affected by the checker frequency. Finally,
+ the always need features for a Procedure are: Checker, TimeTrigger,
+ thread pool size, full qualifier to the procedure implementation
+ and an Event or a Synchronization property. If both of them exist
+ than the system will consider only one of them in accord with
+ the considerations above.       
+ 
+ In particular this class initialize a procedure in accord
+ with \noprint{@link:OFProcedureBuilder}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}{OFProcedureBuilder}} during building time. This will
+ set inside this class all the interesting characteristics of
+ procedure and also it created the related CheckerJob and MainJob
+ (which contains the runnable implementation of the procedure). Than 
+ the CheckerJob is run and will be stopped only by \noprint{@link:#shotdown()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.Algorithm.shotdown()}{shotdown}}.
+ The checker set the quantity relate to Events and TimeTrigger and this
+ changes make this class calling \noprint{@link:#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.Algorithm.stop()}{stop}} or \noprint{@link:#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.Algorithm.run()}{run}} in a 
+ way to implement the above considerations. Moreover, it will care
+ to give to the implementing procedural job the most up to date
+ information required as input througth the Quartz JobDataMap.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.chekerName}{chekerName}\label{ontologyFramework.OFProcedureManagment.Algorithm.chekerName}}]
+~ 
+\end{description}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm()}{Algorithm}\label{ontologyFramework.OFProcedureManagment.Algorithm()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.initialise(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String[])}{initialise}\label{ontologyFramework.OFProcedureManagment.Algorithm.initialise(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String[])}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.run()}{run}\label{ontologyFramework.OFProcedureManagment.Algorithm.run()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.stop()}{stop}\label{ontologyFramework.OFProcedureManagment.Algorithm.stop()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getEventResult()}{getEventResult}\label{ontologyFramework.OFProcedureManagment.Algorithm.getEventResult()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}\label{ontologyFramework.OFProcedureManagment.Algorithm.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.setEventResult(boolean)}{setEventResult}\label{ontologyFramework.OFProcedureManagment.Algorithm.setEventResult(boolean)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getTimeTrigger()}{getTimeTrigger}\label{ontologyFramework.OFProcedureManagment.Algorithm.getTimeTrigger()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getTimeTriggerName(ontologyFramework.OFContextManagement.OWLReferences)}{getTimeTriggerName}\label{ontologyFramework.OFProcedureManagment.Algorithm.getTimeTriggerName(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.setTimeTrigger(java.lang.Object)}{setTimeTrigger}\label{ontologyFramework.OFProcedureManagment.Algorithm.setTimeTrigger(java.lang.Object)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.shotdown()}{shotdown}\label{ontologyFramework.OFProcedureManagment.Algorithm.shotdown()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getScheduler()}{getScheduler}\label{ontologyFramework.OFProcedureManagment.Algorithm.getScheduler()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getCheckerJob()}{getCheckerJob}\label{ontologyFramework.OFProcedureManagment.Algorithm.getCheckerJob()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getMainJob()}{getMainJob}\label{ontologyFramework.OFProcedureManagment.Algorithm.getMainJob()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getAllInstances()}{getAllInstances}\label{ontologyFramework.OFProcedureManagment.Algorithm.getAllInstances()}}]
+~ All the time that this class is created its instance is
+ also collected into a HashMap with its ontological individual 
+ name as key. This method returns the map of the create
+ instances so far created for this class.
+\begin{description}
+\item[Rückgabewert] 
+all the instance of this class created so far and collected into a map.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.getOFProcedureInterface(java.lang.String)}{getOFProcedureInterface}\label{ontologyFramework.OFProcedureManagment.Algorithm.getOFProcedureInterface(java.lang.String)}}]
+~ This methods calls: 
+ \verb!Algorithm#getAllInstances().get( referenceName)!
+ to return an instance of this class which is relate to an
+ ontological individual with name equal \noprint{@link:tokens}\texttt{tokens} the 
+ input parameter.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[referenceName]
+
+\end{description}
+\item[Rückgabewert] 
+The instance of this individual which has individual 
+ named as the input parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.Algorithm.isInAllInstances(java.lang.String)}{isInAllInstances}\label{ontologyFramework.OFProcedureManagment.Algorithm.isInAllInstances(java.lang.String)}}]
+~ It calls: \verb!Algorithm#getAllInstances().containsKey( key)!
+ to return true if an instance with the key name has been 
+ already created for this class, false otherwise.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+the name of the instance of this class 
+ (name of the ontological individual relate to this procedure).
+\end{description}
+\item[Rückgabewert] 
+true if an instance of this class already exist with such
+ name; false if not.
+\end{description}
+\end{description}

@@ -1,0 +1,69 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow (noch nicht fertig). 
+\section[AbsoluteTimeWindow]{Klasse \ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow-class}{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow}}\label{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow-class}
+\subsection{Übersicht}
+This class defines the Object which implements an AbsoluteTimeWindows.
+ It should be use to refer to a time windows which has its place
+ in a time line. Basically it is just a data structure to store
+ the state of a time windows in a particular instant.
+ Note that in this framework time instances are describe has a Long 
+ which represents a Unix time stamp.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow(java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long)}{AbsoluteTimeWindow}\label{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow(java.lang.Long,java.lang.Long,java.lang.Long,java.lang.Long)}}]
+~ Create absolute time windows with final property set.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[lowerBound]
+minimum time stamp of the windows
+\item[centralTime]
+central time stamp of the windows
+\item[upperBound]
+maximum time stamp of the windows
+\item[ck]
+time instant fixed in the representation. It should be the time
+ when this windows has been frozen.
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getUpperBound()}{getUpperBound}\label{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getUpperBound()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the upperBound
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getLowerBound()}{getLowerBound}\label{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getLowerBound()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the lowerBound
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getCentralTime()}{getCentralTime}\label{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getCentralTime()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the centralTime
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getActualClock()}{getActualClock}\label{ontologyFramework.OFDataMapping.ReservatedDataType.AbsoluteTimeWindow.getActualClock()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the actualClock when the framework decide to froze the windows in this class
+\end{description}
+\end{description}

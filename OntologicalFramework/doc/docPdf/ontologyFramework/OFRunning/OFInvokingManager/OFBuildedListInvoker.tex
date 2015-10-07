@@ -1,0 +1,195 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker (noch nicht fertig). 
+\section[OFBuildedListInvoker]{Klasse \ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker}}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}
+\subsection{Übersicht}
+This class is the manager of a synchornized \noprint{@link:java.util.HashMap}\texttt{HashMap}. This has String keys
+ equal to the value of the objectProperty named as \noprint{@link:ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon#BUILDLISTNAME_objProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.BUILDLISTNAME_objProp}{BUILDLISTNAME_objProp}}
+ for each individuals belong to the ontological class \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}}. The 
+ relative value linked to this unique name is the returning value of the method \noprint{@link:OFBuilderInterface#getInitialisedClasses()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.getInitialisedClasses()}{getInitialisedClasses}}
+ which still is an hashMap with String keys.
+ \par 
+ It is used to initialize classes during the initialization phase of the framework trough the 
+ Interface \noprint{@link:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}}. Than, during system evolution, those classes can be 
+ retrieved using this class for further computation.
+ \par 
+ Access to this class is returned by \noprint{@link:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}. Static access to this 
+ individual can been done also by name. Since every instances are collected in an 
+ static Map by name.
+ 
+ \par 
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\item[Siehe auch] ~
+\noprint, \noprint{@see:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}, \noprint{@see:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}}\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker(java.lang.String)}{OFBuildedListInvoker}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker(java.lang.String)}}]
+~ Create a new map and add this instance to the static map of OFBuildedListInvoker. 
+ (see \noprint{@link:#getAllInstances()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getAllInstances()}{getAllInstances}} to track an instance).
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+the name of this instance of this class. If it is null
+ this instance will not be tracked.
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getInstanceName()}{getInstanceName}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getInstanceName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the name of this instances saved in the static map retrievable from  \noprint{@link:#getOFBuildedListInvoker( String)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getOFBuildedListInvoker(java.lang.String)}{getOFBuildedListInvoker}}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addTobuildedList(java.lang.String,java.util.Map<?,?>)}{addTobuildedList}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addTobuildedList(java.lang.String,java.util.Map<?,?>)}}]
+~ Add a value to the hashMap calling:
+ \verb!buildedList.put( key, ( Map< String, Object>) object)!.
+ It returns false if \verb!buildedList.containsKey( key)!, and does
+ not add the map.
+ By default, during framework initialization keys are the value of the objectProperty 
+ named as \noprint{@link:ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon#BUILDLISTNAME_objProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.BUILDLISTNAME_objProp}{BUILDLISTNAME_objProp}} for each individuals belong 
+ to the ontological class \noprint{@link:ontologyFramework.OFRunning.OFInitialising.OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}}. Example : 
+ \textquotedbl MapperList\textquotedbl , \textquotedbl EventList\textquotedbl  ...
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+of the main hasMap
+\item[object]
+added to the main hashMap
+\end{description}
+\item[Rückgabewert] 
+key already used flag
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addTobuildedList(java.lang.String,java.util.Map<?,?>,boolean)}{addTobuildedList}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addTobuildedList(java.lang.String,java.util.Map<?,?>,boolean)}}]
+~ It calls \noprint{@link:#addTobuildedList(String, Map)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addTobuildedList(java.lang.String,java.util.Map<?,?>)}{addTobuildedList}}. 
+ If overwrite is true the system forces OFBuildedListInvoker
+ to substitute the value to the key if this already exist.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+of the main hasMap
+\item[object]
+added to the main hashMap
+\item[overwrite]
+force system to overwrite if the key already exist
+\end{description}
+\item[Rückgabewert] 
+key already used flag
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.removeTobuildedList(java.lang.String)}{removeTobuildedList}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.removeTobuildedList(java.lang.String)}}]
+~ Remove a value to the hashMap calling:
+ \verb!buildedList.remove( key)!.
+ It returns false if \verb!! buildedList.containsKey( key)!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+of the main hasMap
+\end{description}
+\item[Rückgabewert] 
+operation successful flag
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.clearbuildedList()}{clearbuildedList}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.clearbuildedList()}}]
+~ clears all the builded list calling: \verb!buildedList.clear()!
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap()}{getMap}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+returns the overall builded Map
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap(java.lang.String)}{getMap}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap(java.lang.String)}}]
+~ returns a field of the overall builded Map calling
+ \verb!buildedList.get(key)!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+of the main hasMap
+\end{description}
+\item[Rückgabewert] 
+the object of the map relate to key
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getStaticListFromName(java.lang.String)}{getStaticListFromName}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getStaticListFromName(java.lang.String)}}]
+~ it calls $\{$ @link \noprint{@link:OFBuildedListInvoker#getMap(String)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getMap(java.lang.String)}{getMap}}$\}$.
+ and returns its value as an Object.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+of the main hasMap
+\end{description}
+\item[Rückgabewert] 
+the object of the map relate to key
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getClassFromList(java.lang.String,java.lang.String)}{getClassFromList}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getClassFromList(java.lang.String,java.lang.String)}}]
+~ It returns the value of \verb!buildedList.get( listName).get( key)!,
+ which the actually builded class during the initialization phase.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[listName]
+key of the main hasMap
+\item[key]
+of the map returned from \noprint{@link:OFBuilderInterface#getInitialisedClasses}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.getInitialisedClasses()}{getInitialisedClasses}}
+\end{description}
+\item[Rückgabewert] 
+the initialized class
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addToAllInstances(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{addToAllInstances}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.addToAllInstances(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ Add an instance of OFBuildedListInvoker to the static HasMap which
+ collect them by \noprint{@link:#getInstanceName()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getInstanceName()}{getInstanceName}}. 
+ This method is used when the instance has been created
+ with a null name and later we want that it appears in the static instance tracked.
+ It adds the instance in according with the name retrieved with: \verb!inv.getInstanceName()!;
+ if this is null the instance inv will no be added.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[inv]
+instance to track.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getAllInstances()}{getAllInstances}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getAllInstances()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+all the Map where instances of this class are tracked by instanceName
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getOFBuildedListInvoker(java.lang.String)}{getOFBuildedListInvoker}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getOFBuildedListInvoker(java.lang.String)}}]
+~ Returns the instance of this class calling : \verb!return( llInstances.get( referenceName))!.
+ If no instance exist with this name than, the methods returns null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[referenceName]
+the name of the instance to retrieve
+\end{description}
+\item[Rückgabewert] 
+the instance with the speciefied name.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.isInAllInstances(java.lang.String)}{isInAllInstances}\label{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.isInAllInstances(java.lang.String)}}]
+~ It simply uses: \verb!return( allInstances.containsKey( key));!
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+the instance name
+\end{description}
+\item[Rückgabewert] 
+true if it exist
+\end{description}
+\end{description}

@@ -1,0 +1,47 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue (noch nicht fertig). 
+\section[HasBooleanTrue]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue-class}{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue}}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue-class}
+\subsection{Übersicht}
+This class implement the event that takes as input : \verb!...( OWLNamedIndividual ind, OWLDataProperty prop)!.
+ Which return true if the individual has that property and false otherwise. In the ontology 
+ an event must be defined which belongs to the class \verb!"OFEvent"! thus has the properties:
+ {\ttfamily
+\mbox{ }\mbox{}\newline
+\mbox{ }	\verb!implementsOFEventName "ontologyFramework.OFEventManagement.OFEventImplementation.OFEventProcedure.HasBooleanValue"^^string!\mbox{}\newline
+\mbox{ }\mbox{ }\verb!&!\mbox{}\newline
+\mbox{ }\mbox{ }\verb!hasEvent definition 
+  		"in:ontologyFramework.OFEventManagement.OFEventParameter.
+			 ?a exc.AsOWLIndividual
+			 ?b hasExceptionNotify.AsOWLDataProperty
+			 !r HasBooleanTrue( ?a ?b)"^^strign!\mbox{}\newline
+\mbox{ }}
+
+ So, \noprint{@link:#isCorrectInput(List)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}} return true if \verb!inputs.get( 0).getParameter() instanceof OWLNamedIndividual!
+ and \verb!inputs.get( 1).getParameter() instanceof OWLObjectProperty! and \verb!inputs.get( 0).getOntoRef()! are true.
+ The \noprint{@link:#evaluateEvent(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}} just uses  the \verb!invoker.getClassFromList( "MappersList", "Boolean")!
+ the get the boolean mapper and check if the value is true.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue()}{HasBooleanTrue}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation.HasBooleanTrue.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\end{description}

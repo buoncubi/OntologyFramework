@@ -1,0 +1,129 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFDataMapping.ReservatedDataType.Procedure (noch nicht fertig). 
+\section[Procedure]{Klasse \ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure-class}{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure}}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure-class}
+\subsection{Übersicht}
+This class represents the default procedure mapping used 
+ from this framework. This requires that default procedure mast
+ be represented in this way, other procedures may use customizable mappers. 
+ To allow so, this class should implement the java object to use to 
+ address to a procedure.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLLiteral,org.semanticweb.owlapi.model.OWLLiteral,org.semanticweb.owlapi.model.OWLLiteral)}{Procedure}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLLiteral,org.semanticweb.owlapi.model.OWLLiteral,org.semanticweb.owlapi.model.OWLLiteral)}}]
+~ Create a new procedure object initialize with some needed quantities.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[scheduler]
+which address to the individual that describe a 
+ scheduler in the ontology
+\item[event]
+top abstraction individual that represent the event for
+ this procedure. It will run only at timeTriggrt time \& if its event result 
+ true at checking time.
+\item[timeTrigger]
+ontological individual that represents the
+ quartz object to define the next trigger for this procedure.
+\item[synchronization]
+individual that represents if this procedure should run
+ only when other procedures have done their work.
+\item[procedureName]
+which represent a string with the fully qualifier to 
+ the implementation of the procedure.
+\item[concurrrentPoolSize]
+which represents an Integer for the size of the quartz
+ scheduler pool.
+\item[checkerFreqInMillisec]
+which represents a Long to describe the frequency
+ too check the state of the events assign to this object.
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getScheduler()}{getScheduler}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getScheduler()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the scheduler
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getEvent()}{getEvent}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getEvent()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the event
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getTimeTrigger()}{getTimeTrigger}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getTimeTrigger()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the timeTrigger
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getSynchronization()}{getSynchronization}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getSynchronization()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the synchronization
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getProcedureNameLitteral()}{getProcedureNameLitteral}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getProcedureNameLitteral()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the procedureNameLitteral
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getProcedureName()}{getProcedureName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getProcedureName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the procedureName
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getConcurrrentPoolSizeLittteral()}{getConcurrrentPoolSizeLittteral}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getConcurrrentPoolSizeLittteral()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the concurrrentPoolSizeLittteral
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getConcurrentPoolSize()}{getConcurrentPoolSize}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getConcurrentPoolSize()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the concurrentPoolSize
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getCheckerFreqInMillisecLitteral()}{getCheckerFreqInMillisecLitteral}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getCheckerFreqInMillisecLitteral()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the checkerFreqInMillisecLitteral
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getCheckerFreqInMillisec()}{getCheckerFreqInMillisec}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getCheckerFreqInMillisec()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the getCheckerFreqInMillisec
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getSimpleCleaner(ontologyFramework.OFContextManagement.OWLReferences)}{getSimpleCleaner}\label{ontologyFramework.OFDataMapping.ReservatedDataType.Procedure.getSimpleCleaner(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ ??
+ Static methods which returns a simple Procedure object
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+
+\end{description}
+\item[Rückgabewert] 
+the Procedure
+\end{description}
+\end{description}

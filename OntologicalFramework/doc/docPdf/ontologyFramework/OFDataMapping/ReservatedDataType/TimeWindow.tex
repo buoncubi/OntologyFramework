@@ -1,0 +1,184 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow (noch nicht fertig). 
+\section[TimeWindow]{Klasse \ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow-class}{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow}}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow-class}
+\subsection{Übersicht}
+This class is the mapping representation of an ontological time windows.
+  
+ A time windows is represented in the ontology with an individual and a bunch
+ of SWRL rules more addressed in \noprint{@link:ontologyFramework.OFDataMapping.complexDataType.TimeWindowsDataMapper}\texttt{\hyperlink{ontologyFramework.OFDataMapping.complexDataType.TimeWindowsDataMapper-class}{TimeWindowsDataMapper}}.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow(java.lang.Long,java.lang.Long)}{TimeWindow}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow(java.lang.Long,java.lang.Long)}}]
+~ Create a time window whic has a size and a center value with respect to the
+ centre ( = 0 ) of an abstract time line always time invariant.
+ For example give time windows as: <<@literal:T1( 10, 0), T2( 10, -15)>> 
+ <<@literal:and T3( 10, +15)>> the representation will be distributed uniformally
+ in an always fixed time line; as: 
+ <<@literal:T2€[ -15, -5) & T1€[ -5, 5) & T3[5, 15)>>.
+ During the running of the system this line will move during time
+ and so the actual windows would be:
+ <<@literal:T2€[ -15+t, -5+t) & T1€[ -5+t, 5+t) & T3[5+t, 15+t)>>
+ Where <<@literal:t>> is a value close to the real time instance.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[size]
+number of millisecond of the windows size
+\item[relativeCentre]
+relative number of millisecond in which the windows is
+ centered with respect to now.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow(java.lang.Long,java.lang.Long,java.lang.String,java.lang.String)}{TimeWindow}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow(java.lang.Long,java.lang.Long,java.lang.String,java.lang.String)}}]
+~ It creates a time windows using the parameters: \verb!size! and 
+ \verb!relative center! as sow in \noprint{@link:#TimeWindow(Long, Long)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow(java.lang.Long,java.lang.Long)}{TimeWindow}}.
+ Moreover, it assign to this class names for ontological
+ entities that are needed to map the windows from this framework to 
+ the ontology. In particolar they are the name of an Individual belong
+ to the ontological class <<@literal:DataType -> TimeWindow>>. And the name
+ of the class in which other individual can be classified as belong to
+ a give time window. <<@literal:DataType -> TimeRepresentation>> is
+ the ontological path by default
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[size]
+number of millisecond of the windows size
+\item[relativeCentre]
+relative number of millisecond in which the windows is
+ centered with respect to now.
+\item[individualName]
+name of the individual that describe this time window in the 
+ ontology
+\item[className]
+name of the class that will behave as
+ a time windows from the reasoning point of view. This class will
+ collect all the other individual of the ontology which has a time stamp
+ property that fall on this windows of time.
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getSize()}{getSize}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getSize()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the size
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getRelativeCentre()}{getRelativeCentre}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getRelativeCentre()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the relativeCentre
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getIndividualName()}{getIndividualName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getIndividualName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the individual
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setIndividualName(java.lang.String)}{setIndividualName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setIndividualName(java.lang.String)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getClassName()}{getClassName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getClassName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the className
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setClassName(java.lang.String)}{setClassName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setClassName(java.lang.String)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[className]
+the className to set
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getRootClass()}{getRootClass}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getRootClass()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the rootClass
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setRootClass(java.lang.String)}{setRootClass}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setRootClass(java.lang.String)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[rootClass]
+the rootClass to set
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.toString()}{toString}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.toString()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getKeyWord()}{getKeyWord}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getKeyWord()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the keyWord
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setKeyWord(java.lang.String[])}{setKeyWord}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.setKeyWord(java.lang.String[])}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[keyWord]
+the keyWord to set
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows(java.lang.Long)}{getAbsoluteTimeWindows}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows(java.lang.Long)}}]
+~ return the windows with its size and central instant computed
+ with respect to an reference clock value. (long unix time stamp in milliseconds)
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[actualCk]
+time stamp of when compute the windows
+\end{description}
+\item[Rückgabewert] 
+time windows compute with respect to an actual referiment.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows()}{getAbsoluteTimeWindows}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the absulute time windows computed for the time which this method is called
+ 
+ Return the result of: \noprint{@link:#getAbsoluteTimeWindows(Long)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows(java.lang.Long)}{getAbsoluteTimeWindows}} \verb!(System.currentTimeMillis())!
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows(ontologyFramework.OFContextManagement.OWLReferences)}{getAbsoluteTimeWindows}\label{ontologyFramework.OFDataMapping.ReservatedDataType.TimeWindow.getAbsoluteTimeWindows(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ return the windows with its size and central instant  as are descripted 
+ in the ontology refered from \verb!ontoRef!. It must contain the data
+ property \verb!keyWord[ 4] = "hasTypeTimeWindowsUpperBound! 
+ and \verb!keyWord[ 5] = "hasTypeTimeWindowsLowerBound!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+time stamp of when compute the windows
+\end{description}
+\item[Rückgabewert] 
+time windows compute with respect to an actual referiment.
+\end{description}
+\end{description}

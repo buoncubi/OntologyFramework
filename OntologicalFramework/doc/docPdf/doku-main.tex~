@@ -1,0 +1,122 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Damit beim Compilieren nicht bei jedem Fehler angehalten wird
+\scrollmode
+
+   % Report scheint für eine API jedenfalls besser als Artikel
+\documentclass[final, 11pt, a4paper]{scrreprt}
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\setmonofont{Liberation Mono}
+\usepackage[pdfborderstyle={/S/U/W 1}]{hyperref}
+\usepackage{enumerate}
+
+\usepackage[dvipsnames]{color}
+
+\usepackage{ltxdoclet}
+
+\begin{document}
+
+\chapter*{Übersicht}
+Die Package-Sammlung besteht aus den folgenden Packages. Eine kurze Beschreibung folgt danach.   % Liste der Packages:
+\begin{enumerate}[1.]
+\item \hyperlink{ontologyFramework.OFDataMapping.primitiveDataMapper-package}{ontologyFramework.OFDataMapping.primitiveDataMapper}\dotfill \pageref{ontologyFramework.OFDataMapping.primitiveDataMapper-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFEventManagement.OFEventParameter-package}{ontologyFramework.OFEventManagement.OFEventParameter}\dotfill \pageref{ontologyFramework.OFEventManagement.OFEventParameter-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFErrorManagement.OFGUI.individualGui-package}{ontologyFramework.OFErrorManagement.OFGUI.individualGui}\dotfill \pageref{ontologyFramework.OFErrorManagement.OFGUI.individualGui-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFContextManagement.synchronisingManager-package}{ontologyFramework.OFContextManagement.synchronisingManager}\dotfill \pageref{ontologyFramework.OFContextManagement.synchronisingManager-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFDataMapping.complexDataType-package}{ontologyFramework.OFDataMapping.complexDataType}\dotfill \pageref{ontologyFramework.OFDataMapping.complexDataType-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFErrorManagement.OFException-package}{ontologyFramework.OFErrorManagement.OFException}\dotfill \pageref{ontologyFramework.OFErrorManagement.OFException-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFErrorManagement.OFGUI-package}{ontologyFramework.OFErrorManagement.OFGUI}\dotfill \pageref{ontologyFramework.OFErrorManagement.OFGUI-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFRunning.OFInitialising-package}{ontologyFramework.OFRunning.OFInitialising}\dotfill \pageref{ontologyFramework.OFRunning.OFInitialising-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType-package}{ontologyFramework.OFDataMapping.ReservatedDataType}\dotfill \pageref{ontologyFramework.OFDataMapping.ReservatedDataType-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement-package}{ontologyFramework.OFEventManagement.OFLogicalEventManagement}\dotfill \pageref{ontologyFramework.OFEventManagement.OFLogicalEventManagement-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFErrorManagement-package}{ontologyFramework.OFErrorManagement}\dotfill \pageref{ontologyFramework.OFErrorManagement-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFDataMapping-package}{ontologyFramework.OFDataMapping}\dotfill \pageref{ontologyFramework.OFDataMapping-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation-package}{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation}\dotfill \pageref{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventImplementation-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation-package}{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation}\dotfill \pageref{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerImplementation-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFRunning-package}{ontologyFramework.OFRunning}\dotfill \pageref{ontologyFramework.OFRunning-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFEventManagement-package}{ontologyFramework.OFEventManagement}\dotfill \pageref{ontologyFramework.OFEventManagement-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement-package}{ontologyFramework.OFEventManagement.OFTimeTriggerManagement}\dotfill \pageref{ontologyFramework.OFEventManagement.OFTimeTriggerManagement-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFRunning.OFInvokingManager-package}{ontologyFramework.OFRunning.OFInvokingManager}\dotfill \pageref{ontologyFramework.OFRunning.OFInvokingManager-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFErrorManagement.OFGUI.allInstancesGUI-package}{ontologyFramework.OFErrorManagement.OFGUI.allInstancesGUI}\dotfill \pageref{ontologyFramework.OFErrorManagement.OFGUI.allInstancesGUI-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureImplementation-package}{ontologyFramework.OFProcedureManagment.OFProcedureImplementation}\dotfill \pageref{ontologyFramework.OFProcedureManagment.OFProcedureImplementation-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFContextManagement-package}{ontologyFramework.OFContextManagement}\dotfill \pageref{ontologyFramework.OFContextManagement-package}
+\\
+
+\item \hyperlink{ontologyFramework.OFProcedureManagment-package}{ontologyFramework.OFProcedureManagment}\dotfill \pageref{ontologyFramework.OFProcedureManagment-package}
+\\
+
+\end{enumerate}
+\section{Beschreibung}
+
+\setcounter{chapter}{0}
+\input{ontologyFramework/OFDataMapping/primitiveDataMapper/package-doc.tex}
+\input{ontologyFramework/OFEventManagement/OFEventParameter/package-doc.tex}
+\input{ontologyFramework/OFErrorManagement/OFGUI/individualGui/package-doc.tex}
+\input{ontologyFramework/OFContextManagement/synchronisingManager/package-doc.tex}
+\input{ontologyFramework/OFDataMapping/complexDataType/package-doc.tex}
+\input{ontologyFramework/OFErrorManagement/OFException/package-doc.tex}
+\input{ontologyFramework/OFErrorManagement/OFGUI/package-doc.tex}
+\input{ontologyFramework/OFRunning/OFInitialising/package-doc.tex}
+\input{ontologyFramework/OFDataMapping/ReservatedDataType/package-doc.tex}
+\input{ontologyFramework/OFEventManagement/OFLogicalEventManagement/package-doc.tex}
+\input{ontologyFramework/OFErrorManagement/package-doc.tex}
+\input{ontologyFramework/OFDataMapping/package-doc.tex}
+\input{ontologyFramework/OFEventManagement/OFLogicalEventManagement/OFEventImplementation/package-doc.tex}
+\input{ontologyFramework/OFEventManagement/OFTimeTriggerManagement/OFTimeTriggerImplementation/package-doc.tex}
+\input{ontologyFramework/OFRunning/package-doc.tex}
+\input{ontologyFramework/OFEventManagement/package-doc.tex}
+\input{ontologyFramework/OFEventManagement/OFTimeTriggerManagement/package-doc.tex}
+\input{ontologyFramework/OFRunning/OFInvokingManager/package-doc.tex}
+\input{ontologyFramework/OFErrorManagement/OFGUI/allInstancesGUI/package-doc.tex}
+\input{ontologyFramework/OFProcedureManagment/OFProcedureImplementation/package-doc.tex}
+\input{ontologyFramework/OFContextManagement/package-doc.tex}
+\input{ontologyFramework/OFProcedureManagment/package-doc.tex}
+\appendix
+\end{document}

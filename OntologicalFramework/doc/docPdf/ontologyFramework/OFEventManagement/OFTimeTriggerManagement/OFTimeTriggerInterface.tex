@@ -1,0 +1,53 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface (noch nicht fertig). 
+\section[OFTimeTriggerInterface]{Interface \ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface-class}{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface}}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface-class}
+\subsection{Übersicht}
+This class is used to initialise, store and compute Temporal Trigger.
+ \noprint{@link:#isCorrectInput(List)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}} is called frist and if it returns true
+ than \noprint{@link:#getTrigger(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{getTrigger}}$\}$ is called with the
+ same inputs. This is by default done from \noprint{@link:OFTimeTriggerDefinition#compute(OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerDefinition.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{compute}}
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}}]
+~ sviluppated with safety pourposes it is called to check
+ if the type of parameter in inputs are correct. If this return
+ false the event result of \noprint{@link:#getTrigger(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{getTrigger}}
+ will be setted to null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[inputs]
+ordered in accord with the ontological definition of the events trhougth the
+ object property \verb!"hasTypeTimeTriggereDefinition!
+\end{description}
+\item[Rückgabewert] 
+true if the inputs are corrects. If return else, event computation dennied.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{getTrigger}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface.getTrigger(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ implements how to get the temporal trigger starting from the inputs retrieved in
+ \noprint{@link:OFEventParameterDefinition#getParameter()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getParameter()}{getParameter}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[inputs]
+parameter
+\item[invoker]
+access to a builded class duriing software initialization
+\end{description}
+\item[Rückgabewert] 
+true f the event occurs, false otherwise.
+\end{description}
+\end{description}

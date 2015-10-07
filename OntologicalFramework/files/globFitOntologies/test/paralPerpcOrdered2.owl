@@ -1,0 +1,1948 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:untitled-ontology-15="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Plane">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Primitive"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPlaneCoeff_d"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPlaneCoeff_nx"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPlaneCoeff_ny"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPlaneCoeff_nz"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Cone">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Primitive"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasConeApex_x"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasConeApex_y"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasConeApex_z"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasConeOpeningAngle"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveAxis_x"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveAxis_y"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveAxis_z"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveHeigth"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Sphere">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Primitive"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Restriction>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_y"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:complementOf>
+          </owl:Class>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveRadios"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Primitive">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveCentroid_x"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveCentroid_y"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPrimitiveCentroid_z"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Cylinder">
+    <rdfs:subClassOf rdf:resource="#Primitive"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasCylinderPointAxis_x"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasCylinderPointAxis_y"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasCylinderPointAxis_z"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_x"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_y"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_z"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#hasPrimitiveHeigth"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+            >1</owl:qualifiedCardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="#hasPrimitiveRadios"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="isCoaxialWith"/>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_x">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveAxis_x"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_y">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveAxis_y"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasConeApex_x">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasConeApex_x"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPlaneCoeff_d">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPlaneCoeff_d"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveRadios">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveRadios"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasConeApex_z">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasConeApex_z"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasConeApex_y">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasConeApex_y"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveAxis_z">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveAxis_z"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasTreshouldParameter">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:onProperty rdf:resource="#hasTreshouldParameter"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveHeigth">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveHeigth"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPlaneCoeff_ny">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPlaneCoeff_ny"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasCylinderPointAxis_y">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasCylinderPointAxis_y"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPlaneCoeff_nz">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPlaneCoeff_nz"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveCentroid_x">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveCentroid_x"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasCylinderPointAxis_z">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasCylinderPointAxis_z"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveCentroid_y">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveCentroid_y"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasConeOpeningAngle">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasConeOpeningAngle"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasCylinderPointAxis_x">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasCylinderPointAxis_x"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPrimitiveCentroid_z">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPrimitiveCentroid_z"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPlaneCoeff_nx">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="#hasPlaneCoeff_nx"/>
+      </owl:Restriction>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:SymmetricProperty rdf:ID="isParallelTo">
+    <rdfs:domain rdf:resource="#Primitive"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="isPerpendicularTo">
+    <rdfs:domain rdf:resource="#Primitive"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <untitled-ontology-15:Plane rdf:ID="PlaneTest2">
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">2.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <untitled-ontology-15:hasPlaneCoeff_nx rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasPlaneCoeff_nx>
+    <untitled-ontology-15:hasPlaneCoeff_d rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.03</untitled-ontology-15:hasPlaneCoeff_d>
+    <untitled-ontology-15:hasPlaneCoeff_nz rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.01</untitled-ontology-15:hasPlaneCoeff_nz>
+    <untitled-ontology-15:hasPlaneCoeff_ny rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.01</untitled-ontology-15:hasPlaneCoeff_ny>
+    <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">-1.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </untitled-ontology-15:Plane>
+  <owl:NamedIndividual rdf:ID="PlaneTest3">
+    <untitled-ontology-15:hasPlaneCoeff_nz rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.1</untitled-ontology-15:hasPlaneCoeff_nz>
+    <untitled-ontology-15:hasPlaneCoeff_ny rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.1</untitled-ontology-15:hasPlaneCoeff_ny>
+    <untitled-ontology-15:hasPlaneCoeff_d rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasPlaneCoeff_d>
+    <untitled-ontology-15:hasCylinderPointAxis_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasCylinderPointAxis_z>
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <untitled-ontology-15:hasPlaneCoeff_nx rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.001</untitled-ontology-15:hasPlaneCoeff_nx>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:ID="ParaPerpThreshould">
+    <untitled-ontology-15:hasTreshouldParameter rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">0.05</untitled-ontology-15:hasTreshouldParameter>
+  </owl:NamedIndividual>
+  <untitled-ontology-15:Cylinder rdf:ID="CylinderTest1">
+    <untitled-ontology-15:hasPrimitiveAxis_x rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.01</untitled-ontology-15:hasPrimitiveAxis_x>
+    <untitled-ontology-15:hasPrimitiveAxis_z rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.07</untitled-ontology-15:hasPrimitiveAxis_z>
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">2.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasPrimitiveHeigth rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.6</untitled-ontology-15:hasPrimitiveHeigth>
+    <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">-0.5</untitled-ontology-15:hasPrimitiveCentroid_z>
+    <untitled-ontology-15:hasCylinderPointAxis_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">0.9</untitled-ontology-15:hasCylinderPointAxis_x>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <untitled-ontology-15:hasCylinderPointAxis_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">0.2</untitled-ontology-15:hasCylinderPointAxis_y>
+    <untitled-ontology-15:hasCylinderPointAxis_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">2.0</untitled-ontology-15:hasCylinderPointAxis_z>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <untitled-ontology-15:hasPrimitiveAxis_y rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >5.0</untitled-ontology-15:hasPrimitiveAxis_y>
+    <untitled-ontology-15:hasPrimitiveRadios rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.03</untitled-ontology-15:hasPrimitiveRadios>
+  </untitled-ontology-15:Cylinder>
+  <rdf:Description>
+    <rdfs:comment>aaa</rdfs:comment>
+  </rdf:Description>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="#Cone"/>
+      <owl:Class rdf:about="#Cylinder"/>
+      <owl:Class rdf:about="#Plane"/>
+      <owl:Class rdf:about="#Sphere"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <untitled-ontology-15:Cone rdf:ID="ConeTest2">
+    <untitled-ontology-15:hasPrimitiveAxis_x rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.01</untitled-ontology-15:hasPrimitiveAxis_x>
+    <untitled-ontology-15:hasPrimitiveHeigth rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.2</untitled-ontology-15:hasPrimitiveHeigth>
+    <untitled-ontology-15:hasPrimitiveAxis_z rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.2</untitled-ontology-15:hasPrimitiveAxis_z>
+    <untitled-ontology-15:hasConeApex_x rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.3</untitled-ontology-15:hasConeApex_x>
+    <untitled-ontology-15:hasConeApex_z rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.3</untitled-ontology-15:hasConeApex_z>
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">0.3</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasPrimitiveAxis_y rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.1</untitled-ontology-15:hasPrimitiveAxis_y>
+    <untitled-ontology-15:hasConeOpeningAngle rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.2</untitled-ontology-15:hasConeOpeningAngle>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">0.2</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <untitled-ontology-15:hasConeApex_y rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.2</untitled-ontology-15:hasConeApex_y>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">0.4</untitled-ontology-15:hasPrimitiveCentroid_z>
+  </untitled-ontology-15:Cone>
+  <owl:NamedIndividual rdf:ID="ConeTest1">
+    <untitled-ontology-15:hasPrimitiveAxis_x rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasPrimitiveAxis_x>
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasConeOpeningAngle rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasConeOpeningAngle>
+    <untitled-ontology-15:hasPrimitiveAxis_y rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-0.01</untitled-ontology-15:hasPrimitiveAxis_y>
+    <untitled-ontology-15:hasPrimitiveHeigth rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.5</untitled-ontology-15:hasPrimitiveHeigth>
+    <untitled-ontology-15:hasConeApex_z rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.05</untitled-ontology-15:hasConeApex_z>
+    <untitled-ontology-15:hasPrimitiveAxis_z rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.001</untitled-ontology-15:hasPrimitiveAxis_z>
+    <untitled-ontology-15:hasConeApex_x rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasConeApex_x>
+    <untitled-ontology-15:hasConeApex_y rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >-1.0</untitled-ontology-15:hasConeApex_y>
+    <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">2.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <rdf:type rdf:resource="#Cone"/>
+  </owl:NamedIndividual>
+  <untitled-ontology-15:Plane rdf:ID="PlaneTest1">
+    <untitled-ontology-15:hasPlaneCoeff_ny rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasPlaneCoeff_ny>
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasPlaneCoeff_nz rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</untitled-ontology-15:hasPlaneCoeff_nz>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <untitled-ontology-15:hasPlaneCoeff_d rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.2</untitled-ontology-15:hasPlaneCoeff_d>
+    <untitled-ontology-15:hasPlaneCoeff_nx rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.01</untitled-ontology-15:hasPlaneCoeff_nx>
+    <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">-1.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </untitled-ontology-15:Plane>
+  <untitled-ontology-15:Sphere rdf:ID="SphereTest1">
+    <untitled-ontology-15:hasPrimitiveCentroid_y rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">2.0</untitled-ontology-15:hasPrimitiveCentroid_y>
+    <untitled-ontology-15:hasPrimitiveCentroid_x rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">1.0</untitled-ontology-15:hasPrimitiveCentroid_x>
+    <untitled-ontology-15:hasPrimitiveRadios rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.02</untitled-ontology-15:hasPrimitiveRadios>
+    <untitled-ontology-15:hasPrimitiveCentroid_z rdf:datatype=
+    "http://www.w3.org/2001/XMLSchema#float">-3.0</untitled-ontology-15:hasPrimitiveCentroid_z>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </untitled-ontology-15:Sphere>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#a"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#b"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#ax"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#ay"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#az"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#gax"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#gbx"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#gay"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#gby"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#gaz"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#gbz"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#e"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#bx"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#by"/>
+	<swrl:Variable rdf:about="http://www.w3.org/2003/11/swrl#bz"/>
+	<swrl:Imp rdf:ID="Coaxial">
+		<swrl:body>
+			<swrl:AtomList>
+				<rdf:first>
+					<swrl:ClassAtom>
+						<swrl:classPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Primitive"/>
+						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+					</swrl:ClassAtom>
+				</rdf:first>
+				<rdf:rest>
+					<swrl:AtomList>
+						<rdf:first>
+							<swrl:ClassAtom>
+								<swrl:classPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Primitive"/>
+								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+							</swrl:ClassAtom>
+						</rdf:first>
+						<rdf:rest>
+							<swrl:AtomList>
+								<rdf:first>
+									<swrl:IndividualPropertyAtom>
+										<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+										<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isParallelTo"/>
+										<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+									</swrl:IndividualPropertyAtom>
+								</rdf:first>
+								<rdf:rest>
+									<swrl:AtomList>
+										<rdf:first>
+											<swrl:DatavaluedPropertyAtom>
+												<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+												<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_x"/>
+												<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+											</swrl:DatavaluedPropertyAtom>
+										</rdf:first>
+										<rdf:rest>
+											<swrl:AtomList>
+												<rdf:first>
+													<swrl:DatavaluedPropertyAtom>
+														<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+														<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_y"/>
+														<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+													</swrl:DatavaluedPropertyAtom>
+												</rdf:first>
+												<rdf:rest>
+													<swrl:AtomList>
+														<rdf:first>
+															<swrl:DatavaluedPropertyAtom>
+																<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_z"/>
+																<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+															</swrl:DatavaluedPropertyAtom>
+														</rdf:first>
+														<rdf:rest>
+															<swrl:AtomList>
+																<rdf:first>
+																	<swrl:DatavaluedPropertyAtom>
+																		<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																		<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_x"/>
+																		<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#gax"/>
+																	</swrl:DatavaluedPropertyAtom>
+																</rdf:first>
+																<rdf:rest>
+																	<swrl:AtomList>
+																		<rdf:first>
+																			<swrl:DatavaluedPropertyAtom>
+																				<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																				<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_x"/>
+																				<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#gbx"/>
+																			</swrl:DatavaluedPropertyAtom>
+																		</rdf:first>
+																		<rdf:rest>
+																			<swrl:AtomList>
+																				<rdf:first>
+																					<swrl:DatavaluedPropertyAtom>
+																						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																						<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_y"/>
+																						<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#gay"/>
+																					</swrl:DatavaluedPropertyAtom>
+																				</rdf:first>
+																				<rdf:rest>
+																					<swrl:AtomList>
+																						<rdf:first>
+																							<swrl:DatavaluedPropertyAtom>
+																								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																								<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_y"/>
+																								<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#gby"/>
+																							</swrl:DatavaluedPropertyAtom>
+																						</rdf:first>
+																						<rdf:rest>
+																							<swrl:AtomList>
+																								<rdf:first>
+																									<swrl:DatavaluedPropertyAtom>
+																										<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																										<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_z"/>
+																										<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#gaz"/>
+																									</swrl:DatavaluedPropertyAtom>
+																								</rdf:first>
+																								<rdf:rest>
+																									<swrl:AtomList>
+																										<rdf:first>
+																											<swrl:DatavaluedPropertyAtom>
+																												<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																												<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveCentroid_z"/>
+																												<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#gbz"/>
+																											</swrl:DatavaluedPropertyAtom>
+																										</rdf:first>
+																										<rdf:rest>
+																											<swrl:AtomList>
+																												<rdf:first>
+																													<swrl:DatavaluedPropertyAtom>
+																														<swrl:argument1 rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#ParaPerpThreshould"/>
+																														<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasTreshouldParameter"/>
+																														<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#e"/>
+																													</swrl:DatavaluedPropertyAtom>
+																												</rdf:first>
+																												<rdf:rest>
+																													<swrl:AtomList>
+																														<rdf:first>
+																															<swrl:BuiltinAtom>
+ 																																<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																<swrl:arguments>
+																																	<rdf:List>
+																																			<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2"/>
+																																		<rdf:rest> 
+																																			<rdf:List>
+																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2yz"/>
+																																		<rdf:rest> 
+																																			<rdf:List>
+																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2x"/>
+																																				<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																			</rdf:List>
+																																		</rdf:rest> 
+																																	</rdf:List>
+																																		</rdf:rest> 
+																																	</rdf:List>
+																																</swrl:arguments>
+																															</swrl:BuiltinAtom>
+																														</rdf:first>
+																														<rdf:rest>
+																															<swrl:AtomList>
+																																<rdf:first>
+																																	<swrl:BuiltinAtom>
+ 																																		<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																		<swrl:arguments>
+																																			<rdf:List>
+																																					<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2yz"/>
+																																				<rdf:rest> 
+																																					<rdf:List>
+																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2y"/>
+																																				<rdf:rest> 
+																																					<rdf:List>
+																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2z"/>
+																																						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																					</rdf:List>
+																																				</rdf:rest> 
+																																			</rdf:List>
+																																				</rdf:rest> 
+																																			</rdf:List>
+																																		</swrl:arguments>
+																																	</swrl:BuiltinAtom>
+																																</rdf:first>
+																																<rdf:rest>
+																																	<swrl:AtomList>
+																																		<rdf:first>
+																																			<swrl:BuiltinAtom>
+ 																																				<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																				<swrl:arguments>
+																																					<rdf:List>
+																																							<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#d"/>
+																																						<rdf:rest> 
+																																							<rdf:List>
+																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taby2"/>
+																																						<rdf:rest> 
+																																							<rdf:List>
+																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabz2"/>
+																																								<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																							</rdf:List>
+																																						</rdf:rest> 
+																																					</rdf:List>
+																																						</rdf:rest> 
+																																					</rdf:List>
+																																				</swrl:arguments>
+																																			</swrl:BuiltinAtom>
+																																		</rdf:first>
+																																		<rdf:rest>
+																																			<swrl:AtomList>
+																																				<rdf:first>
+																																					<swrl:BuiltinAtom>
+ 																																						<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																						<swrl:arguments>
+																																							<rdf:List>
+																																									<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#d2"/>
+																																								<rdf:rest> 
+																																									<rdf:List>
+																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#d"/>
+																																								<rdf:rest> 
+																																									<rdf:List>
+																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabx2"/>
+																																										<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																									</rdf:List>
+																																								</rdf:rest> 
+																																							</rdf:List>
+																																								</rdf:rest> 
+																																							</rdf:List>
+																																						</swrl:arguments>
+																																					</swrl:BuiltinAtom>
+																																				</rdf:first>
+																																				<rdf:rest>
+																																					<swrl:AtomList>
+																																						<rdf:first>
+																																							<swrl:BuiltinAtom>
+ 																																								<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																								<swrl:arguments>
+																																									<rdf:List>
+																																											<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gg1"/>
+																																										<rdf:rest> 
+																																											<rdf:List>
+																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ggy"/>
+																																										<rdf:rest> 
+																																											<rdf:List>
+																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ggz"/>
+																																												<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																											</rdf:List>
+																																										</rdf:rest> 
+																																									</rdf:List>
+																																										</rdf:rest> 
+																																									</rdf:List>
+																																								</swrl:arguments>
+																																							</swrl:BuiltinAtom>
+																																						</rdf:first>
+																																						<rdf:rest>
+																																							<swrl:AtomList>
+																																								<rdf:first>
+																																									<swrl:BuiltinAtom>
+ 																																										<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																										<swrl:arguments>
+																																											<rdf:List>
+																																													<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gg2"/>
+																																												<rdf:rest> 
+																																													<rdf:List>
+																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gg1"/>
+																																												<rdf:rest> 
+																																													<rdf:List>
+																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ggx"/>
+																																														<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																													</rdf:List>
+																																												</rdf:rest> 
+																																											</rdf:List>
+																																												</rdf:rest> 
+																																											</rdf:List>
+																																										</swrl:arguments>
+																																									</swrl:BuiltinAtom>
+																																								</rdf:first>
+																																								<rdf:rest>
+																																									<swrl:AtomList>
+																																										<rdf:first>
+																																											<swrl:BuiltinAtom>
+ 																																												<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																												<swrl:arguments>
+																																													<rdf:List>
+																																															<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabx"/>
+																																														<rdf:rest> 
+																																															<rdf:List>
+																																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gax"/>
+																																														<rdf:rest> 
+																																															<rdf:List>
+																																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tgx"/>
+																																																<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																															</rdf:List>
+																																														</rdf:rest> 
+																																													</rdf:List>
+																																														</rdf:rest> 
+																																													</rdf:List>
+																																												</swrl:arguments>
+																																											</swrl:BuiltinAtom>
+																																										</rdf:first>
+																																										<rdf:rest>
+																																											<swrl:AtomList>
+																																												<rdf:first>
+																																													<swrl:BuiltinAtom>
+ 																																														<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																														<swrl:arguments>
+																																															<rdf:List>
+																																																	<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taby"/>
+																																																<rdf:rest> 
+																																																	<rdf:List>
+																																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gay"/>
+																																																<rdf:rest> 
+																																																	<rdf:List>
+																																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tgy"/>
+																																																		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																	</rdf:List>
+																																																</rdf:rest> 
+																																															</rdf:List>
+																																																</rdf:rest> 
+																																															</rdf:List>
+																																														</swrl:arguments>
+																																													</swrl:BuiltinAtom>
+																																												</rdf:first>
+																																												<rdf:rest>
+																																													<swrl:AtomList>
+																																														<rdf:first>
+																																															<swrl:BuiltinAtom>
+ 																																																<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																																																<swrl:arguments>
+																																																	<rdf:List>
+																																																			<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabz"/>
+																																																		<rdf:rest> 
+																																																			<rdf:List>
+																																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gaz"/>
+																																																		<rdf:rest> 
+																																																			<rdf:List>
+																																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tgz"/>
+																																																				<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																			</rdf:List>
+																																																		</rdf:rest> 
+																																																	</rdf:List>
+																																																		</rdf:rest> 
+																																																	</rdf:List>
+																																																</swrl:arguments>
+																																															</swrl:BuiltinAtom>
+																																														</rdf:first>
+																																														<rdf:rest>
+																																															<swrl:AtomList>
+																																																<rdf:first>
+																																																	<swrl:BuiltinAtom>
+ 																																																		<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#divide" />
+																																																		<swrl:arguments>
+																																																			<rdf:List>
+																																																					<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#t"/>
+																																																				<rdf:rest> 
+																																																					<rdf:List>
+																																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gg2"/>
+																																																				<rdf:rest> 
+																																																					<rdf:List>
+																																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2"/>
+																																																						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																					</rdf:List>
+																																																				</rdf:rest> 
+																																																			</rdf:List>
+																																																				</rdf:rest> 
+																																																			</rdf:List>
+																																																		</swrl:arguments>
+																																																	</swrl:BuiltinAtom>
+																																																</rdf:first>
+																																																<rdf:rest>
+																																																	<swrl:AtomList>
+																																																		<rdf:first>
+																																																			<swrl:BuiltinAtom>
+ 																																																				<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" />
+																																																				<swrl:arguments>
+																																																					<rdf:List>
+																																																							<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#d"/>
+																																																						<rdf:rest> 
+																																																							<rdf:List>
+																																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e2"/>
+																																																								<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																							</rdf:List>
+																																																						</rdf:rest> 
+																																																					</rdf:List>
+																																																				</swrl:arguments>
+																																																			</swrl:BuiltinAtom>
+																																																		</rdf:first>
+																																																		<rdf:rest>
+																																																			<swrl:AtomList>
+																																																				<rdf:first>
+																																																					<swrl:BuiltinAtom>
+ 																																																						<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																						<swrl:arguments>
+																																																							<rdf:List>
+																																																									<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2x"/>
+																																																								<rdf:rest> 
+																																																									<rdf:List>
+																																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+																																																								<rdf:rest> 
+																																																									<rdf:List>
+																																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+																																																										<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																									</rdf:List>
+																																																								</rdf:rest> 
+																																																							</rdf:List>
+																																																								</rdf:rest> 
+																																																							</rdf:List>
+																																																						</swrl:arguments>
+																																																					</swrl:BuiltinAtom>
+																																																				</rdf:first>
+																																																				<rdf:rest>
+																																																					<swrl:AtomList>
+																																																						<rdf:first>
+																																																							<swrl:BuiltinAtom>
+ 																																																								<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																								<swrl:arguments>
+																																																									<rdf:List>
+																																																											<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2y"/>
+																																																										<rdf:rest> 
+																																																											<rdf:List>
+																																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+																																																										<rdf:rest> 
+																																																											<rdf:List>
+																																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+																																																												<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																											</rdf:List>
+																																																										</rdf:rest> 
+																																																									</rdf:List>
+																																																										</rdf:rest> 
+																																																									</rdf:List>
+																																																								</swrl:arguments>
+																																																							</swrl:BuiltinAtom>
+																																																						</rdf:first>
+																																																						<rdf:rest>
+																																																							<swrl:AtomList>
+																																																								<rdf:first>
+																																																									<swrl:BuiltinAtom>
+ 																																																										<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																										<swrl:arguments>
+																																																											<rdf:List>
+																																																													<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#a2z"/>
+																																																												<rdf:rest> 
+																																																													<rdf:List>
+																																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+																																																												<rdf:rest> 
+																																																													<rdf:List>
+																																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+																																																														<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																													</rdf:List>
+																																																												</rdf:rest> 
+																																																											</rdf:List>
+																																																												</rdf:rest> 
+																																																											</rdf:List>
+																																																										</swrl:arguments>
+																																																									</swrl:BuiltinAtom>
+																																																								</rdf:first>
+																																																								<rdf:rest>
+																																																									<swrl:AtomList>
+																																																										<rdf:first>
+																																																											<swrl:BuiltinAtom>
+ 																																																												<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																												<swrl:arguments>
+																																																													<rdf:List>
+																																																															<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e2"/>
+																																																														<rdf:rest> 
+																																																															<rdf:List>
+																																																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e"/>
+																																																														<rdf:rest> 
+																																																															<rdf:List>
+																																																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e"/>
+																																																																<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																															</rdf:List>
+																																																														</rdf:rest> 
+																																																													</rdf:List>
+																																																														</rdf:rest> 
+																																																													</rdf:List>
+																																																												</swrl:arguments>
+																																																											</swrl:BuiltinAtom>
+																																																										</rdf:first>
+																																																										<rdf:rest>
+																																																											<swrl:AtomList>
+																																																												<rdf:first>
+																																																													<swrl:BuiltinAtom>
+ 																																																														<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																														<swrl:arguments>
+																																																															<rdf:List>
+																																																																	<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ggx"/>
+																																																																<rdf:rest> 
+																																																																	<rdf:List>
+																																																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+																																																																<rdf:rest> 
+																																																																	<rdf:List>
+																																																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gabx"/>
+																																																																		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																	</rdf:List>
+																																																																</rdf:rest> 
+																																																															</rdf:List>
+																																																																</rdf:rest> 
+																																																															</rdf:List>
+																																																														</swrl:arguments>
+																																																													</swrl:BuiltinAtom>
+																																																												</rdf:first>
+																																																												<rdf:rest>
+																																																													<swrl:AtomList>
+																																																														<rdf:first>
+																																																															<swrl:BuiltinAtom>
+ 																																																																<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																<swrl:arguments>
+																																																																	<rdf:List>
+																																																																			<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ggy"/>
+																																																																		<rdf:rest> 
+																																																																			<rdf:List>
+																																																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+																																																																		<rdf:rest> 
+																																																																			<rdf:List>
+																																																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gaby"/>
+																																																																				<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																			</rdf:List>
+																																																																		</rdf:rest> 
+																																																																	</rdf:List>
+																																																																		</rdf:rest> 
+																																																																	</rdf:List>
+																																																																</swrl:arguments>
+																																																															</swrl:BuiltinAtom>
+																																																														</rdf:first>
+																																																														<rdf:rest>
+																																																															<swrl:AtomList>
+																																																																<rdf:first>
+																																																																	<swrl:BuiltinAtom>
+ 																																																																		<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																		<swrl:arguments>
+																																																																			<rdf:List>
+																																																																					<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ggz"/>
+																																																																				<rdf:rest> 
+																																																																					<rdf:List>
+																																																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+																																																																				<rdf:rest> 
+																																																																					<rdf:List>
+																																																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gabz"/>
+																																																																						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																					</rdf:List>
+																																																																				</rdf:rest> 
+																																																																			</rdf:List>
+																																																																				</rdf:rest> 
+																																																																			</rdf:List>
+																																																																		</swrl:arguments>
+																																																																	</swrl:BuiltinAtom>
+																																																																</rdf:first>
+																																																																<rdf:rest>
+																																																																	<swrl:AtomList>
+																																																																		<rdf:first>
+																																																																			<swrl:BuiltinAtom>
+ 																																																																				<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																				<swrl:arguments>
+																																																																					<rdf:List>
+																																																																							<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabx2"/>
+																																																																						<rdf:rest> 
+																																																																							<rdf:List>
+																																																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabx"/>
+																																																																						<rdf:rest> 
+																																																																							<rdf:List>
+																																																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabx"/>
+																																																																								<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																							</rdf:List>
+																																																																						</rdf:rest> 
+																																																																					</rdf:List>
+																																																																						</rdf:rest> 
+																																																																					</rdf:List>
+																																																																				</swrl:arguments>
+																																																																			</swrl:BuiltinAtom>
+																																																																		</rdf:first>
+																																																																		<rdf:rest>
+																																																																			<swrl:AtomList>
+																																																																				<rdf:first>
+																																																																					<swrl:BuiltinAtom>
+ 																																																																						<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																						<swrl:arguments>
+																																																																							<rdf:List>
+																																																																									<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taby2"/>
+																																																																								<rdf:rest> 
+																																																																									<rdf:List>
+																																																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taby"/>
+																																																																								<rdf:rest> 
+																																																																									<rdf:List>
+																																																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taby"/>
+																																																																										<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																									</rdf:List>
+																																																																								</rdf:rest> 
+																																																																							</rdf:List>
+																																																																								</rdf:rest> 
+																																																																							</rdf:List>
+																																																																						</swrl:arguments>
+																																																																					</swrl:BuiltinAtom>
+																																																																				</rdf:first>
+																																																																				<rdf:rest>
+																																																																					<swrl:AtomList>
+																																																																						<rdf:first>
+																																																																							<swrl:BuiltinAtom>
+ 																																																																								<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																								<swrl:arguments>
+																																																																									<rdf:List>
+																																																																											<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabz2"/>
+																																																																										<rdf:rest> 
+																																																																											<rdf:List>
+																																																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabz"/>
+																																																																										<rdf:rest> 
+																																																																											<rdf:List>
+																																																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tabz"/>
+																																																																												<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																											</rdf:List>
+																																																																										</rdf:rest> 
+																																																																									</rdf:List>
+																																																																										</rdf:rest> 
+																																																																									</rdf:List>
+																																																																								</swrl:arguments>
+																																																																							</swrl:BuiltinAtom>
+																																																																						</rdf:first>
+																																																																						<rdf:rest>
+																																																																							<swrl:AtomList>
+																																																																								<rdf:first>
+																																																																									<swrl:BuiltinAtom>
+ 																																																																										<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																										<swrl:arguments>
+																																																																											<rdf:List>
+																																																																													<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tax"/>
+																																																																												<rdf:rest> 
+																																																																													<rdf:List>
+																																																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#t"/>
+																																																																												<rdf:rest> 
+																																																																													<rdf:List>
+																																																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+																																																																														<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																													</rdf:List>
+																																																																												</rdf:rest> 
+																																																																											</rdf:List>
+																																																																												</rdf:rest> 
+																																																																											</rdf:List>
+																																																																										</swrl:arguments>
+																																																																									</swrl:BuiltinAtom>
+																																																																								</rdf:first>
+																																																																								<rdf:rest>
+																																																																									<swrl:AtomList>
+																																																																										<rdf:first>
+																																																																											<swrl:BuiltinAtom>
+ 																																																																												<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																												<swrl:arguments>
+																																																																													<rdf:List>
+																																																																															<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tay"/>
+																																																																														<rdf:rest> 
+																																																																															<rdf:List>
+																																																																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#t"/>
+																																																																														<rdf:rest> 
+																																																																															<rdf:List>
+																																																																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+																																																																																<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																															</rdf:List>
+																																																																														</rdf:rest> 
+																																																																													</rdf:List>
+																																																																														</rdf:rest> 
+																																																																													</rdf:List>
+																																																																												</swrl:arguments>
+																																																																											</swrl:BuiltinAtom>
+																																																																										</rdf:first>
+																																																																										<rdf:rest>
+																																																																											<swrl:AtomList>
+																																																																												<rdf:first>
+																																																																													<swrl:BuiltinAtom>
+ 																																																																														<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																																																														<swrl:arguments>
+																																																																															<rdf:List>
+																																																																																	<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taz"/>
+																																																																																<rdf:rest> 
+																																																																																	<rdf:List>
+																																																																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#t"/>
+																																																																																<rdf:rest> 
+																																																																																	<rdf:List>
+																																																																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+																																																																																		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																	</rdf:List>
+																																																																																</rdf:rest> 
+																																																																															</rdf:List>
+																																																																																</rdf:rest> 
+																																																																															</rdf:List>
+																																																																														</swrl:arguments>
+																																																																													</swrl:BuiltinAtom>
+																																																																												</rdf:first>
+																																																																												<rdf:rest>
+																																																																													<swrl:AtomList>
+																																																																														<rdf:first>
+																																																																															<swrl:BuiltinAtom>
+ 																																																																																<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract" />
+																																																																																<swrl:arguments>
+																																																																																	<rdf:List>
+																																																																																			<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gabx"/>
+																																																																																		<rdf:rest> 
+																																																																																			<rdf:List>
+																																																																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gax"/>
+																																																																																		<rdf:rest> 
+																																																																																			<rdf:List>
+																																																																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gbx"/>
+																																																																																				<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																			</rdf:List>
+																																																																																		</rdf:rest> 
+																																																																																	</rdf:List>
+																																																																																		</rdf:rest> 
+																																																																																	</rdf:List>
+																																																																																</swrl:arguments>
+																																																																															</swrl:BuiltinAtom>
+																																																																														</rdf:first>
+																																																																														<rdf:rest>
+																																																																															<swrl:AtomList>
+																																																																																<rdf:first>
+																																																																																	<swrl:BuiltinAtom>
+ 																																																																																		<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract" />
+																																																																																		<swrl:arguments>
+																																																																																			<rdf:List>
+																																																																																					<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gaby"/>
+																																																																																				<rdf:rest> 
+																																																																																					<rdf:List>
+																																																																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gay"/>
+																																																																																				<rdf:rest> 
+																																																																																					<rdf:List>
+																																																																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gby"/>
+																																																																																						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																					</rdf:List>
+																																																																																				</rdf:rest> 
+																																																																																			</rdf:List>
+																																																																																				</rdf:rest> 
+																																																																																			</rdf:List>
+																																																																																		</swrl:arguments>
+																																																																																	</swrl:BuiltinAtom>
+																																																																																</rdf:first>
+																																																																																<rdf:rest>
+																																																																																	<swrl:AtomList>
+																																																																																		<rdf:first>
+																																																																																			<swrl:BuiltinAtom>
+ 																																																																																				<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract" />
+																																																																																				<swrl:arguments>
+																																																																																					<rdf:List>
+																																																																																							<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gabz"/>
+																																																																																						<rdf:rest> 
+																																																																																							<rdf:List>
+																																																																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gaz"/>
+																																																																																						<rdf:rest> 
+																																																																																							<rdf:List>
+																																																																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gbz"/>
+																																																																																								<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																							</rdf:List>
+																																																																																						</rdf:rest> 
+																																																																																					</rdf:List>
+																																																																																						</rdf:rest> 
+																																																																																					</rdf:List>
+																																																																																				</swrl:arguments>
+																																																																																			</swrl:BuiltinAtom>
+																																																																																		</rdf:first>
+																																																																																		<rdf:rest>
+																																																																																			<swrl:AtomList>
+																																																																																				<rdf:first>
+																																																																																					<swrl:BuiltinAtom>
+ 																																																																																						<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract" />
+																																																																																						<swrl:arguments>
+																																																																																							<rdf:List>
+																																																																																									<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tgx"/>
+																																																																																								<rdf:rest> 
+																																																																																									<rdf:List>
+																																																																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tax"/>
+																																																																																								<rdf:rest> 
+																																																																																									<rdf:List>
+																																																																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gbx"/>
+																																																																																										<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																									</rdf:List>
+																																																																																								</rdf:rest> 
+																																																																																							</rdf:List>
+																																																																																								</rdf:rest> 
+																																																																																							</rdf:List>
+																																																																																						</swrl:arguments>
+																																																																																					</swrl:BuiltinAtom>
+																																																																																				</rdf:first>
+																																																																																				<rdf:rest>
+																																																																																					<swrl:AtomList>
+																																																																																						<rdf:first>
+																																																																																							<swrl:BuiltinAtom>
+ 																																																																																								<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract" />
+																																																																																								<swrl:arguments>
+																																																																																									<rdf:List>
+																																																																																											<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tgy"/>
+																																																																																										<rdf:rest> 
+																																																																																											<rdf:List>
+																																																																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tay"/>
+																																																																																										<rdf:rest> 
+																																																																																											<rdf:List>
+																																																																																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gby"/>
+																																																																																												<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																											</rdf:List>
+																																																																																										</rdf:rest> 
+																																																																																									</rdf:List>
+																																																																																										</rdf:rest> 
+																																																																																									</rdf:List>
+																																																																																								</swrl:arguments>
+																																																																																							</swrl:BuiltinAtom>
+																																																																																						</rdf:first>
+																																																																																						<rdf:rest>
+																																																																																							<swrl:AtomList>
+																																																																																								<rdf:first>
+																																																																																									<swrl:BuiltinAtom>
+ 																																																																																										<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract" />
+																																																																																										<swrl:arguments>
+																																																																																											<rdf:List>
+																																																																																													<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#tgz"/>
+																																																																																												<rdf:rest> 
+																																																																																													<rdf:List>
+																																																																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#taz"/>
+																																																																																												<rdf:rest> 
+																																																																																													<rdf:List>
+																																																																																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#gbz"/>
+																																																																																														<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																													</rdf:List>
+																																																																																												</rdf:rest> 
+																																																																																											</rdf:List>
+																																																																																												</rdf:rest> 
+																																																																																											</rdf:List>
+																																																																																										</swrl:arguments>
+																																																																																									</swrl:BuiltinAtom>
+																																																																																								</rdf:first>
+																																																																																								<rdf:rest>
+																																																																																									<swrl:AtomList>
+																																																																																										<rdf:first>
+																																																																																											<swrl:DifferentIndividualsAtom>
+																																																																																												<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																																																																																												<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																																																																																											</swrl:DifferentIndividualsAtom>
+																																																																																										</rdf:first>
+																																																																																										<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																																																																									</swrl:AtomList>
+																																																																																								</rdf:rest>
+																																																																																							</swrl:AtomList>
+																																																																																						</rdf:rest>
+																																																																																					</swrl:AtomList>
+																																																																																				</rdf:rest>
+																																																																																			</swrl:AtomList>
+																																																																																		</rdf:rest>
+																																																																																	</swrl:AtomList>
+																																																																																</rdf:rest>
+																																																																															</swrl:AtomList>
+																																																																														</rdf:rest>
+																																																																													</swrl:AtomList>
+																																																																												</rdf:rest>
+																																																																											</swrl:AtomList>
+																																																																										</rdf:rest>
+																																																																									</swrl:AtomList>
+																																																																								</rdf:rest>
+																																																																							</swrl:AtomList>
+																																																																						</rdf:rest>
+																																																																					</swrl:AtomList>
+																																																																				</rdf:rest>
+																																																																			</swrl:AtomList>
+																																																																		</rdf:rest>
+																																																																	</swrl:AtomList>
+																																																																</rdf:rest>
+																																																															</swrl:AtomList>
+																																																														</rdf:rest>
+																																																													</swrl:AtomList>
+																																																												</rdf:rest>
+																																																											</swrl:AtomList>
+																																																										</rdf:rest>
+																																																									</swrl:AtomList>
+																																																								</rdf:rest>
+																																																							</swrl:AtomList>
+																																																						</rdf:rest>
+																																																					</swrl:AtomList>
+																																																				</rdf:rest>
+																																																			</swrl:AtomList>
+																																																		</rdf:rest>
+																																																	</swrl:AtomList>
+																																																</rdf:rest>
+																																															</swrl:AtomList>
+																																														</rdf:rest>
+																																													</swrl:AtomList>
+																																												</rdf:rest>
+																																											</swrl:AtomList>
+																																										</rdf:rest>
+																																									</swrl:AtomList>
+																																								</rdf:rest>
+																																							</swrl:AtomList>
+																																						</rdf:rest>
+																																					</swrl:AtomList>
+																																				</rdf:rest>
+																																			</swrl:AtomList>
+																																		</rdf:rest>
+																																	</swrl:AtomList>
+																																</rdf:rest>
+																															</swrl:AtomList>
+																														</rdf:rest>
+																													</swrl:AtomList>
+																												</rdf:rest>
+																											</swrl:AtomList>
+																										</rdf:rest>
+																									</swrl:AtomList>
+																								</rdf:rest>
+																							</swrl:AtomList>
+																						</rdf:rest>
+																					</swrl:AtomList>
+																				</rdf:rest>
+																			</swrl:AtomList>
+																		</rdf:rest>
+																	</swrl:AtomList>
+																</rdf:rest>
+															</swrl:AtomList>
+														</rdf:rest>
+													</swrl:AtomList>
+												</rdf:rest>
+											</swrl:AtomList>
+										</rdf:rest>
+									</swrl:AtomList>
+								</rdf:rest>
+							</swrl:AtomList>
+						</rdf:rest>
+					</swrl:AtomList>
+				</rdf:rest>
+			</swrl:AtomList>
+		</swrl:body>
+		<swrl:head>
+			<swrl:AtomList>
+				<rdf:first>
+					<swrl:IndividualPropertyAtom>
+						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+						<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isCoaxialWith"/>
+						<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+					</swrl:IndividualPropertyAtom>
+				</rdf:first>
+				<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+			</swrl:AtomList>
+		</swrl:head>
+	</swrl:Imp>
+	<swrl:Imp rdf:ID="perpendicolar">
+		<swrl:body>
+			<swrl:AtomList>
+				<rdf:first>
+					<swrl:ClassAtom>
+						<swrl:classPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Primitive"/>
+						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+					</swrl:ClassAtom>
+				</rdf:first>
+				<rdf:rest>
+					<swrl:AtomList>
+						<rdf:first>
+							<swrl:ClassAtom>
+								<swrl:classPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Primitive"/>
+								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+							</swrl:ClassAtom>
+						</rdf:first>
+						<rdf:rest>
+							<swrl:AtomList>
+								<rdf:first>
+									<swrl:DatavaluedPropertyAtom>
+										<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+										<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_x"/>
+										<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+									</swrl:DatavaluedPropertyAtom>
+								</rdf:first>
+								<rdf:rest>
+									<swrl:AtomList>
+										<rdf:first>
+											<swrl:DatavaluedPropertyAtom>
+												<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+												<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_x"/>
+												<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#bx"/>
+											</swrl:DatavaluedPropertyAtom>
+										</rdf:first>
+										<rdf:rest>
+											<swrl:AtomList>
+												<rdf:first>
+													<swrl:DatavaluedPropertyAtom>
+														<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+														<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_y"/>
+														<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+													</swrl:DatavaluedPropertyAtom>
+												</rdf:first>
+												<rdf:rest>
+													<swrl:AtomList>
+														<rdf:first>
+															<swrl:DatavaluedPropertyAtom>
+																<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_y"/>
+																<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#by"/>
+															</swrl:DatavaluedPropertyAtom>
+														</rdf:first>
+														<rdf:rest>
+															<swrl:AtomList>
+																<rdf:first>
+																	<swrl:DatavaluedPropertyAtom>
+																		<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																		<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_z"/>
+																		<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+																	</swrl:DatavaluedPropertyAtom>
+																</rdf:first>
+																<rdf:rest>
+																	<swrl:AtomList>
+																		<rdf:first>
+																			<swrl:DatavaluedPropertyAtom>
+																				<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																				<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasPrimitiveAxis_z"/>
+																				<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#bz"/>
+																			</swrl:DatavaluedPropertyAtom>
+																		</rdf:first>
+																		<rdf:rest>
+																			<swrl:AtomList>
+																				<rdf:first>
+																					<swrl:DatavaluedPropertyAtom>
+																						<swrl:argument1 rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#ParaPerpThreshould"/>
+																						<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#hasTreshouldParameter"/>
+																						<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#e"/>
+																					</swrl:DatavaluedPropertyAtom>
+																				</rdf:first>
+																				<rdf:rest>
+																					<swrl:AtomList>
+																						<rdf:first>
+																							<swrl:BuiltinAtom>
+ 																								<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																								<swrl:arguments>
+																									<rdf:List>
+																											<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#q1"/>
+																										<rdf:rest> 
+																											<rdf:List>
+																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#p1"/>
+																										<rdf:rest> 
+																											<rdf:List>
+																												<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#p2"/>
+																												<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																											</rdf:List>
+																										</rdf:rest> 
+																									</rdf:List>
+																										</rdf:rest> 
+																									</rdf:List>
+																								</swrl:arguments>
+																							</swrl:BuiltinAtom>
+																						</rdf:first>
+																						<rdf:rest>
+																							<swrl:AtomList>
+																								<rdf:first>
+																									<swrl:BuiltinAtom>
+ 																										<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add" />
+																										<swrl:arguments>
+																											<rdf:List>
+																													<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#q2"/>
+																												<rdf:rest> 
+																													<rdf:List>
+																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#q1"/>
+																												<rdf:rest> 
+																													<rdf:List>
+																														<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#p3"/>
+																														<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																													</rdf:List>
+																												</rdf:rest> 
+																											</rdf:List>
+																												</rdf:rest> 
+																											</rdf:List>
+																										</swrl:arguments>
+																									</swrl:BuiltinAtom>
+																								</rdf:first>
+																								<rdf:rest>
+																									<swrl:AtomList>
+																										<rdf:first>
+																											<swrl:BuiltinAtom>
+ 																												<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" />
+																												<swrl:arguments>
+																													<rdf:List>
+																															<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#q2"/>
+																														<rdf:rest> 
+																															<rdf:List>
+																																<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e1"/>
+																																<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																															</rdf:List>
+																														</rdf:rest> 
+																													</rdf:List>
+																												</swrl:arguments>
+																											</swrl:BuiltinAtom>
+																										</rdf:first>
+																										<rdf:rest>
+																											<swrl:AtomList>
+																												<rdf:first>
+																													<swrl:BuiltinAtom>
+ 																														<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" />
+																														<swrl:arguments>
+																															<rdf:List>
+																																	<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#q2"/>
+																																<rdf:rest> 
+																																	<rdf:List>
+																																		<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e"/>
+																																		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																	</rdf:List>
+																																</rdf:rest> 
+																															</rdf:List>
+																														</swrl:arguments>
+																													</swrl:BuiltinAtom>
+																												</rdf:first>
+																												<rdf:rest>
+																													<swrl:AtomList>
+																														<rdf:first>
+																															<swrl:BuiltinAtom>
+ 																																<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																<swrl:arguments>
+																																	<rdf:List>
+																																			<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e1"/>
+																																		<rdf:rest> 
+																																			<rdf:List>
+																																				<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#e"/>
+																																		<rdf:rest> 
+																																			<rdf:List>
+																																				<rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer" >-1</rdf:first>
+																																				<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																			</rdf:List>
+																																		</rdf:rest> 
+																																	</rdf:List>
+																																		</rdf:rest> 
+																																	</rdf:List>
+																																</swrl:arguments>
+																															</swrl:BuiltinAtom>
+																														</rdf:first>
+																														<rdf:rest>
+																															<swrl:AtomList>
+																																<rdf:first>
+																																	<swrl:BuiltinAtom>
+ 																																		<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																		<swrl:arguments>
+																																			<rdf:List>
+																																					<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#p1"/>
+																																				<rdf:rest> 
+																																					<rdf:List>
+																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ax"/>
+																																				<rdf:rest> 
+																																					<rdf:List>
+																																						<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#bx"/>
+																																						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																					</rdf:List>
+																																				</rdf:rest> 
+																																			</rdf:List>
+																																				</rdf:rest> 
+																																			</rdf:List>
+																																		</swrl:arguments>
+																																	</swrl:BuiltinAtom>
+																																</rdf:first>
+																																<rdf:rest>
+																																	<swrl:AtomList>
+																																		<rdf:first>
+																																			<swrl:BuiltinAtom>
+ 																																				<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																				<swrl:arguments>
+																																					<rdf:List>
+																																							<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#p2"/>
+																																						<rdf:rest> 
+																																							<rdf:List>
+																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#ay"/>
+																																						<rdf:rest> 
+																																							<rdf:List>
+																																								<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#by"/>
+																																								<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																							</rdf:List>
+																																						</rdf:rest> 
+																																					</rdf:List>
+																																						</rdf:rest> 
+																																					</rdf:List>
+																																				</swrl:arguments>
+																																			</swrl:BuiltinAtom>
+																																		</rdf:first>
+																																		<rdf:rest>
+																																			<swrl:AtomList>
+																																				<rdf:first>
+																																					<swrl:BuiltinAtom>
+ 																																						<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply" />
+																																						<swrl:arguments>
+																																							<rdf:List>
+																																									<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#p3"/>
+																																								<rdf:rest> 
+																																									<rdf:List>
+																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#az"/>
+																																								<rdf:rest> 
+																																									<rdf:List>
+																																										<rdf:first rdf:resource="http://www.w3.org/2003/11/swrl#bz"/>
+																																										<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																									</rdf:List>
+																																								</rdf:rest> 
+																																							</rdf:List>
+																																								</rdf:rest> 
+																																							</rdf:List>
+																																						</swrl:arguments>
+																																					</swrl:BuiltinAtom>
+																																				</rdf:first>
+																																				<rdf:rest>
+																																					<swrl:AtomList>
+																																						<rdf:first>
+																																							<swrl:DifferentIndividualsAtom>
+																																								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+																																								<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+																																							</swrl:DifferentIndividualsAtom>
+																																						</rdf:first>
+																																						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+																																					</swrl:AtomList>
+																																				</rdf:rest>
+																																			</swrl:AtomList>
+																																		</rdf:rest>
+																																	</swrl:AtomList>
+																																</rdf:rest>
+																															</swrl:AtomList>
+																														</rdf:rest>
+																													</swrl:AtomList>
+																												</rdf:rest>
+																											</swrl:AtomList>
+																										</rdf:rest>
+																									</swrl:AtomList>
+																								</rdf:rest>
+																							</swrl:AtomList>
+																						</rdf:rest>
+																					</swrl:AtomList>
+																				</rdf:rest>
+																			</swrl:AtomList>
+																		</rdf:rest>
+																	</swrl:AtomList>
+																</rdf:rest>
+															</swrl:AtomList>
+														</rdf:rest>
+													</swrl:AtomList>
+												</rdf:rest>
+											</swrl:AtomList>
+										</rdf:rest>
+									</swrl:AtomList>
+								</rdf:rest>
+							</swrl:AtomList>
+						</rdf:rest>
+					</swrl:AtomList>
+				</rdf:rest>
+			</swrl:AtomList>
+		</swrl:body>
+		<swrl:head>
+			<swrl:AtomList>
+				<rdf:first>
+					<swrl:IndividualPropertyAtom>
+						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+						<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isPerpendicularTo"/>
+						<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+					</swrl:IndividualPropertyAtom>
+				</rdf:first>
+				<rdf:rest>
+					<swrl:AtomList>
+						<rdf:first>
+							<swrl:IndividualPropertyAtom>
+								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+								<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isPerpendicularTo"/>
+								<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+							</swrl:IndividualPropertyAtom>
+						</rdf:first>
+						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+					</swrl:AtomList>
+				</rdf:rest>
+			</swrl:AtomList>
+		</swrl:head>
+	</swrl:Imp>
+	<swrl:Imp rdf:ID="SphereParralel">
+		<swrl:body>
+			<swrl:AtomList>
+				<rdf:first>
+					<swrl:ClassAtom>
+						<swrl:classPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Primitive"/>
+						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+					</swrl:ClassAtom>
+				</rdf:first>
+				<rdf:rest>
+					<swrl:AtomList>
+						<rdf:first>
+							<swrl:ClassAtom>
+								<swrl:classPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#Sphere"/>
+								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+							</swrl:ClassAtom>
+						</rdf:first>
+						<rdf:rest>
+							<swrl:AtomList>
+								<rdf:first>
+									<swrl:DifferentIndividualsAtom>
+										<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+										<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+									</swrl:DifferentIndividualsAtom>
+								</rdf:first>
+								<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+							</swrl:AtomList>
+						</rdf:rest>
+					</swrl:AtomList>
+				</rdf:rest>
+			</swrl:AtomList>
+		</swrl:body>
+		<swrl:head>
+			<swrl:AtomList>
+				<rdf:first>
+					<swrl:IndividualPropertyAtom>
+						<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+						<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isParallelTo"/>
+						<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+					</swrl:IndividualPropertyAtom>
+				</rdf:first>
+				<rdf:rest>
+					<swrl:AtomList>
+						<rdf:first>
+							<swrl:IndividualPropertyAtom>
+								<swrl:argument1 rdf:resource="http://www.w3.org/2003/11/swrl#b"/>
+								<swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#isParallelTo"/>
+								<swrl:argument2 rdf:resource="http://www.w3.org/2003/11/swrl#a"/>
+							</swrl:IndividualPropertyAtom>
+						</rdf:first>
+						<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+					</swrl:AtomList>
+				</rdf:rest>
+			</swrl:AtomList>
+		</swrl:head>
+	</swrl:Imp>
+</rdf:RDF>

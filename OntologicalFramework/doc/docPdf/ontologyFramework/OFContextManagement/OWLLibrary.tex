@@ -1,0 +1,1490 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFContextManagement.OWLLibrary (noch nicht fertig). 
+\section[OWLLibrary]{Klasse \ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary-class}{ontologyFramework.OFContextManagement.OWLLibrary}}\label{ontologyFramework.OFContextManagement.OWLLibrary-class}
+\subsection{Übersicht}
+This static class implement several common procedure
+ for manipulating entity inside an ontology, using
+ OWL api 3.0
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.PELLET_reasonerFactoryQualifier}{PELLET\_reasonerFactoryQualifier}\label{ontologyFramework.OFContextManagement.OWLLibrary.PELLET_reasonerFactoryQualifier}}]
+~ Full qualifier of the Pellet reasoner Factory. String to be called by
+ Java reflection to instantiate a Reasoner.
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.SNOROCKET_reasonerFactoryQualifier}{SNOROCKET\_reasonerFactoryQualifier}\label{ontologyFramework.OFContextManagement.OWLLibrary.SNOROCKET_reasonerFactoryQualifier}}]
+~ Full qualifier of the Snorocket reasoner Factory. String to be called by
+ Java reflection to instantiate a Reasoner.
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.HERMIT_reasonerFactoryQualifier}{HERMIT\_reasonerFactoryQualifier}\label{ontologyFramework.OFContextManagement.OWLLibrary.HERMIT_reasonerFactoryQualifier}}]
+~ Full qualifier of the Hermit reasoner Factory. String to be called by
+ Java reflection to instantiate a Reasoner.
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.FACTPLUSPLUS_reasonerFactoryQualifier}{FACTPLUSPLUS\_reasonerFactoryQualifier}\label{ontologyFramework.OFContextManagement.OWLLibrary.FACTPLUSPLUS_reasonerFactoryQualifier}}]
+~ Full qualifier of the Fact++ reasoner Factory. String to be called by
+ Java reflection to instantiate a Reasoner.
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.createOntologyManager(ontologyFramework.OFContextManagement.OWLReferences)}{createOntologyManager}\label{ontologyFramework.OFContextManagement.OWLLibrary.createOntologyManager(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ creates and returns a new OWLOntologyManager. 
+ If the parameter has a not null \noprint{@link:OWLReferences#getIriFilePath()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getIriFilePath()}{getIriFilePath}} and
+ \noprint{@link:OWLReferences#getOntologyPath()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getOntologyPath()}{getOntologyPath}} that this method set this Iri mapper
+ to the manager using: \verb!manager.addIRIMapper( new SimpleIRIMapper( ontoPath, filePath))!
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[OWLReferences]
+reference to the ontology.
+\end{description}
+\item[Rückgabewert] 
+the manager of the ontology refereed by the parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.createOntology(ontologyFramework.OFContextManagement.OWLReferences)}{createOntology}\label{ontologyFramework.OFContextManagement.OWLLibrary.createOntology(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Creates an new empty ontology in accord to the 
+ \noprint{@link:OWLReferences#getIriOntologyPath()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getIriOntologyPath()}{getIriOntologyPath}}. It will return null 
+ if the ontology path associate to the parameter is null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[OWLReferences]
+reference to the ontology.
+\end{description}
+\item[Exceptions] ~
+\begin{description}
+\item[OWLOntologyCreationException]
+
+\end{description}
+\item[Rückgabewert] 
+a new empty ontology in accord with the parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.loadOntologyFromFile(ontologyFramework.OFContextManagement.OWLReferences)}{loadOntologyFromFile}\label{ontologyFramework.OFContextManagement.OWLLibrary.loadOntologyFromFile(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It loads an ontology from file in accord with the function parameter; 
+ to do so the method uses the ontology manager from: \noprint{@link:OWLReferences#getManager()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getManager()}{getManager}}.
+ It will return null if \noprint{@link:OWLReferences#getIriOntologyPath()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getIriOntologyPath()}{getIriOntologyPath}} is null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[OWLReferences]
+reference to the ontology.
+\end{description}
+\item[Exceptions] ~
+\begin{description}
+\item[OWLOntologyCreationException]
+
+\end{description}
+\item[Rückgabewert] 
+a pointer to the ontology refered by the parameter,
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.loadOntologyFromWeb(ontologyFramework.OFContextManagement.OWLReferences)}{loadOntologyFromWeb}\label{ontologyFramework.OFContextManagement.OWLLibrary.loadOntologyFromWeb(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It loads an ontology where its \noprint{@link:OWLReferences#getIriOntologyPath()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getIriOntologyPath()}{getIriOntologyPath}} 
+ defines an path to be browsed into the web. It returns null if the IRI
+ ontology Path is null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+reference to the ontology.
+\end{description}
+\item[Exceptions] ~
+\begin{description}
+\item[OWLOntologyCreationException]
+
+\end{description}
+\item[Rückgabewert] 
+a pointer to the ontology refered by the parameter,
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getPrefixFormat(ontologyFramework.OFContextManagement.OWLReferences)}{getPrefixFormat}\label{ontologyFramework.OFContextManagement.OWLLibrary.getPrefixFormat(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a prefix manager to be attached into an ontolofy manager
+ to simplify IRI definition and usage
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[OWLReferences]
+a reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a prefix manager format.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLDataFactory(ontologyFramework.OFContextManagement.OWLReferences)}{getOWLDataFactory}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLDataFactory(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the OWLDataFactory associate to the OWLManager 
+ associate to the parameter.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[OWLReferences]
+
+\end{description}
+\item[Rückgabewert] 
+an OWL data factory
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getReasoner(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences,boolean)}{getReasoner}\label{ontologyFramework.OFContextManagement.OWLLibrary.getReasoner(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences,boolean)}}]
+~ It creates and returns a Reasoner instance. The type of 
+ reasoner is defined by the reasoner name factory, which could be:
+ \noprint{@link:#PELLET_reasonerFactoryQualifier}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.PELLET_reasonerFactoryQualifier}{PELLET_reasonerFactoryQualifier}}, \noprint{@link:#SNOROCKET_reasonerFactoryQualifier}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.SNOROCKET_reasonerFactoryQualifier}{SNOROCKET_reasonerFactoryQualifier}},
+ \noprint{@link:#HERMIT_reasonerFactoryQualifier}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.HERMIT_reasonerFactoryQualifier}{HERMIT_reasonerFactoryQualifier}} or \noprint{@link:#FACTPLUSPLUS_reasonerFactoryQualifier}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.FACTPLUSPLUS_reasonerFactoryQualifier}{FACTPLUSPLUS_reasonerFactoryQualifier}}.
+ The created reasoner, will be attached to the ontology references given
+ as parameter. If buffering flag is true than the reasoner will update its 
+ state only if \verb!reasoner.flush()! is called. Otherwise this reasoner
+ will synchronizes itself at any ontological changes. The system 
+ will return null if a Reflaction error occurs in instancing the
+ class defined by the parameter reasonerFactoryName.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[reasonerFactoryName]
+full qualifier to the reasoner factory.
+\item[ontoRef]
+references to the OWL ontology.
+\item[buffering]
+flag.
+\end{description}
+\item[Rückgabewert] 
+a new instance to the specified reasoner.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getPelletReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}{getPelletReasoner}\label{ontologyFramework.OFContextManagement.OWLLibrary.getPelletReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}}]
+~ Returns an instance of the Pellet reasoner. If buffering is true
+ than the reasoner is update only when \verb!reasoner.flush()! is called.
+ Otherwise returns a reasoner which synchronizes itself at any ontological
+ changes.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+references to the OWL ontology
+\item[buffering]
+flag
+\end{description}
+\item[Rückgabewert] 
+a new Pellet reasoner instance
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSnorocketReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}{getSnorocketReasoner}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSnorocketReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}}]
+~ Returns an instance of the Snorocket reasoner. If buffering is true
+ than the reasoner is update only when \verb!reasoner.flush()! is called.
+ Otherwise returns a reasoner which synchronizes itself at any ontological
+ changes.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+references to the OWL ontology
+\item[buffering]
+flag
+\end{description}
+\item[Rückgabewert] 
+a new Snorocket reasoner instance
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getHermitReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}{getHermitReasoner}\label{ontologyFramework.OFContextManagement.OWLLibrary.getHermitReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}}]
+~ Returns an instance of the Hermit reasoner. If buffering is true
+ than the reasoner is update only when \verb!reasoner.flush()! is called.
+ Otherwise returns a reasoner which synchronizes itself at any ontological
+ changes.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+references to the OWL ontology
+\item[buffering]
+flag
+\end{description}
+\item[Rückgabewert] 
+a new Hermit reasoner instance
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getFactReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}{getFactReasoner}\label{ontologyFramework.OFContextManagement.OWLLibrary.getFactReasoner(ontologyFramework.OFContextManagement.OWLReferences,boolean)}}]
+~ Returns an instance of the Fact++ reasoner. If buffering is true
+ than the reasoner is update only when \verb!reasoner.flush()! is called.
+ Otherwise returns a reasoner which synchronizes itself at any ontological
+ changes.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+references to the OWL ontology
+\item[buffering]
+flag
+\end{description}
+\item[Rückgabewert] 
+a new Fact++ reasoner instance
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.printOntonolyOnConsole(ontologyFramework.OFContextManagement.OWLReferences)}{printOntonolyOnConsole}\label{ontologyFramework.OFContextManagement.OWLLibrary.printOntonolyOnConsole(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It prints the ontology over console using Manchester formatting.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+reference to an OWL ontology
+\end{description}
+\item[Exceptions] ~
+\begin{description}
+\item[OWLOntologyStorageException]
+
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.synchroniseReasoner(ontologyFramework.OFContextManagement.OWLReferences)}{synchroniseReasoner}\label{ontologyFramework.OFContextManagement.OWLLibrary.synchroniseReasoner(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ If the Ontology is consistent it will synchronize a buffering reasoner
+ calling \verb!reasoner.flush()!; if the reasoner has a false buffering 
+ flag, than this method has no effects. If an inconsistency error 
+ occurs than this method will print over console an explanation of the 
+ error. Note that if the ontology is inconsistent than all the methods
+ in this class may return a null value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+references to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns an Object which represents an ontological class
+ with a given name and specifics IRI paths. If the entity
+ already exists in the entology than the object will refer to it, 
+ otherwise the method will create a new ontological entity.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[className]
+string to define the name of the ontological class
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the OWL class with the given name and IRI paths in accord to the OWLReference
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLIndividual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns an Object which represents an onological individual
+ with a given name and specific IRI paths. If the entity
+ already exists in the entology than the object will refer to it, 
+ otherwise the method will create a new ontological entity.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+string to define the name of the ontological individual
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the OWL individual with the given name and IRI paths in accord to the OWLReference
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLDataProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLDataProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLDataProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns an Object which represents an onological data property
+ with a given name and specific IRI paths. If the entity
+ already exists in the entology than the object will refer to it, 
+ otherwise the method will create a new ontological entity.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[dataPropertyName]
+string to define the name of the ontological data property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the OWL data property with the given name and IRI paths in accord to the OWLReference
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLObjectProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLObjectProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLObjectProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns an Object which represents an onological object property
+ with a given name and specific IRI paths. If the entity
+ already exists in the entology than the object will refer to it, 
+ otherwise the method will create a new ontological entity.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[objPropertyName]
+string to define the name of the ontological object property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the OWL object property with the given name and IRI paths in accord to the OWLReference
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLLiteral(java.lang.Object,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLLiteral}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLLiteral(java.lang.Object,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns an Object which represents an onological literal
+ with a given value and specific IRI paths. Indeed it calls:
+ \verb!OWLLibrary.getOWLLiteral( value, null, ontoRef)!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[value]
+object to define the value of the ontological literal
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the OWL literal with the given value, type and IRI paths in accord to the OWLReference
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLLiteral(java.lang.Object,org.semanticweb.owlapi.model.OWLDatatype,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLLiteral}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLLiteral(java.lang.Object,org.semanticweb.owlapi.model.OWLDatatype,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Given an Object value this method returns the OWLLiteral in accord with the
+ actual type of value. The parameter Type can be null if value is of type:
+ String, Integer, Boolean, Float, Long; otherwise this method will returns null.
+ For more specific data type this methods require to give in input the 
+ rigth OWLDataType parameter. Generally it will return null if the 
+ data type of the parameter value is unknown.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[value]
+object to define the value of the ontological literal
+\item[type]
+the OWL data type to define the literal
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the OWL literal with the given value, type and IRI paths in accord to the OWLReference
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualB2Class(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualB2Class(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns all the ontological individual which are defined in the 
+ refereed ontology and which are belonging to the calss with name 
+ defined by the parameter. Indeed this method will call \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}},
+ to get the actual OWL class Object and than it use it to call
+ \noprint{@link:#getIndividualB2Class(OWLClass, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualB2Class(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getIndividualB2Class}}. Than the 
+ returning value is propagated, so it returns null if no individual are
+ classified in that class or if such class does not exist in 
+ the refereed ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[className]
+name of the ontological calss
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an not ordered set of individual belong to such class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualB2Class(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualB2Class(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns all the ontological individual which are defined in the 
+ refereed ontology and which are belonging to the calss 
+ defined by the parameter. It returns null if no individual are
+ classified in that class or if such class does not exist in 
+ the refereed ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoClass]
+OWL class for which the individual are asked.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an not ordered set of individual belong to such class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyIndividualB2Class(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyIndividualB2Class(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns one ontological individual which are defined in the 
+ refereed ontology and which are belonging to the calss with name 
+ defined by the parameter. Indeed this method will call \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}},
+ to get the actual OWL class Object and than it use it to call
+ \noprint{@link:#getIndividualB2Class(OWLClass, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualB2Class(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getIndividualB2Class}}. Than,
+ using \noprint{@link:#getOnlyElement(Set)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}} it will return one
+ individual that are belongign to the class. It returns null if no individual are
+ classified in that class, if such class does not exist in 
+ the refereed ontology or if the individual set returned by 
+ \verb!OWLLibrary.getIndividualB2Class( .. )! has \verb!size > 1!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[className]
+name of the ontological calss
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an individual belong to such class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyIndividualB2Class(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyIndividualB2Class(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns an ontological individual which are defined in the 
+ refereed ontology and which are belonging to the calss 
+ defined by the parameter. It returns null if no individual are
+ classified in that class, if such class does not exist in 
+ the refereed ontology or if there are more than one
+ individual classified in that class (since it uses \noprint{@link:#getOnlyElement(Set)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}}).
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoClass]
+OWL class for which the individual are asked.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an individual belong to such class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualClasses(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getIndividualClasses}\label{ontologyFramework.OFContextManagement.OWLLibrary.getIndividualClasses(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns the set of classes in which an individual has been
+ classified.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+ontological individual object
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not ordered set of all the classes where the individual is belonging to.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getDataPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getDataPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the set of literal value relate to an OWL Data Property 
+ which has a specific name and which is assign to a given individual. 
+ Indeed it retrieves OWL object from strings and calls: 
+ \noprint{@link:#getDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getDataPropertyB2Individual}}.
+ Than its returning value is propagated.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+name to the ontological individual belonging to the refering ontology
+\item[propertyName]
+data property name applied to the ontological individual belonging to the refering ontology
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not ordered set of literal value of such property applied to a given individual
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the set of literal value relate to an OWL Data Property 
+ and assigned to a given individual. It returns null if such data property or
+ individual doesn not exist. Also if the individual has not such
+ proprerty.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+the OWL individual belonging to the refering ontology
+\item[property]
+the OWL data property applied to the ontological individual belonging to the refering ontology
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not ordered set of literal value of such property applied to a given individual
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyDataPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyDataPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns one literal value attached to a given individual
+ througth a specific data property. Here both, individual and property, are given
+ by name, than the system calls \noprint{@link:#getOnlyDataPropertyB2Individual(String, String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyDataPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyDataPropertyB2Individual}}
+ and its returning value is used with \noprint{@link:#getOnlyElement(Set)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+name to the ontological individual belonging to the refering ontology
+\item[propertyName]
+data property name applied to the ontological individual belonging to the refering ontology
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a literal value of such property applied to a given individual
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns one litteral value attached to a given OWL individual 
+ througth an OWL data property. This returns null if \noprint{@link:#getDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getDataPropertyB2Individual}}
+ or \noprint{@link:#getOnlyElement(Set)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}} return null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+the OWL individual belonging to the refering ontology
+\item[property]
+the OWL data property applied to the ontological individual belonging to the refering ontology
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a literal value of such property applied to a given individual
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getObjectPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getObjectPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns all the values (individuals) to an Object property, given by name,
+ linked to an individual, given by name as well. Indeed it retrueve the OWL
+ Objects by name using \noprint{@link:#getOWLObjectProperty(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLObjectProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLObjectProperty}}
+ and \noprint{@link:#getOWLIndividual(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLIndividual}}. 
+ Than it calls \noprint{@link:#getObjectPropertyB2Individual(OWLNamedIndividual, OWLObjectProperty, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getObjectPropertyB2Individual}}
+ propagating its returning value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+the name of an ontological individual
+\item[propertyName]
+the name of an ontological object property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not ordered set of all the values (OWLNamedIndividual) that
+ the individual has w.r.t. such object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns all the values (individuals) to an Object property, given by name,
+ linked to an individual, given by name as well. It will return null
+ if such object property or individual does not exist.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+an OWL individual
+\item[property]
+an OWL object property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not ordered set of all the values (OWLNamedIndividual) that
+ the individual has w.r.t. such object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyObjectPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyObjectPropertyB2Individual(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a value (individual) to an Object property, given by name,
+ linked to an individual, given by name as well. Indeed it retrueve the OWL
+ Objects by name using \noprint{@link:#getOWLObjectProperty(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary-class}{OWLLibrary}}
+ and \noprint{@link:#getOWLIndividual(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLIndividual}}. 
+ Than it calls \noprint{@link:#getObjectPropertyB2Individual(OWLNamedIndividual, OWLObjectProperty, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getObjectPropertyB2Individual}}
+ and its returning value is used to call 
+ \noprint{@link:#getOnlyElement(Set)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}} which define the actual returning
+ value of this method.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+the name of an ontological individual
+\item[propertyName]
+the name of an ontological object property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a value (OWLNamedIndividual) that
+ the individual has w.r.t. such object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getOnlyObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a value (individual) to an Object property, given by name,
+ linked to an individual, given by name as well. It will return null
+ if such object property or individual does not exist. 
+ Finally it can return null if \noprint{@link:#getOnlyElement(Set)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}} returns
+ null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+an OWL individual
+\item[property]
+an OWL object property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a value (OWLNamedIndividual) that
+ the individual has w.r.t. such object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSubClassOf(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSubClassOf(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns all the classes that are sub classes of the given parameter.
+ Here class is defined by name, so this method uses: 
+ \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}} to get an OWLClass and than
+ it calls \noprint{@link:#getSubClassOf(OWLClass, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getSubClassOf(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getSubClassOf}}
+ propagating its returning value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[className]
+name of the ontological class to find sub classes
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not order set of all the sub classes of cl parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSubClassOf(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSubClassOf(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns all the classes that are sub classes of the given class parameter.
+ It returns null if no sub classes are defined in the ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[cl]
+OWL class to find sub classes
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not order set of all the sub-classes of cl parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSuperClassOf(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getSuperClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSuperClassOf(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns all the classes that are super classes of the given parameter.
+ Here class is defined by name, so this method uses: 
+ \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}} to get an OWLClass and than
+ it calls \noprint{@link:#getSuperClassOf(OWLClass, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getSuperClassOf(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getSuperClassOf}}
+ propagating its returning value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[className]
+name of the ontological class to find super classes
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not order set of all the super classes of cl parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSuperClassOf(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{getSuperClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSuperClassOf(org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns all the classes that are super classes of the given class parameter.
+ It returns null if no super classes are defined in the ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[cl]
+OWL class to find super classes
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+a not order set of all the super classes of cl parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(java.lang.String,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Set the parameter subClass to be a sub class of the
+ parameter superClass. Here classes are given by name, the method
+ uses \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}} to cal
+ \noprint{@link:#setSubClassOf(OWLClass, OWLClass, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}} and 
+ propagate its returning value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[superClassName]
+the name of the ontological super class
+\item[subClassName]
+the name of the ontological sub class
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an ontologial axiom to describe this hyerarchly dependece between classes.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Set the parameter subClass to be a sub class of the
+ parameter superClass. Here classes are given by name, the method
+ uses \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}} to cal
+ \noprint{@link:#setSubClassOf(OWLClass, OWLClass, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}} and 
+ propagate its returning value. If the boolean value addAxiom is true,
+ than the axioms to add to describe those dependencies are stored in an
+ internal buffer. it will be not added to the buffer if it is false.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[superClassName]
+the name of the ontological super class
+\item[subClassName]
+the name of the ontological sub class
+\item[addAxiom]
+flag to store the adding axioms into a buffer managed in this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an ontologial axiom to describe this hyerarchly dependece between classes.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(java.lang.String,java.lang.String,boolean,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(java.lang.String,java.lang.String,boolean,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Set the parameter subClass to be a sub class of the
+ parameter superClass. Here classes are given by name, the method
+ uses \noprint{@link:#getOWLClass(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLClass(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLClass}} to cal
+ \noprint{@link:#setSubClassOf(OWLClass, OWLClass, boolean, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,boolean,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}} and 
+ propagate its returning value. If the boolean value addAxiom is true,
+ than the axioms to add to describe those dependencies are stored in an
+ internal buffer. it will be not added to the buffer if it is false.
+ On the other hand if the parameter applyChanges is true than those changes are also
+ immidiately apllied, otherwise a call to apply them
+ is required.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[superClassName]
+the name of the ontological super class
+\item[subClassName]
+the name of the ontological sub class
+\item[addAxiom]
+flag to store the adding axioms into a buffer managed in this class.
+\item[applyChanges]
+flag to decide if applyng those change immediatly or not.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an ontologial axiom to describe this hyerarchly dependece between classes.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Set the parameter subClass to be a sub class of the
+ parameter superClass.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[superClass]
+the OWL super class
+\item[subClass]
+the OWL sub class
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an ontologial axiom to describe this hyerarchly dependece between classes.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Set the parameter subClass to be a sub class of the
+ parameter superClass. If addAxiom flag is true than, this axioms
+ will be stored inside an internal buffer, otherwise no. This is
+ done by calling \noprint{@link:#getAddAxiom(OWLAxiom, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{getAddAxiom}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[superClass]
+the OWL super class
+\item[subClass]
+the OWL sub class
+\item[addAxiom]
+flag to store the adding axioms into a buffer managed in this class.	 * @param ontoRef
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an ontologial axiom to describe this hyerarchly dependece between classes.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,boolean,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{setSubClassOf}\label{ontologyFramework.OFContextManagement.OWLLibrary.setSubClassOf(org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,boolean,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Set the parameter subClass to be a sub class of the
+ parameter superClass. If addAxiom flag is true than, this axioms
+ will be stored inside an internal buffer, otherwise no. This is
+ done by calling \noprint{@link:#getAddAxiom(OWLAxiom, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{getAddAxiom}}.
+ On the other hand if applyChanges id true than the changes are immediately 
+ moved into the otology, otherwise no. This is done
+ by calling \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[superClass]
+the OWL super class
+\item[subClass]
+the OWL sub class
+\item[addAxiom]
+flag to store the adding axioms into a buffer managed in this class.
+\item[applyChanges]
+flag to decide if applyng those change immediatly or not.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an ontologial axiom to describe this hyerarchly dependece between classes.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,ontologyFramework.OFContextManagement.OWLReferences)}{getAddAxiom}\label{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns a list of ontology changes to be done to build a 
+ given axiom into the ontology. Indeed it calls:
+ \noprint{@link:#getAddAxiom(OWLAxiom, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{getAddAxiom}} with the 
+ flag value always set to \verb!true!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[axiom]
+to describe relationsheps between ontological entities.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the order set of changes to build a given axiom.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{getAddAxiom}\label{ontologyFramework.OFContextManagement.OWLLibrary.getAddAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns a list of ontology changes to be done to build a 
+ given axiom into the ontology. If the flag \verb!addToChangeList! is true
+ than those changes will be stored inside an internul buffer, otherwise no.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[axiom]
+o describe relationsheps between ontological entities.
+\item[addToChangeList]
+flag to decide if add them into the internal buffer of changes
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the order set of changes to build a given axiom.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getRemoveAxiom(org.semanticweb.owlapi.model.OWLAxiom,ontologyFramework.OFContextManagement.OWLReferences)}{getRemoveAxiom}\label{ontologyFramework.OFContextManagement.OWLLibrary.getRemoveAxiom(org.semanticweb.owlapi.model.OWLAxiom,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns a list of ontology changes to be done to remove a 
+ given axiom from the ontology. Indeed it calls:
+ \noprint{@link:#getRemoveAxiom(OWLAxiom, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getRemoveAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{getRemoveAxiom}} with the 
+ flag value always set to \verb!true!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[axiom]
+to describe relationsheps between ontological entities.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the order set of changes to remove a given axiom.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getRemoveAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{getRemoveAxiom}\label{ontologyFramework.OFContextManagement.OWLLibrary.getRemoveAxiom(org.semanticweb.owlapi.model.OWLAxiom,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns a list of ontology changes to be done to remove a 
+ given axiom from the ontology. If the flag \verb!addToChangeList! is true
+ than those changes will be stored inside an internul buffer, otherwise no.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[axiom]
+o describe relationsheps between ontological entities.
+\item[addToChangeList]
+flag to decide if add them into the internal buffer of changes
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the order set of changes to remove a given axiom.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}\label{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It applies all the changes and axioms stored in the internal buffer 
+ into the ontology. After its work, it will clean up this buffer.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(org.semanticweb.owlapi.model.OWLOntologyChange,ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}\label{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(org.semanticweb.owlapi.model.OWLOntologyChange,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It applies, into the ontology, only the change given as parameter.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[addAxiom]
+change to apply in the ontology
+\item[ontoRef]
+param ontoRef reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(java.util.List<org.semanticweb.owlapi.model.OWLOntologyChange>,ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}\label{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(java.util.List<org.semanticweb.owlapi.model.OWLOntologyChange>,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It applies, into the ontology, all the changes given as parameter.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[addAxiom]
+list of ontological changes.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSubObjectProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getSubObjectProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSubObjectProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Return all the sub object property relate do a property
+ given as an input parameter. Indeed, it retrieve the object from their
+ names using \noprint{@link:#getOWLObjectProperty(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLObjectProperty(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLObjectProperty}}. Than
+ it calls \noprint{@link:#getSubObjectProperty(OWLObjectProperty, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getSubObjectProperty(org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getSubObjectProperty}}
+ and propagate its returning value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[objectPropName]
+the name of the ontological object property to check for its sub property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an unordered set of Expression to define this hyererchly relations.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getSubObjectProperty(org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}{getSubObjectProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.getSubObjectProperty(org.semanticweb.owlapi.model.OWLObjectProperty,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ eturn all the sub object property relate do a property
+ given as an input parameter.It can return null if no sub object property
+ are defined into the ontology for the input parameter.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[objectProp]
+the OWL object property to check for its sub property
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an unordered set of Expression to define this hyererchly relations.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}{getOnlyElement}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyElement(java.util.Set<?>)}}]
+~ Its pourpuses is to be used when an entity of the ontology can
+ have only one element by construction. In particolar this method
+ returns true \verb!if( set.size() > 1)!. Otherwise it will iterate over 
+ the set and return just the first value. Note that a set does not
+ guarantee that its order is always the same.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[set]
+a generic set of object
+\end{description}
+\item[Rückgabewert] 
+an element of the set
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyString(java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>)}{getOnlyString}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOnlyString(java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>)}}]
+~ Its pourpuses is to be used when an entity of the ontology can
+ have only one literal by construction. In particolar this method
+ returns true \verb!if( set.size() > 1)!. Otherwise it will iterate over 
+ the set and return just the first value. Note that a set does not
+ guarantee that its order is always the same.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[set]
+set of literals
+\end{description}
+\item[Rückgabewert] 
+an element of the set as a string
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.renameEntity(org.semanticweb.owlapi.model.OWLEntity,org.semanticweb.owlapi.model.IRI,ontologyFramework.OFContextManagement.OWLReferences)}{renameEntity}\label{ontologyFramework.OFContextManagement.OWLLibrary.renameEntity(org.semanticweb.owlapi.model.OWLEntity,org.semanticweb.owlapi.model.IRI,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns the changes that must be done into the ontology to rename 
+ an entity, they should be applied by calling 
+ \verb!applyChanges(renameChanges, ontoRef)!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entity]
+ontological object to rename
+\item[newIRI]
+new name as ontological IRI path
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changesa to be apllyed into the ontology to rename an entity with a new IRI.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.renameEntity(org.semanticweb.owlapi.model.OWLEntity,org.semanticweb.owlapi.model.IRI,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{renameEntity}\label{ontologyFramework.OFContextManagement.OWLLibrary.renameEntity(org.semanticweb.owlapi.model.OWLEntity,org.semanticweb.owlapi.model.IRI,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It returns the changes that must be done into the ontology to rename 
+ an entity. If the flag appyChanges is true than the entity 
+ will be immediately renamed into the ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entity]
+ontological object to rename
+\item[newIRI]
+new name as ontological IRI path
+\item[applyChanges]
+flag to apply immediatly those changes,
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changesa to be apllyed into the ontology to rename an entity with a new IRI.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLObjectName(org.semanticweb.owlapi.model.OWLObject)}{getOWLObjectName}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLObjectName(org.semanticweb.owlapi.model.OWLObject)}}]
+~ It uses a render defined as \verb!OWLObjectRenderer renderer = new DLSyntaxObjectRenderer();!
+ to get the name of an ontological object from its IRI path. 
+ It returns null if the input parametere is null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[o]
+the objet for which get the ontological name
+\end{description}
+\item[Rückgabewert] 
+the name of the ontological object given as input parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLSetAsString(java.util.Set<org.semanticweb.owlapi.model.OWLObject>)}{getOWLSetAsString}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLSetAsString(java.util.Set<org.semanticweb.owlapi.model.OWLObject>)}}]
+~ Returns a set of names given a set of ontological objects. It uses a 
+ renderer: \verb!OWLObjectRenderer renderer = new DLSyntaxObjectRenderer();!
+ to do this work. The inoput set cannot have null value. It will riturn
+ null if the input set is empty.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[set]
+of ontological object from which retrieve names.
+\end{description}
+\item[Rückgabewert] 
+set of names of the object contained in the input parameter.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getOWLLiteralAsString(java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>)}{getOWLLiteralAsString}\label{ontologyFramework.OFContextManagement.OWLLibrary.getOWLLiteralAsString(java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>)}}]
+~ It converts all the literal inside a set into a set of string using
+ \verb!literal.getLiteral()!. The input set cannot contain null values.
+ This method returns null if the input set is empty.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[set]
+set of ontological individual.
+\end{description}
+\item[Rückgabewert] 
+the input set converterd to string.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.saveOntology(boolean,ontologyFramework.OFContextManagement.OWLReferences)}{saveOntology}\label{ontologyFramework.OFContextManagement.OWLLibrary.saveOntology(boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It will save an ontology into a file. The files path is 
+ retrieved from the OWLReferences class using: 
+ \verb!ontoRef.getIriFilePath();!. Note that this procedure
+ may replace an already existing file. The exporting of the 
+ asserted relation is done by: \noprint{@link:InferedAxiomExporter#exportOntology(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.InferedAxiomExporter.exportOntology(ontologyFramework.OFContextManagement.OWLReferences)}{exportOntology}}
+ and my be an expencive procedure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[exportInf]
+flag to export inferences as fixed relations.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.saveOntology(boolean,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{saveOntology}\label{ontologyFramework.OFContextManagement.OWLLibrary.saveOntology(boolean,java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It will save an ontology into a file. The files path is 
+ given as input parameter, and this method does not update: 
+ \verb!ontoRef.getIriFilePath();!. Note that this procedure
+ may replace an already existing file. The exporting of the 
+ asserted relation is done by: \noprint{@link:InferedAxiomExporter#exportOntology(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.InferedAxiomExporter.exportOntology(ontologyFramework.OFContextManagement.OWLReferences)}{exportOntology}}
+ and my be an expencive procedure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[exportInf]
+flag to export inferences as fixed relations.
+\item[filePath]
+directiory in which save the ontology.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.addObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.addObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ add a new object property (with its value) into an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual that have to have a new object property.
+\item[prop]
+object property to be added.
+\item[value]
+individual which is the value of the given object property.
+\item[bufferize]
+flag to bufferize changes inside an internal buffer.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to add this specific object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.addObjectPropertyB2Individual(java.lang.String,java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.addObjectPropertyB2Individual(java.lang.String,java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ add a new object property (with its value) into an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+ Indeed it retrieve the ontological object from name and than it calls: 
+ \noprint{@link:#addObjectPropertyB2Individual(OWLNamedIndividual, OWLObjectProperty, OWLNamedIndividual, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addObjectPropertyB2Individual}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+tha name of an ontological individual that havo to have a new object property
+\item[propName]
+name of the object property inside the ontology refered by ontoRef.
+\item[valueName]
+individual name inside te refereed ontology to be the value of the given object property
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to add this specific object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ add a new datat property (with its value) into an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual that have to have a new data property.
+\item[prop]
+data property to be added.
+\item[value]
+literal which is the value of the given data property.
+\item[bufferize]
+flag to bufferize changes inside an internal buffer.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to add this specific data property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(java.lang.String,java.lang.String,java.lang.Object,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(java.lang.String,java.lang.String,java.lang.Object,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ add a new data property (with its value) into an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+ Indeed it retrieve the ontological object from name and than it calls: 
+ \noprint{@link:#addDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLLiteral, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addDataPropertyB2Individual}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+tha name of an ontological individual that havo to have a new data property
+\item[propertyName]
+name of the data property inside the ontology refered by ontoRef.
+\item[value]
+literal to be added as the value of a data property.
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to add the given data property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.addIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.addIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the ontological changes to be applyed to put an 
+ individual inside an ontological class.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual to add into an ontological class
+\item[c]
+ontological class that than will conteind this individual
+\item[bufferize]
+flag to bufferize changes inside an internal buffer.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+changes to be done into the refereed ontology to set an individual to be belonging to a specific class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.addIndividualB2Class(java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.addIndividualB2Class(java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ set an individual to belonging to a class.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+ Indeed it retrieve the ontological object from name inside the refering ontology
+ and than it calls: 
+ \noprint{@link:#addIndividualB2Class(OWLNamedIndividual, OWLClass, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addIndividualB2Class}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+tha name of an ontological individual that have to be beloging to a given class.
+\item[className]
+the name of an ontological class that will contains the input individual parameter.
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to set an individual belong to a class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ remove an object property (with its value) from an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual from which remove a given object property.
+\item[prop]
+object property to be removed.
+\item[value]
+individual which is the value of the given object property.
+\item[bufferize]
+flag to bufferize changes inside an internal buffer.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to remove this specific object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeObjectPropertyB2Individual(java.lang.String,java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeObjectPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeObjectPropertyB2Individual(java.lang.String,java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ remove a given object property (with its value) from an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+ Indeed it retrieve the ontological object from name and than it calls: 
+ \noprint{@link:#removeObjectPropertyB2Individual(OWLNamedIndividual, OWLObjectProperty, OWLNamedIndividual, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeObjectPropertyB2Individual}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+tha name of an ontological individual from which remove the object property
+\item[propName]
+name of the object property inside the ontology refered by ontoRef.
+\item[valueName]
+individual name inside te refereed ontology to be the value of the given object property
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to remove this specific object property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ remove  datat property (with its value) from an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual from which remove the given data property.
+\item[prop]
+data property to be removed.
+\item[value]
+literal which is the value of the given data property.
+\item[bufferize]
+flag to bufferize changes inside an internal buffer.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to remove this specific data property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(java.lang.String,java.lang.String,java.lang.Object,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeDataPropertyB2Individual}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(java.lang.String,java.lang.String,java.lang.Object,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ remove a data property (with its value) from an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+ Indeed it retrieve the ontological object from name and than it calls: 
+ \noprint{@link:#removeDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLLiteral, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeDataPropertyB2Individual}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+tha name of an ontological individual from which remove the data property
+\item[propertyName]
+name of the data property inside the ontology refered by ontoRef.
+\item[value]
+literal to be removed as the value of a data property.
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to remove this specific data property.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the ontological changes to be applyed to remove an 
+ individual from an ontological class.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual to remove from an ontological class
+\item[c]
+ontological class that than was conteind this individual
+\item[bufferize]
+flag to bufferize changes inside an internal buffer.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+changes to be done into the refereed ontology to set an individual to not be anymore belonging to a specific class.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividualB2Class(java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeIndividualB2Class}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividualB2Class(java.lang.String,java.lang.String,boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns a list of changes to be applied into the ontology to
+ remove an individual to belonging to a class.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+ Indeed it retrieve the ontological object from name inside the refering ontology
+ and than it calls: 
+ \noprint{@link:#removeIndividualB2Class(OWLNamedIndividual, OWLClass, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeIndividualB2Class}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+tha name of an ontological individual that have not to be beloging to a given class.
+\item[className]
+the name of an ontological class that will no more contains the input individual parameter.
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+the changes to be done into the refereed ontology to set an individual to do not belong to a class anymore.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividual(org.semanticweb.owlapi.model.OWLNamedIndividual,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeIndividual}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividual(org.semanticweb.owlapi.model.OWLNamedIndividual,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the changes to be apllied into the refering ontology for 
+ removing an individual.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+to be removed from the ontology.
+\item[bufferize]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+tha changes to be done into the refereed ontology to remove a given individual.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividual(java.util.Set<org.semanticweb.owlapi.model.OWLNamedIndividual>,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeIndividual}\label{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividual(java.util.Set<org.semanticweb.owlapi.model.OWLNamedIndividual>,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Returns the changes to be applied into the refering ontology for removing
+ a set of individuals.
+ If the bufferize flag is true than those changes will be saved inside at the
+ internal buffer of this class which can be applied by calling:
+ \noprint{@link:#applyChanges(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.applyChanges(ontologyFramework.OFContextManagement.OWLReferences)}{applyChanges}}. If this flag is false than only this
+ changes will be immediately applied to the refering ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individuals]
+set of individuals to be removed.
+\item[bufferised]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+tha changes to be done into the refereed ontology to remove a given set individuals.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.replaceDataProperty(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>,org.semanticweb.owlapi.model.OWLLiteral,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}{replaceDataProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.replaceDataProperty(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>,org.semanticweb.owlapi.model.OWLLiteral,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Atomically (with respect to reasoner update) replacing of a data property.
+ Indeed, it will remove all the possible data property with a given values
+ using \noprint{@link:#removeDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLLiteral, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeDataPropertyB2Individual}}.
+ Than, it add the new value calling \noprint{@link:#addDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLLiteral, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addDataPropertyB2Individual}}.
+ Refer to this last two for how the flag bufferized is used.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual for which a data property will be replaced.
+\item[prop]
+property to replace
+\item[oldValue]
+set of old values to remove
+\item[newValue]
+new value to add
+\item[buffered]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.replaceDataProperty(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,org.semanticweb.owlapi.model.OWLLiteral,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}{replaceDataProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.replaceDataProperty(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,org.semanticweb.owlapi.model.OWLLiteral,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Atimically (with respect to reasoner update) replacing of a data property.
+ Indeed, it will remove the possible data property with a given value
+ using \noprint{@link:#removeDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLLiteral, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeDataPropertyB2Individual}}.
+ Than, it add the new value calling \noprint{@link:#addDataPropertyB2Individual(OWLNamedIndividual, OWLDataProperty, OWLLiteral, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addDataPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLDataProperty,org.semanticweb.owlapi.model.OWLLiteral,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addDataPropertyB2Individual}}.
+ Refer to this last two for how the flag bufferized is used.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual for which a data property will be replaced.
+\item[prop]
+property to replace
+\item[oldValue]
+value to remove
+\item[newValue]
+new value to add
+\item[buffered]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.replaceObjectProperty(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}{replaceObjectProperty}\label{ontologyFramework.OFContextManagement.OWLLibrary.replaceObjectProperty(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLNamedIndividual,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Atomically (with respect to reasoner update) replacing of a object property.
+ Indeed, it will remove the possible object property with a given values
+ using \noprint{@link:#removeObjectPropertyB2Individual(OWLNamedIndividual, OWLObjectProperty, OWLNamedIndividual, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeObjectPropertyB2Individual}}.
+ Than, it add the new value calling \noprint{@link:#addObjectPropertyB2Individual(OWLNamedIndividual, OWLObjectProperty, OWLNamedIndividual, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addObjectPropertyB2Individual(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLObjectProperty,org.semanticweb.owlapi.model.OWLNamedIndividual,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addObjectPropertyB2Individual}}.
+ Refer to this last two for how the flag bufferized is used.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual for which a object property will be replaced.
+\item[prop]
+property to replace
+\item[oldValue]
+set of old values to remove
+\item[newValue]
+new value to add
+\item[buffered]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.replaceIndividualClass(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}{replaceIndividualClass}\label{ontologyFramework.OFContextManagement.OWLLibrary.replaceIndividualClass(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,org.semanticweb.owlapi.model.OWLClass,java.lang.Boolean,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Atomically (with respect to reasoner update) replacing of individual
+ type. Which means to remove an individual from a class and add it to
+ belong to another calss.
+ Indeed, it will remove the possible type with a given values
+ using \noprint{@link:#removeIndividualB2Class(OWLNamedIndividual, OWLClass, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.removeIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{removeIndividualB2Class}}.
+ Than, it add the new value calling \noprint{@link:#addIndividualB2Class(OWLNamedIndividual, OWLClass, boolean, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.addIndividualB2Class(org.semanticweb.owlapi.model.OWLNamedIndividual,org.semanticweb.owlapi.model.OWLClass,boolean,ontologyFramework.OFContextManagement.OWLReferences)}{addIndividualB2Class}}.
+ Refer to this last two for how the flag bufferized is used.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ind]
+individual to change its classification.
+\item[oldValue]
+old class in which the individual is belonging to
+\item[newValue]
+new class in which the individual will belonging to
+\item[buffered]
+flag to buffering changes internally to this class.
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLLibrary.getPelletExplanation(ontologyFramework.OFContextManagement.OWLReferences)}{getPelletExplanation}\label{ontologyFramework.OFContextManagement.OWLLibrary.getPelletExplanation(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It uses Manchester syntax to explain possible inconsistencies.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+reference to an OWL ontology.
+\end{description}
+\item[Rückgabewert] 
+an inconcistency explanation as a string of text.
+\end{description}
+\end{description}

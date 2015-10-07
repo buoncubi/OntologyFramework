@@ -1,0 +1,79 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper (noch nicht fertig). 
+\section[NameMapper]{Klasse \ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper-class}{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper}}\label{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper-class}
+\subsection{Übersicht}
+This static class is used to represent a Data Type mapper
+ which is by default defined in the framework.
+ 
+ In particular, it is used to map the full 
+ classifier or a Java Class. So, given an ontological individual I
+ which has only one Data-Property:\mbox{}\newline
+
+ \verb!I {@value #propName} "full.classifier.toJava.Class"^^string!\mbox{}\newline
+
+ it returns a string which contains the pat. Namely: 
+ \verb!full.classifier.toJava.Class!.
+ 
+ Note that this mechanism is equivalent to the String Mapper
+ but has been divided from him to guarantee more maintainability.
+ Moreover, it does not implement the mapping of a string into the 
+ ontology, but only the reading of such information. This is done
+ to allow the usage of customisable Mapper for such data type
+ without affect the initialization phase of the framework.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.NAME_propName}{NAME\_propName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.NAME_propName}}]
+~ Defines the default name of the ontologica Data Property
+ to map java full qualifier between the system and the data structure.
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getNameFromOntology}\label{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ given the name of an individual as a String
+ it retrieves the actual individual and use it to call
+ \noprint{@link:#getNameFromOntology(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getNameFromOntology}}.
+ The returning value is than propagated.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+name of the ontological individual
+\item[ontoRef]
+OWL references to the ontology
+\end{description}
+\item[Rückgabewert] 
+the name (full qualifier) of a class
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getNameFromOntology}\label{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Given an ontological individual which has a data property <<@value:#NAME_propName>>
+ it returns a string containing the name which should
+ point to a class through its full qualifier. 
+ The result can be different if the property
+ does not contain a string ( see \noprint{@link:OWLLiteral#getLiteral()}\texttt{getLiteral} for more).
+ It returns \verb!Null! if the individual does not exist or if
+ it does not have such data property.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+ontological individual from which retrieve the name
+\item[ontoRef]
+OWL references to the ontology
+\end{description}
+\item[Rückgabewert] 
+string stored in the property
+\end{description}
+\end{description}

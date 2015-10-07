@@ -1,0 +1,97 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder (noch nicht fertig). 
+\section[OFEventBuilder]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder-class}{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder}}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder-class}
+\subsection{Übersicht}
+This class, as all the class that implements \noprint{@link:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}} has the proposes to initialize
+ classes to be used during system evolution. In this case its initializes Events,
+ in particular the classes: \noprint{@link:OFEventParameterDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition-class}{OFEventParameterDefinition}}, \noprint{@link:OFEventDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition-class}{OFEventDefinition}} and \noprint{@link:OFEventAggregation}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation-class}{OFEventAggregation}}. 
+ \par 
+ A call to \noprint{@link:#buildInfo(String[], OWLReferences, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}} causes the reset of the
+ initialized classes Map, then all the individual inside the ontological class, named \verb!keyWord[ 0]!
+ (by default: \textquotedbl Event\textquotedbl ) are processed. Where, The definition of this class must be:
+ 	\verb!(hasTypeEventParameter min 1 string) and (hasTypeEventComputeLow exactly 1 string)! 
+ \par 
+ For all of them it retrieves the computational low (ex: \textquotedbl r1 \&\& r2\textquotedbl ) as a string and creates a 
+ new \noprint{@link:OFEventAggregation}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation-class}{OFEventAggregation}}. Than, it gets the value of the data property 
+ named \verb!keyWord[ 1]!$\}$ (by default: \textquotedbl hasTypeEventParameter\textquotedbl ) and 
+ it parse the incoming value (for example: \textquotedbl r1 = OFEventProcedure\_IndName\textquotedbl ) using the symbol 
+ \noprint{@link:#ASSEGNATION_symb}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ASSEGNATION_symb}{ASSEGNATION_symb}}; by default <<@value:#ASSEGNATION_symb>>. 
+ Note that the parameter is discarded if the parse has no two token. 
+ Then for each parameter belong to the individual a new 
+ \noprint{@link:OFEventDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition-class}{OFEventDefinition}} is created with the full identify java class which belongs to the individual 
+ \textquotedbl OFEventProcedure\_IndName\textquotedbl , Name retrieved from the value of the \verb!keyWord[ 2]!(by default: implements OFEventName).  
+ Finally, it gets parameters trough ontological individual linked by the object property named: \verb!keyWord[ 3]! 
+ (by Default: \textquotedbl hasEventDefinition\textquotedbl ). Parameters are  added to the Event Definition thanks a parsing 
+ Mechanism of the data type value belong to the data property: \verb!keyWord[ 4]! 
+ (by default \textquotedbl hasTypeEventDefinition\textquotedbl ).   
+ \par 
+ The call to the method \noprint{@link:#getInitialisedClasses()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.getInitialisedClasses()}{getInitialisedClasses}} after called \noprint{@link:#initializeDefinition(OWLNamedIndividual, OFEventDefinition, OWLReferences)}\texttt{initializeDefinition}
+ returns a \verb!HashMap<String,! \noprint{@link:OFEventAggregation}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation-class}{OFEventAggregation}}\verb!>! where, keys are the names of the individuals
+ belong to the class named \verb!keyWord[ 0]!. While the values are the classes which represent and
+ allow to compute all the Events available during the calling of \noprint{@link:#initializeDefinition(OWLNamedIndividual, OFEventDefinition, OWLReferences)}\texttt{initializeDefinition}
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ASSEGNATION_symb}{ASSEGNATION\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ASSEGNATION_symb}}]
+~ Symbol for divide parameters and accept tokens, used only in Event aggregation
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ENDLine_symb}{ENDLine\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ENDLine_symb}}]
+~ System symbol to end a line, it represents the end of a command
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ASSEGNATIONPARAMETER_symb}{ASSEGNATIONPARAMETER\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ASSEGNATIONPARAMETER_symb}}]
+~ Symbol to assign parameters to a variable. It represents an assegnation during Parameter definition
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.VARIABLE_symb}{VARIABLE\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.VARIABLE_symb}}]
+~ Symbol which identify that the word used before than the next \noprint{@link:#SPLIT_symb}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.SPLIT_symb}{SPLIT_symb}} 
+ is a local variable.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.RETURN_symb}{RETURN\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.RETURN_symb}}]
+~ Symbol which identify that the word used before than the next \noprint{@link:#SPLIT_symb}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.SPLIT_symb}{SPLIT_symb}} 
+ is a the actual event instruction and no more a parameter.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ATONTOLOGY_symb}{ATONTOLOGY\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ATONTOLOGY_symb}}]
+~ It can be used after the declaration of a variable and identify the \noprint{@link:OWLReferences}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences-class}{OWLReferences}}
+ name i in whihc the parameter must be retrieved. If it is not specified than the
+ corrent ontology is considered.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.COMMAND_symb}{COMMAND\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.COMMAND_symb}}]
+~ Symbol used the decide chains of computation to retrieve parameter, where 
+ they must to contains \noprint{@link:#SPLIT_symb}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.SPLIT_symb}{SPLIT_symb}}. An example is:
+ \verb!name.AsInteger.AsIntegerOWLDataProperty!, equivalent to write
+ \verb!AsIntegerOWLDataProperty( AsInteger( name.toString()))!; in other languages.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.NULL_symb}{NULL\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.NULL_symb}}]
+~ Intercepts whenever null value should be given as input to computer parameter. It can
+ be used only as a first element of parameter computation.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.STARTPARAMETR_symb}{STARTPARAMETR\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.STARTPARAMETR_symb}}]
+~ It defines the starting point in which parameter are used inside the event definition.
+ It must be used in the returning line defined by \noprint{@link:#RETURN_symb}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.RETURN_symb}{RETURN_symb}}. Between this two symbol 
+ no check of the name is provided.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ENDPARAMETER_symb}{ENDPARAMETER\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.ENDPARAMETER_symb}}]
+~ It defines the starting point in which parameter are used inside the event definition.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.SPLIT_symb}{SPLIT\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.SPLIT_symb}}]
+~ Symbol used compute tokens of every lines.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.IMPORT_symb}{IMPORT\_symb}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.IMPORT_symb}}]
+~ Symbol used to define the full identify package in which all the computational
+ method to compute parameters are located. This string is added to the name of the name of
+ the procedure ( ex: \textquotedbl in: java.package.\textquotedbl  + \textquotedbl AsIntegerOWLDataProperty).
+\end{description}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder()}{OFEventBuilder}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.getInitialisedClasses()}{getInitialisedClasses}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.getInitialisedClasses()}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.getText(java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>)}{getText}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder.getText(java.util.Set<org.semanticweb.owlapi.model.OWLLiteral>)}}]
+~ 
+\end{description}

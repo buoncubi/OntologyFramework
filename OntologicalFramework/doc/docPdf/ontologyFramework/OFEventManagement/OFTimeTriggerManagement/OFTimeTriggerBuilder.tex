@@ -1,0 +1,51 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder (noch nicht fertig). 
+\section[OFTimeTriggerBuilder]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder-class}{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder}}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder-class}
+\subsection{Übersicht}
+This class, as all the class that implements \noprint{@link:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}} has the proposes to initialize
+ classes to be used during system evolution. In this case its initializes Trigger relate to Time,
+ in particular the classes: \noprint{@link:OFTimeTriggerDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerDefinition-class}{OFTimeTriggerDefinition}}. 
+ \par 
+ A call to \noprint{@link:#buildInfo(String[], OWLReferences, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}} causes the reset of the
+ initialized classes Map, then all the individual inside the ontological class, named \verb!keyWord[ 0]!
+ (by default: \textquotedbl OFTimeTrigger\textquotedbl ) are processed. Where, The definition of this class must be:
+ 	\verb!(hasTimeTriggerDefinition exactly 1 TimeTriggerDefinition) and (implementsOFTimeTriggerName exactly 1 Name)!
+ \par 
+ For all of them it gets the name of the trigger implementation as the fully qualifyer if the class that
+ implement it. This retrieved thanks to the object property named \verb!keyWord[ 1]!, (by default: \textquotedbl implementsOFTimeTriggerName\textquotedbl ).
+ Than, the method retrieve the definiton of the trigger as the string value of the 
+ object property named: \verb!keyWord[ 3]! (by default, \textquotedbl hasTypeTimeTriggerDefinition\textquotedbl )
+ attached to an individual that is linked to this one trhougth the object property named
+ \verb!keyWord[ 2]! (by default: \textquotedbl hasTimeTriggerDefinition\textquotedbl ). Where, the parsing procedure 
+ of the text are hinnerated from \noprint{@link:OFEventBuilder}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder-class}{OFEventBuilder}}. As well as the managament of its parameter
+ are managed by \noprint{@link:OFEventParameterDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition-class}{OFEventParameterDefinition}}
+ \par 
+ The call to the method \noprint{@link:#getInitialisedClasses()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder.getInitialisedClasses()}{getInitialisedClasses}} after called \noprint{@link:#initializeDefinition(OWLNamedIndividual, OFTimeTriggerDefinition, OWLReferences)}\texttt{initializeDefinition}$\}$
+ returns a \verb!HashMap<String,! \noprint{@link:OFTimeTriggerDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerDefinition-class}{OFTimeTriggerDefinition}}\verb!>! where, keys are the names of the individuals
+ belong to the class named \verb!keyWord[ 0]!. While the values are the classes which represent and
+ allow to compute all the temporal triggers available during the calling of \noprint{@link:#initializeDefinition(OWLNamedIndividual, OFTimeTriggerDefinition, OWLReferences)}\texttt{initializeDefinition}.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder()}{OFTimeTriggerBuilder}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder()}}]
+~ 
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder.getInitialisedClasses()}{getInitialisedClasses}\label{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerBuilder.getInitialisedClasses()}}]
+~ 
+\end{description}

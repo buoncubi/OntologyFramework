@@ -1,0 +1,45 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFEventParameterInterface (noch nicht fertig). 
+\section[OFEventParameterInterface]{Interface \ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterInterface-class}{ontologyFramework.OFEventManagement.OFEventParameterInterface}}\label{ontologyFramework.OFEventManagement.OFEventParameterInterface-class}
+\subsection{Übersicht}
+This class is interface to implement the definition a parameter to be used
+ during event computation. It is instanciated and called by 
+ \noprint{@link:OFEventParameterDefinition#getParameter()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getParameter()}{getParameter}}
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterInterface.getParameter(java.lang.Object,ontologyFramework.OFContextManagement.OWLReferences)}{getParameter}\label{ontologyFramework.OFEventManagement.OFEventParameterInterface.getParameter(java.lang.Object,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It compute and return a new value of the parameter to be used during
+ event computation. Inputs are defined by \noprint{@link:OFEventBuilder}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder-class}{OFEventBuilder}} and
+ \noprint{@link:OFEventDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition-class}{OFEventDefinition}} and are the first rigth token of a parameter chain
+ starting from the name of the class that implements this interface.
+ Example1: \verb!exc.AsString! if the implementation is a class called \textquotedbl AsString\textquotedbl 
+ than, on this method \verb!input = "exc"!. (String by default.)
+ Example2: \verb!@OntoName exc.AsOWLNamedIndividual.Exist! if the implementation is a class
+ with name \textquotedbl Exist\textquotedbl  than, \verb!input = OWLNAMEDINDIVIDUAL_withName_exc!
+ and \textquotedbl OntoName\textquotedbl  is the name associated to the ontology in with the individual \textquotedbl exc\textquotedbl 
+ should be retrieved.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[input]
+of the parameter coming from ontological definition
+\item[ontoRef]
+ontological reference of this input
+\end{description}
+\item[Rückgabewert] 
+the actual parameter for event computation.
+\end{description}
+\end{description}

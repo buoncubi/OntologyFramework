@@ -1,0 +1,76 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation (noch nicht fertig). 
+\section[OFEventAggregation]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation-class}{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation}}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation-class}
+\subsection{Übersicht}
+This class represent the event linked to every individual belong to the ontological class \verb!"Event"!.
+ \par 
+ It is based on a boolean parameterized expression given as a String. And a list of parameters that can 
+ be added or removed. All parameters are expressed in therms of instances 
+ of \noprint{@link:OFEventDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition-class}{OFEventDefinition}} and they must tagged with the name used in the expression.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation(java.lang.String)}{OFEventAggregation}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation(java.lang.String)}}]
+~ Create new event with a specific boolean low as a String. This will be processed by
+ the library \noprint{@link:MVEL}\texttt{MVEL} on runtime and must return always a boolean value.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[aggregationLow]
+parameterized logical relation
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.addParameter(java.lang.String,ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition)}{addParameter}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.addParameter(java.lang.String,ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition)}}]
+~ Add a new parameter to the definition of this event tagged with the variable
+ name used to define the aggregation low. This class must contains one OFEventDefinition 
+ for each name used in the \verb!String aggregationLow!. 
+ (ex: \verb!"!r1 && r2"!) where r1 and r2 are variables.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[varName]
+the name of the variable used in the String \verb!aggregationLow!
+\item[eventDef]
+initialized definition of the parameter
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.removeParameterMap(java.lang.String)}{removeParameterMap}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.removeParameterMap(java.lang.String)}}]
+~ Remove a parameter from definition of this event.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[varName]
+the name of the variable used in the String \verb!aggregationLow!
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.clearParameterMap()}{clearParameterMap}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.clearParameterMap()}}]
+~ Remove all the parameters from definition of this event.
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{compute}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ Compute event result. It goes for all the parameter added to 
+ this class and calls \verb!ofEventDefinition.compute( invoker)!. 
+ Finally, the returning boolean value is used to compute the aggregation low.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[invoker]
+builded list of class during startup used by \noprint{@link:OFEventInterface#evaluateEvent(java.util.List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}}
+\end{description}
+\item[Rückgabewert] 
+true if the event occurs in this moment
+\end{description}
+\end{description}

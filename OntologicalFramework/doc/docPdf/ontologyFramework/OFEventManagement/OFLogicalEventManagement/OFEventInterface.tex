@@ -1,0 +1,54 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface (noch nicht fertig). 
+\section[OFEventInterface]{Interface \ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface}}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}
+\subsection{Übersicht}
+This interface is used to define the event procedure. It is called
+ from \noprint{@link:OFEventDefinition#compute(OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventDefinition.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{compute}} which calls
+ \noprint{@link:#isCorrectInput(List)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}} first and, if the result is true it calls
+ \noprint{@link:#evaluateEvent(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}} and propagate the result
+ to the \noprint{@link:OFEventAggregation#compute(OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventAggregation.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{compute}}.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}{isCorrectInput}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.isCorrectInput(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>)}}]
+~ sviluppated with safety pourposes it is called to check
+ if the type of parameter in inputs are correct. If this return
+ false the event result of \noprint{@link:#evaluateEvent(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}}
+ will be setted to null.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[inputs]
+ordered in accord with the ontological definition of the events trhougth the
+ object property \verb!"hasTypeEventDefinition!
+\end{description}
+\item[Rückgabewert] 
+true if the inputs are corrects. If return else, event computation dennied.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}\label{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ implements how compute the event results starting from the inputs retrieved in
+ \noprint{@link:OFEventParameterDefinition#getParameter()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getParameter()}{getParameter}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[inputs]
+parameter
+\item[invoker]
+access to a builded class duriing software initialization
+\end{description}
+\item[Rückgabewert] 
+true f the event occurs, false otherwise.
+\end{description}
+\end{description}

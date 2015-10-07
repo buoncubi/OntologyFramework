@@ -1,0 +1,59 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+\chapter[Package ontologyFramework.OFProcedureManagment]{Package \ltdHypertarget{ontologyFramework.OFProcedureManagment-package}{ontologyFramework.OFProcedureManagment}}\label{ontologyFramework.OFProcedureManagment-package}
+
+
+
+\section{Klassen-Liste}
+\begin{description}
+\item[{\hyperlink{ontologyFramework.OFProcedureManagment.Algorithm-class}{Algorithm}}]
+This class is an implementation of \noprint{@link:OFProcedureInterface}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}{OFProcedureInterface}}
+ which is designed to run procedure using Quartz API;
+ it works with data initialized from \noprint{@link:OFProcedureBuilder}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}{OFProcedureBuilder}}.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.Algorithm-class}
+
+\item[{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}{OFProcedureBuilder}}]
+This class is design to initialize (build) a Procedure
+ object with respect to the ontology into the framework.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}
+
+\item[{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation-class}{OFProcedureSynchronisation}}]
+This class contains, for a given procedure individual name,
+ a list of names related to other ontological individuals that represent
+ procedures.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.OFProcedureSynchronisation-class}
+
+\item[{\textit{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}{OFProcedureInterface}}}]
+This interface represents a Procedure object.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}
+
+\item[{\hyperlink{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData-class}{ProcedureConcurrenceData}}]
+This class describes a procedure while is running to 
+ manage dead line and concurrent pool monitoring.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData-class}
+
+\item[{\hyperlink{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder-class}{OFSchedulingBuilder}}]
+This class is design to initialize (build) a Quartz scheduler
+ object with respect to the ontology into the framework.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.OFSchedulingBuilder-class}
+
+\item[{\hyperlink{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager-class}{ProcedureConcurrenceManager}}]
+This class is used to initialize and manage a Procedure with its ID which
+ is necessary to manage a concurrent pool approach.
+\hfill\pageref{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager-class}
+
+\end{description}
+\section{Package-Beschreibung}
+
+\input{ontologyFramework/OFProcedureManagment/Algorithm}
+\input{ontologyFramework/OFProcedureManagment/OFProcedureBuilder}
+\input{ontologyFramework/OFProcedureManagment/OFProcedureSynchronisation}
+\input{ontologyFramework/OFProcedureManagment/OFProcedureInterface}
+\input{ontologyFramework/OFProcedureManagment/ProcedureConcurrenceData}
+\input{ontologyFramework/OFProcedureManagment/OFSchedulingBuilder}
+\input{ontologyFramework/OFProcedureManagment/ProcedureConcurrenceManager}

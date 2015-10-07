@@ -1,0 +1,51 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T> (noch nicht fertig). 
+\section[OFBuilderInterface]{Interface \ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface\textless T\textgreater }}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}
+\subsection{Übersicht}
+This interface is instantiated and called during the initialization phase of the software
+ for the method \noprint{@link:OFInitialiser#buildIndividual(org.semanticweb.owlapi.model.OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.buildIndividual(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{buildIndividual}}.
+ Its proposes is to be used to load classes into the framework.
+ Than, they will be available trough the class: \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} 
+ as a Map where the initialized class from an implementation of this Procedure can be retrieved
+ based on the list name specified by the builder ontological individual.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ Given references to the ontology, already initialized classes and key words it
+ discover the ontology to retrieve information and initialize other classes.
+ A call to this method should clear all stored variables that are used in 
+ \noprint{@link:#getInitialisedClasses}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.getInitialisedClasses()}{getInitialisedClasses}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[keyWords]
+retrieved by \noprint{@link:OFBuilderCommon#getKeyWords(org.semanticweb.owlapi.model.OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWords}}
+\item[ontoRef]
+reference to the ontology which contains the builder individual
+\item[listInvoker]
+references to already initialized classes from \noprint{@link:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.getInitialisedClasses()}{getInitialisedClasses}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.getInitialisedClasses()}}]
+~ During initialization phase, \noprint{@link:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}} calls \noprint{@link:#buildInfo(String[], OWLReferences, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}}
+ first and than retries the initialized Map from this method. Its returning value is add to the Map 
+ managed by \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} with key value given by \noprint{@link:OFBuilderCommon#getBuildedListName(org.semanticweb.owlapi.model.OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getBuildedListName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getBuildedListName}}.
+\begin{description}
+\item[Rückgabewert] 
+initialisedMap a Map which contains the initialized classes linked to a key (by default it 
+ is of type String$\}$
+\end{description}
+\end{description}

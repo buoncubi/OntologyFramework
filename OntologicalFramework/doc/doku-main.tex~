@@ -1,0 +1,34 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Damit beim Compilieren nicht bei jedem Fehler angehalten wird
+\scrollmode
+
+   % Report scheint für eine API jedenfalls besser als Artikel
+\documentclass[final, 11pt, a4paper]{scrreprt}
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\setmonofont{Liberation Mono}
+\usepackage[pdfborderstyle={/S/U/W 1}]{hyperref}
+\usepackage{enumerate}
+
+\usepackage[dvipsnames]{color}
+
+\usepackage{ltxdoclet}
+
+\begin{document}
+
+\chapter*{Übersicht}
+Die Package-Sammlung besteht aus den folgenden Packages. Eine kurze Beschreibung folgt danach.   % Liste der Packages:
+\begin{enumerate}[1.]
+\end{enumerate}
+\section{Beschreibung}
+
+\setcounter{chapter}{0}
+\appendix
+\end{document}

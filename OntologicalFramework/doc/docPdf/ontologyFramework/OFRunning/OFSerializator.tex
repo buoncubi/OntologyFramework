@@ -1,0 +1,147 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFRunning.OFSerializator (noch nicht fertig). 
+\section[OFSerializator]{Klasse \ltdHypertarget{ontologyFramework.OFRunning.OFSerializator-class}{ontologyFramework.OFRunning.OFSerializator}}\label{ontologyFramework.OFRunning.OFSerializator-class}
+\subsection{Übersicht}
+This static class collects common methods to serialize and de-serialize the framework.
+ Exception and errors are handled by \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.SERIALIZATION_fileExtension}{SERIALIZATION\_fileExtension}\label{ontologyFramework.OFRunning.OFSerializator.SERIALIZATION_fileExtension}}]
+~ the format of the file automatically added to directory$/$name\textquotedbl .<<@value:#SERIALIZATION_fileExtension>>\textquotedbl 
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.SCHEDULER_individualName}{SCHEDULER\_individualName}\label{ontologyFramework.OFRunning.OFSerializator.SCHEDULER_individualName}}]
+~ The name of the ontological individual which represent the scheduler that will be initialize
+ after de-serializaition.
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.PROCEDURE_individualName}{PROCEDURE\_individualName}\label{ontologyFramework.OFRunning.OFSerializator.PROCEDURE_individualName}}]
+~ The name of the ontological individual which represent the algorithms that will be initialize
+ after de-serializaition.
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(boolean)}{saveFrameworkState}\label{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(boolean)}}]
+~ It calls \noprint{@link:#saveFrameworkState(Set, Set, String, boolean)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{saveFrameworkState}} with all parameter equal to \textquotedbl null\textquotedbl .
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\item[Rückgabewert] 
+OFSystemStates set of classes which represents the state of the OntologicalFramework
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(java.lang.String,boolean)}{saveFrameworkState}\label{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(java.lang.String,boolean)}}]
+~ It calls \noprint{@link:#saveFrameworkState(Set, Set, String, boolean)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{saveFrameworkState}} with the first two 
+ parameter equal to \textquotedbl null\textquotedbl  and the third equal to ontoFilePath.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoFilePath]
+the folder directory in which you want to store the ontologies
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\item[Rückgabewert] 
+OFSystemStates set of classes which represents the state of the OntologicalFramework
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}{saveFrameworkState}\label{ontologyFramework.OFRunning.OFSerializator.saveFrameworkState(java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,java.lang.String,boolean)}}]
+~ It goes across all the instances of \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} and, for each of them
+ Instantiates a new \noprint{@link:OFSystemState}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSystemState-class}{OFSystemState}}. Those are collected in a Set and
+ given as output. All the parameter of this function are passed to constructor:
+ \noprint{@link:OFSystemState#OFSystemState(OFBuildedListInvoker, String, Set, Set, boolean)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSystemState(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String,java.util.Set<java.lang.String>,java.util.Set<java.lang.String>,boolean)}{OFSystemState}}\bl  
+ \par 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoToSerializeName]
+list of \noprint{@link:OWLReferences}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences-class}{OWLReferences}} instance names that we want to serialize. If it is equal to \textquotedbl null\textquotedbl  than all the instances are serialized
+\item[listToSerializeName]
+list of Names of the Individual linked to the builder by Object Property <<@value:ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon#BUILDLISTNAME_objProp>>
+\item[ontoFilePath]
+the folder directory in which you want to store the ontologies
+\item[exportInferd]
+if true all the asserted axiom will be exported in the Ontology that will be saved
+\end{description}
+\item[Rückgabewert] 
+OFSystemStates set of classes which represents the state of the OntologicalFramework
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.serializeObjectToFile(java.util.Set<ontologyFramework.OFRunning.OFSystemState>)}{serializeObjectToFile}\label{ontologyFramework.OFRunning.OFSerializator.serializeObjectToFile(java.util.Set<ontologyFramework.OFRunning.OFSystemState>)}}]
+~ It calls \noprint{@link:#serializeObjectToFile(String, String, Set)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSerializator.serializeObjectToFile(java.lang.String,java.lang.String,java.util.Set<ontologyFramework.OFRunning.OFSystemState>)}{serializeObjectToFile}} where the first two 
+ parameters are \textquotedbl null\textquotedbl  and the third is: toSerialize
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[toSerialize]
+set of classes which represents the state of the OntologicalFramework
+\end{description}
+\item[Rückgabewert] 
+serializationPaths the set of paths in which objects has been serialized in a .<<@value:#SERIALIZATION_fileExtension>> file.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.serializeObjectToFile(java.lang.String,java.lang.String,java.util.Set<ontologyFramework.OFRunning.OFSystemState>)}{serializeObjectToFile}\label{ontologyFramework.OFRunning.OFSerializator.serializeObjectToFile(java.lang.String,java.lang.String,java.util.Set<ontologyFramework.OFRunning.OFSystemState>)}}]
+~ It iterate over all the value of toSerialize. For each of them it retrieves the 
+ serializable Map ( of type \noprint{@link:ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}) and writes it in a file.
+ \par 
+ If filePath is \textquotedbl null\textquotedbl  than the base files path will be:
+ \verb!oFBuildedListInvoker_SerialMap.!\noprint{@link:OFSystemState#getOntologyFilePath()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFSystemState.getOntologyFilePath()}{getOntologyFilePath}}.
+ Otherwise filePath it must be an absolute map to a folder, in which
+ serialize the framework Java classes
+ \par 
+ If fileName is \textquotedbl null\textquotedbl  than the name of a serialized Java Class
+ will be \noprint{@link:ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker#getInstanceName()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker.getInstanceName()}{getInstanceName}}.
+ Otherwise it will be \verb!fileName + ( count++).toString()!.
+ \par 
+ In any case the complete path to a file will be:
+ \verb!filePath + FileName + !<<@value:#SERIALIZATION_fileExtension>>$\}$
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[filePath]
+folder path in which save the serialized Classes
+\item[fileName]
+base name of the serialized Classes belong to the folder linked by filePath
+\item[toSerialize]
+set of classes which represents the state of the OntologicalFramework
+\end{description}
+\item[Rückgabewert] 
+serializationPaths the set of paths in which objects has been serialized in a .<<@value:#SERIALIZATION_fileExtension>> file.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.deserializeOFBuildedListInvoker(java.util.Set<java.lang.String>,java.lang.Boolean)}{deserializeOFBuildedListInvoker}\label{ontologyFramework.OFRunning.OFSerializator.deserializeOFBuildedListInvoker(java.util.Set<java.lang.String>,java.lang.Boolean)}}]
+~ It load the frame status from files and re-instantiate it. 
+ It load all the files and retreive the related Map than, for each of it makes this steps:
+ {\ttfamily
+\mbox{ }		\verb!1 -> get all!\mbox{ }\noprint{@link:OWLReferencesSerializable}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferencesSerializable-class}{OWLReferencesSerializable}}\mbox{ }\mbox{}\newline
+\mbox{ }			\verb!load all the ontologies calling new!\mbox{ }\noprint{@link:OWLReferences}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences-class}{OWLReferences}}.\mbox{}\newline
+\mbox{ }			\verb!eliminate them from the Map!\mbox{}\newline
+\mbox{ }\mbox{ }	\verb!2 -> for all the classes which are not Serializable.!\mbox{}\newline
+\mbox{ }\mbox{ }		\verb!Get serializable objects and re-instantiate them.!\mbox{}\newline
+\mbox{ }\mbox{ }		\verb!substitute those class between each other in the Map!\mbox{}\newline
+\mbox{ }\mbox{ }\mbox{ }	\verb!3 -> re-build the scheduler since is not Serializable!\mbox{}\newline
+\mbox{ }\mbox{ }		\verb!substitute those class between each other in the Map!\mbox{}\newline
+\mbox{ }\mbox{ }	\verb!4 -> re-build Debugging Map!\mbox{}\newline
+\mbox{ }\mbox{ }		\verb!eliminate them from the Map!\mbox{}\newline
+\mbox{ }\mbox{ }	\verb!5 -> re-build static property of Map and return it!\mbox{}\newline
+\mbox{ }}
+
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[filePaths]
+the set of paths in which objects has been serialized in a .<<@value:#SERIALIZATION_fileExtension>> file.
+\end{description}
+\item[Rückgabewert] 
+loadedList the set of list builded and stored during serialization.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFSerializator.rebuildScheduler(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{rebuildScheduler}\label{ontologyFramework.OFRunning.OFSerializator.rebuildScheduler(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ 
+\end{description}

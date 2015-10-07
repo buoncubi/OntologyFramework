@@ -1,0 +1,311 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFContextManagement.OWLReferences (noch nicht fertig). 
+\section[OWLReferences]{Klasse \ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences-class}{ontologyFramework.OFContextManagement.OWLReferences}}\label{ontologyFramework.OFContextManagement.OWLReferences-class}
+\subsection{Übersicht}
+This class define a complete reference to a OWL ontology. 
+ In particular, it should be create to introduce an ontology 
+ into the framework. This class is compatible in all the part of the framework
+ and it helps in moving ontologies through the computational flow.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.CREATEcommand}{CREATEcommand}\label{ontologyFramework.OFContextManagement.OWLReferences.CREATEcommand}}]
+~ Value to describe the create ontology command during class construction. 
+ It will create a new ontology as a file considering a given filePath.
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.LOADFROMFILEcommand}{LOADFROMFILEcommand}\label{ontologyFramework.OFContextManagement.OWLReferences.LOADFROMFILEcommand}}]
+~ Value to describe the load from file command during class construction
+ It will load an ontology w.r.t. filePath and ontoPath.
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.LOADFROMWEBcommand}{LOADFROMWEBcommand}\label{ontologyFramework.OFContextManagement.OWLReferences.LOADFROMWEBcommand}}]
+~ Value to describe the load ontology from web command during class construction.
+ In this case filePath will be set to \verb!null!.
+\end{description}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences(ontologyFramework.OFContextManagement.OWLReferencesSerializable)}{OWLReferences}\label{ontologyFramework.OFContextManagement.OWLReferences(ontologyFramework.OFContextManagement.OWLReferencesSerializable)}}]
+~ Constructor to resume this class from its serialization
+ variable. It can be retrieved using \noprint{@link:#getSerialisableData( String)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData(java.lang.String)}{getSerialisableData}}.
+ This is done since the reasoner and the ontology are not
+ serializable trougth the interface \noprint{@link:java.io.Serializable}\texttt{Serializable}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[serial]
+
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences(java.lang.String,java.lang.String,java.lang.String,int)}{OWLReferences}\label{ontologyFramework.OFContextManagement.OWLReferences(java.lang.String,java.lang.String,java.lang.String,int)}}]
+~ Create a new references to an ontology using the standard reasoner.
+ By default it is set to Pellet reasoner with a buffering synchronisation.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontologyName]
+name of this OWLReferences instances, used to refer to this instance.
+\item[filePath]
+IRI path to the file where the ontology is stored.
+\item[ontologyPath]
+IRI path of the ontology.
+\item[command]
+value to define the create or load from file or web comand.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences(java.lang.String,java.lang.String,java.lang.String,org.semanticweb.owlapi.reasoner.OWLReasoner,int)}{OWLReferences}\label{ontologyFramework.OFContextManagement.OWLReferences(java.lang.String,java.lang.String,java.lang.String,org.semanticweb.owlapi.reasoner.OWLReasoner,int)}}]
+~ Create a new references to an ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontologyName]
+name of this OWLReferences instances, used to refer to this instance.
+\item[filePath]
+IRI path to the file where the ontology is stored.
+\item[ontologyPath]
+IRI path of the ontology.
+\item[reasonerInstance]
+instance to the reasoner to attach to this ontology.
+\item[command]
+value to define the create or load from file or web comand.
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.setPelletReasoner(java.lang.Boolean)}{setPelletReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.setPelletReasoner(java.lang.Boolean)}}]
+~ Set the reasoner attached to this ontology as Pellet.
+ If @param buffering is true than the ontology buffers 
+ changes that will be synchronized by the reasoner in one call to 
+ \verb!reasoner.flush();!. If it is false than the reasoner will
+ be synchronized at every changes of the ontology structure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[buffering]
+flag to set a buffering, or not buffering Pellet.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.setHermitReasoner(java.lang.Boolean)}{setHermitReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.setHermitReasoner(java.lang.Boolean)}}]
+~ Set the reasoner attached to this ontology as Hermit.
+ If @param buffering is true than the ontology buffers 
+ changes that will be synchronized by the reasoner in one call to 
+ \verb!reasoner.flush();!. If it is false than the reasoner will
+ be synchronized at every changes of the ontology structure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[buffering]
+reasoner buffering flag
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.setSnorocketReasoner(java.lang.Boolean)}{setSnorocketReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.setSnorocketReasoner(java.lang.Boolean)}}]
+~ Set the reasoner attached to this ontology as Snorocket.
+ If @param buffering is true than the ontology buffers 
+ changes that will be synchronized by the reasoner in one call to 
+ \verb!reasoner.flush();!. If it is false than the reasoner will
+ be synchronized at every changes of the ontology structure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[buffering]
+reasoner buffering flag
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.setFactReasoner(java.lang.Boolean)}{setFactReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.setFactReasoner(java.lang.Boolean)}}]
+~ Set the reasoner attached to this ontology as Fact++.
+ If @param buffering is true than the ontology buffers 
+ changes that will be synchronized by the reasoner in one call to 
+ \verb!reasoner.flush();!. If it is false than the reasoner will
+ be synchronized at every changes of the ontology structure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[buffering]
+reasoner buffering flag
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.isBufferingReasoner()}{isBufferingReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.isBufferingReasoner()}}]
+~ Returns true if the reasoner has a buffering synchronisation.
+ false if the reasoner is apdated at every ontological changes.
+\begin{description}
+\item[Rückgabewert] 
+the bufferingReasoner flag
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getOntoName()}{getOntoName}\label{ontologyFramework.OFContextManagement.OWLReferences.getOntoName()}}]
+~ Every OWLReferences has only one ontology attached to it.
+ Moreover, every of them has a name used to statically refer to the different
+ OWLReferences inside the framework. This name must be different for
+ every OWLReferences since they are stored in an \verb!HashMap<String, OWLReferences>!.
+\begin{description}
+\item[Rückgabewert] 
+the name of the OWLReferences.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getIriFilePath()}{getIriFilePath}\label{ontologyFramework.OFContextManagement.OWLReferences.getIriFilePath()}}]
+~ Returns the IRI path to the file where the ontology is.
+\begin{description}
+\item[Rückgabewert] 
+the iriFilePath
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getFilePath()}{getFilePath}\label{ontologyFramework.OFContextManagement.OWLReferences.getFilePath()}}]
+~ Returns the IRI path to the file where the ontology is, as a String.
+\begin{description}
+\item[Rückgabewert] 
+the iriFilePath as a String
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.setFilePath(java.lang.String)}{setFilePath}\label{ontologyFramework.OFContextManagement.OWLReferences.setFilePath(java.lang.String)}}]
+~ Set the file Path of the ontology refereed by this instance. 
+ As long as is not the case in which an ontology should be
+ locally saved from web is recommended to set this variable
+ in during class constructors.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[filePath]
+the filePath to set.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getUsedCommand()}{getUsedCommand}\label{ontologyFramework.OFContextManagement.OWLReferences.getUsedCommand()}}]
+~ Returns the command used to initialize this instance.
+\begin{description}
+\item[Rückgabewert] 
+the used command.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getOntologyPath()}{getOntologyPath}\label{ontologyFramework.OFContextManagement.OWLReferences.getOntologyPath()}}]
+~ Returns the IRI path associate to the ontology
+ refereed by this class as a String.
+\begin{description}
+\item[Rückgabewert] 
+the IRI ontology Path as a String
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getIriOntologyPath()}{getIriOntologyPath}\label{ontologyFramework.OFContextManagement.OWLReferences.getIriOntologyPath()}}]
+~ Returns the IRI path associate to the ontology
+ refereed by this class.
+\begin{description}
+\item[Rückgabewert] 
+the IRI ontology Path
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getManager()}{getManager}\label{ontologyFramework.OFContextManagement.OWLReferences.getManager()}}]
+~ Returns the OWL manager associate only to the ontology 
+ refereed by this instance.
+\begin{description}
+\item[Rückgabewert] 
+the OWL manager
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getFactory()}{getFactory}\label{ontologyFramework.OFContextManagement.OWLReferences.getFactory()}}]
+~ Returns the OWL data factory, used to get object used
+ for ontological changes.
+\begin{description}
+\item[Rückgabewert] 
+the factory
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.setReasoner(org.semanticweb.owlapi.reasoner.OWLReasoner)}{setReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.setReasoner(org.semanticweb.owlapi.reasoner.OWLReasoner)}}]
+~ Set an external reasoner instance to this ontology.
+ The old relation to a reasoner will be deleted.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[reasoner]
+the reasoner to set
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getOntology()}{getOntology}\label{ontologyFramework.OFContextManagement.OWLReferences.getOntology()}}]
+~ Get the ontology refereed by this class.
+\begin{description}
+\item[Rückgabewert] 
+the ontology
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getPm()}{getPm}\label{ontologyFramework.OFContextManagement.OWLReferences.getPm()}}]
+~ Returns a prefix manager to semply the IRI representation.
+\begin{description}
+\item[Rückgabewert] 
+the prefix manager
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getReasoner()}{getReasoner}\label{ontologyFramework.OFContextManagement.OWLReferences.getReasoner()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the reasoner instance associate to this ontology
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData()}{getSerialisableData}\label{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData()}}]
+~ Serialize this class saving important quantities and using
+ a special constructor: \noprint{@link:#OWLReferences(OWLReferencesSerializable)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences(ontologyFramework.OFContextManagement.OWLReferencesSerializable)}{OWLReferences}}.
+ Basically, it calls \noprint{@link:#getSerialisableData(String)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData(java.lang.String)}{getSerialisableData}} 
+ with input parameter \verb!filePath = this.getIriFilePath()!.
+\begin{description}
+\item[Rückgabewert] 
+serializable Data relate to this OWLReferences
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData(java.lang.String)}{getSerialisableData}\label{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData(java.lang.String)}}]
+~ Serialize this class saving important quantities and using
+ a special constructor: \noprint{@link:#OWLReferences(OWLReferencesSerializable)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences(ontologyFramework.OFContextManagement.OWLReferencesSerializable)}{OWLReferences}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[filePath]
+new file Path for the serializated class
+\end{description}
+\item[Rückgabewert] 
+serializable Data relate to this OWLReferences
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getAllInstances()}{getAllInstances}\label{ontologyFramework.OFContextManagement.OWLReferences.getAllInstances()}}]
+~ Returns a map that contains all the instances of OWLReferences class
+ create into the framework. Instances are organized w.r.t the ontoName
+ attached to them
+\begin{description}
+\item[Rückgabewert] 
+Map between ontoName and OWKReferences
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getOWLReferences(java.lang.String)}{getOWLReferences}\label{ontologyFramework.OFContextManagement.OWLReferences.getOWLReferences(java.lang.String)}}]
+~ Return a particular OWLReferences, given its ontoName. Basically it just 
+ calls: \verb!return( this.getAllInstances().get(referenceName))!.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[referenceName]
+the name attached to a particolar OWLReferences (ontoName).
+\end{description}
+\item[Rückgabewert] 
+the instance of this class attached to a particular name
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.isInAllInstances(java.lang.String)}{isInAllInstances}\label{ontologyFramework.OFContextManagement.OWLReferences.isInAllInstances(java.lang.String)}}]
+~ check if exist an OWLReferences with a particolar name already stored in the
+ Map (\noprint{@link:#getAllInstances()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getAllInstances()}{getAllInstances}}). Basically it just calls:
+ \verb!return( this.getAllInstance.containsKey( key))!
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[key]
+ontoName used to store a OWLReferences.
+\end{description}
+\item[Rückgabewert] 
+true if it exist, false otherwise.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.checkConsistent()}{checkConsistent}\label{ontologyFramework.OFContextManagement.OWLReferences.checkConsistent()}}]
+~ call the reasoner to check ontology consistency and synchronizes the consistency flag
+\item[{\ltdHypertarget{ontologyFramework.OFContextManagement.OWLReferences.getAllSerializableInstances(java.lang.String,java.util.Set<java.lang.String>,boolean)}{getAllSerializableInstances}\label{ontologyFramework.OFContextManagement.OWLReferences.getAllSerializableInstances(java.lang.String,java.util.Set<java.lang.String>,boolean)}}]
+~ It goes trough all the named instances of this class and for each of them
+ calls \noprint{@link:#getSerialisableData(String)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getSerialisableData(java.lang.String)}{getSerialisableData}}. Note that to properly serialize
+ an OWLOntology that has to be saved in owl format.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[basePath]
+folder path in which save the ontologies
+\item[nameToSerialize]
+name of the ontologies to save. If this is null then all keys of \noprint{@link:#getAllInstances()}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLReferences.getAllInstances()}{getAllInstances}} will be considered.
+\item[exportInfer]
+if true all the asserted axiom will be exported in the Ontology
+\end{description}
+\item[Rückgabewert] 
+the map of serializable data.
+\end{description}
+\end{description}

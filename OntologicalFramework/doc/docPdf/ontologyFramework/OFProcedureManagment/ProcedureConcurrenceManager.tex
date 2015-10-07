@@ -1,0 +1,82 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager (noch nicht fertig). 
+\section[ProcedureConcurrenceManager]{Klasse \ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager-class}{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager}}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager-class}
+\subsection{Übersicht}
+This class is used to initialize and manage a Procedure with its ID which
+ is necessary to manage a concurrent pool approach.
+ Practically, this class represent a List of \noprint{@link:ProcedureConcurrenceData}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData-class}{ProcedureConcurrenceData}}
+ with fixed size.
+ Initially all places of the list are null and this means that the pool
+ is empty. Where an instance is running, the first place of the list will
+ be associate to a ProcedureConcurrenceData object and it will means
+ that that place inside the pool is unusable. Than, when the instance
+ Finishes its work its relate place inside the list will go back to null.
+ So, if this list does not contain null places means that the pool
+ is full, namely the procedure cannot run even if all its conditions
+ are satisfied. The ID associate to the procedure will be equal to the index 
+ inside the list represented by this class.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager(java.lang.String,java.lang.Integer)}{ProcedureConcurrenceManager}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager(java.lang.String,java.lang.Integer)}}]
+~ Create a new ProcedureConcurrenceManager associate to a particular 
+ Procedure individual.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[procedureName]
+ontological name of the procedure
+\item[concurrencyOrder]
+the concurrency pool size for this procedure.
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.generateID()}{generateID}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.generateID()}}]
+~ Returns an new instance of \noprint{@link:ProcedureConcurrenceData}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData-class}{ProcedureConcurrenceData}}
+ initialized with procedureName and the index (ID)
+ inside the concurrent pool. If the pool is full than this 
+ method will return null.
+\begin{description}
+\item[Rückgabewert] 
+the procedure data in terms of concurrency if the thread pool is
+ not full.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.removeID(ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData)}{removeID}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.removeID(ontologyFramework.OFProcedureManagment.ProcedureConcurrenceData)}}]
+~ remove a procedure from the concurrency pool.
+ It should be called as soon as the procedure ends.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[pcd]
+concurrency data with respect to a procedure ended that
+ should be removed from the thread pool.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.getProcedureName()}{getProcedureName}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.getProcedureName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the procedureName
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.getProcedureActivated()}{getProcedureActivated}\label{ontologyFramework.OFProcedureManagment.ProcedureConcurrenceManager.getProcedureActivated()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the list of all the instances running inside the pool related to 
+ this procedure.
+\end{description}
+\end{description}

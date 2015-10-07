@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15" uri="test/paralPerpc.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15" uri="test/paralPerpcOrdered.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15" uri="test/paralPerpcRulesBackup.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-15#" uri="test/paralPerpcOrdered2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="http://www.semanticweb.org/luca-phd/ontologies/2015/6/untitled-ontology-22" uri="test/paralPerpcExported.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/upitalia/ontologies/2015/7/untitled-ontology-9" uri="globFit-description-base-javad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/upitalia/ontologies/2015/7/untitled-ontology-9" uri="globFit-description-base.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/upitalia/ontologies/2015/7/untitled-ontology-9" uri="globFit-description.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/upitalia/ontologies/2015/7/untitled-ontology-9" uri="globFit-javad.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/upitalia/ontologies/2015/7/untitled-ontology-9" uri="globFit-recognition-base.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1441056175591" name="duplicate:http://www.semanticweb.org/upitalia/ontologies/2015/7/untitled-ontology-9" uri="globFit-recognition.owl"/>
+    </group>
+</catalog>

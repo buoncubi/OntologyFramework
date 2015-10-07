@@ -1,0 +1,81 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper (noch nicht fertig). 
+\section[KeyWordsMapper]{Klasse \ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper-class}{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper}}\label{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper-class}
+\subsection{Übersicht}
+This static class is used to represent a Data Type mapper
+ which is by default defined in the framework.
+ 
+ In particular it is able to map an Array of String as:\mbox{}\newline
+
+ \verb!strings = ["A" "B" "C" ...]!
+ w.r.t an ontological individual I which as the default DataProperty:\mbox{}\newline
+
+ \verb!I {@value #propName} "A B C ..."^^string! 
+ 
+ If key words exist in an individual that are builded from the 
+ framework they are mapped with the porpuses to inject names
+ in the builded classes. Basically to make thir coode more
+ general with respect to different ontologies. 
+ 
+ Note that this mapper does not store arrays in the ontology
+ but only read them. In fact, due non trade-safe capability
+ of the ontology, an ArrayMapper should be used for this kind
+ of data types. Anyway this class permits the implementation
+ of customizable approaches to describe the succession of data inside 
+ an array, without affect the initialization procedure
+ of the framework.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.KEYWORD_propName}{KEYWORD\_propName}\label{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.KEYWORD_propName}}]
+~ Defines the default name of the ontologica Data Property
+ to map KeyWords between the system and the data structure.
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.getKeyWordFromOntology(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWordFromOntology}\label{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.getKeyWordFromOntology(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Given the name of an individual it retrieve that specific
+ individual. Than, it calls \noprint{@link:#getKeyWordFromOntology(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.getKeyWordFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWordFromOntology}}
+ and the returning value is propagated.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+name of the ontological individual for which get the key words.
+\item[ontoRef]
+OWL references to the ontology.
+\end{description}
+\item[Rückgabewert] 
+an Array of string where every cell contains a key word
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.getKeyWordFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWordFromOntology}\label{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.getKeyWordFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Given an ontological individual which has a data property <<@value:#KEYWORD_propName>>
+ it returns an array of string containing, all the word (in each
+ cell a word separated by \textquotedbl  \textquotedbl ). The result can be different if the property
+ does not contain string ( see \noprint{@link:OWLLiteral#getLiteral()}\texttt{getLiteral} for more).
+ It returns \verb!Null! if the individual does not exist or if
+ it does not have such data property.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+ontological individual from where retrieve the key words
+\item[ontoRef]
+OWL references to the ontology
+\end{description}
+\item[Rückgabewert] 
+the key words collected in an array of strings.
+\end{description}
+\end{description}

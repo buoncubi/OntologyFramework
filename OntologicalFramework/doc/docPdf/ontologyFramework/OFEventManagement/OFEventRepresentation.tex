@@ -1,0 +1,137 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFEventRepresentation (noch nicht fertig). 
+\section[OFEventRepresentation]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation-class}{ontologyFramework.OFEventManagement.OFEventRepresentation}}\label{ontologyFramework.OFEventManagement.OFEventRepresentation-class}
+\subsection{Übersicht}
+This class contains a basic implementation of how store initializate mechanism
+ from the OFlanguage in data property.
+ Thasnks to this class it is possible to use the Event mapping mecchanism 
+ semply defining how to compute them.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation(java.lang.String)}{OFEventRepresentation}\label{ontologyFramework.OFEventManagement.OFEventRepresentation(java.lang.String)}}]
+~ Create a new definition of event
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[packageClassName]
+the full qualify to a class that represent the event provedure 
+ implementing \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}}
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.getOrder()}{getOrder}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.getOrder()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+varNameOrder the ordered variable names to compute parameter for the event.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.setOrder(java.util.List<java.lang.String>)}{setOrder}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.setOrder(java.util.List<java.lang.String>)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[varNameOrder]
+the ordered variable names to compute parameter for the event.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.getClassName()}{getClassName}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.getClassName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the fully java quilifier to the event class that implements \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.getParameterMap()}{getParameterMap}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.getParameterMap()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the parameterMap. It contains an unordered set of \noprint{@link:OFEventParameterDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition-class}{OFEventParameterDefinition}} linked
+ by variableName string value.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.setParameterMap(java.util.Map<java.lang.String,ontologyFramework.OFEventManagement.OFEventParameterDefinition>)}{setParameterMap}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.setParameterMap(java.util.Map<java.lang.String,ontologyFramework.OFEventManagement.OFEventParameterDefinition>)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[parameterMap]
+set the parameterMap. It contains an unordered set of \noprint{@link:OFEventParameterDefinition}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition-class}{OFEventParameterDefinition}} linked
+ by variableName string value.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.addToParameterMap(java.lang.String,ontologyFramework.OFEventManagement.OFEventParameterDefinition)}{addToParameterMap}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.addToParameterMap(java.lang.String,ontologyFramework.OFEventManagement.OFEventParameterDefinition)}}]
+~ add a parameter into the event tagged by its variable name. Those names must be 
+ coherent with the one retrieved during the event building; managed
+ by \noprint{@link:OFEventBuilder}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder-class}{OFEventBuilder}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[varName]
+the name of the parameter
+\item[epd]
+a parameter to inject as input into the Event implementstion 
+ (interface of \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}})
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.addToParameterMap(java.util.Map<java.lang.String,ontologyFramework.OFEventManagement.OFEventParameterDefinition>)}{addToParameterMap}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.addToParameterMap(java.util.Map<java.lang.String,ontologyFramework.OFEventManagement.OFEventParameterDefinition>)}}]
+~ add parameters into the event as a map where keys are variable names and
+ value initialized parameter. The names, must be coherent with the one retrieved 
+ during the event building managed by \noprint{@link:OFEventBuilder}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventBuilder-class}{OFEventBuilder}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[map]
+of varName and parameter to inject as input into the Event implementation 
+ (interface of \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}})
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.removeFromParameterMap(java.lang.String)}{removeFromParameterMap}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.removeFromParameterMap(java.lang.String)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[varName]
+name of the variable which define the parameter to remove
+ from this event.
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.getComputedParameterList()}{getComputedParameterList}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.getComputedParameterList()}}]
+~ It goes trough all the parameter following the ordered name of variables.
+ For each of them it instantiates an new \noprint{@link:EventComputedData}\texttt{\hyperlink{ontologyFramework.OFEventManagement.EventComputedData-class}{EventComputedData}} with the 
+ correspondent parameter (computed each time using \noprint{@link:OFEventParameterDefinition#getParameter()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getParameter()}{getParameter}})
+ and its ontology reference. All of them are than collected in a ordered List.
+\begin{description}
+\item[Rückgabewert] 
+update computed list of parameter results
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventRepresentation.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{compute}\label{ontologyFramework.OFEventManagement.OFEventRepresentation.compute(ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}}]
+~ $/$**
+ Here the creation of a new instance of the event implementation should be done
+ ( by default for \noprint{@link:OFTimeTriggerInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFTimeTriggerManagement.OFTimeTriggerInterface-class}{OFTimeTriggerInterface}} and \noprint{@link:OFEventInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface-class}{OFEventInterface}}. 
+ Using \noprint{@link:#getClassName()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventRepresentation.getClassName()}{getClassName}} is possible to load a new instance of such
+ Interface (you must define your own methods to do so). Than the ordered and 
+ update parameter values can be retrieved using \noprint{@link:OFEventRepresentation#getComputedParameterList()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventRepresentation.getComputedParameterList()}{getComputedParameterList}},
+ to have the inputs to check your own event implementation.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[invoker]
+lsit of builded class during initialization to be used by \noprint{@link:OFEventInterface#evaluateEvent(List, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFLogicalEventManagement.OFEventInterface.evaluateEvent(java.util.List<ontologyFramework.OFEventManagement.EventComputedData>,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{evaluateEvent}}
+\end{description}
+\item[Rückgabewert] 
+the event result
+\end{description}
+\end{description}

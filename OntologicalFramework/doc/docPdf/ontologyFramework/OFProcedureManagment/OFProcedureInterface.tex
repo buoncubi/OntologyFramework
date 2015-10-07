@@ -1,0 +1,159 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFProcedureManagment.OFProcedureInterface (noch nicht fertig). 
+\section[OFProcedureInterface]{Interface \ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}{ontologyFramework.OFProcedureManagment.OFProcedureInterface}}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface-class}
+\subsection{Übersicht}
+This interface represents a Procedure object.
+ Instances of this interface will be create in accord
+ from \noprint{@link:OFProcedureBuilder}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureBuilder-class}{OFProcedureBuilder}}.
+ An implementation of this Interface is \noprint{@link:Algorithm}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.Algorithm-class}{Algorithm}}
+ which uses Quartz engine.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.initialise(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String[])}{initialise}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.initialise(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,java.lang.String[])}}]
+~ This method will be called just after all
+ building times. It should be used to initialize 
+ variables that need to get data from 
+ the ontology.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[procedureInd]
+ontological individual which is reflacting a procedure
+\item[ontoRef]
+reference to an OWL ontology
+\item[listInvoker]
+static list manager of builded entity
+\item[keyWords]
+coming from the builder ontological definition througth data type:
+ \verb!hasTypeKeyWor exactly 1 string!
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}}]
+~ Should run this procedure immediately.
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}}]
+~ Should stop this procedure immediately 
+  (or just after is computation, if it is running).
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.shotdown()}{shotdown}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.shotdown()}}]
+~ After a call to this method the procedure should be
+  no more schedulable ( at least, as long as a new building time
+  occurs).
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Get the individual name of the Event attached to the ontological
+ representation of a procedure. It should be able to update 
+ themselves without call a building mechanism.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+reference to an OWL ontology
+\end{description}
+\item[Rückgabewert] 
+the individual name of the Event attached to this procedure.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.setEventResult(boolean)}{setEventResult}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.setEventResult(boolean)}}]
+~ The name returned by: \noprint{@link:#getEventName(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}}
+ will be used during checking (as an example: 
+ \noprint{@link:ontologyFramework.OFProcedureManagment.OFProcedureImplementation.AlgorithmCheckerJob}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureImplementation.AlgorithmCheckerJob-class}{AlgorithmCheckerJob}})
+ time to retrieve their result through the Event list 
+ (\noprint{@link:ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}). When its boolean 
+ result is available this method is called to deal
+ with a possible change of event result. So, it should 
+ use \noprint{@link:#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}} \noprint{@link:#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}} or \noprint{@link:#shotdown()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.shotdown()}{shotdown}} to change
+ the state of the procedure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[result]
+the boolean value associate to the Event which name is 
+ given by \noprint{@link:#getEventName( OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}}
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventResult()}{getEventResult}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventResult()}}]
+~ should return the most up to date Event result given by;
+ \noprint{@link:#setEventResult(boolean)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.setEventResult(boolean)}{setEventResult}}
+\begin{description}
+\item[Rückgabewert] 
+the boolean value associate to the Event which name is 
+ given by \noprint{@link:#getEventName( OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getTimeTriggerName(ontologyFramework.OFContextManagement.OWLReferences)}{getTimeTriggerName}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getTimeTriggerName(ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Get the individual name of the TimeTrigger attached to the ontological
+ representation of a procedure. It should be able to update 
+ themselves without call a building mechanism.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[ontoRef]
+reference to an OWL ontology
+\end{description}
+\item[Rückgabewert] 
+the individual name of the TimeTrigger attached to this procedure.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.setTimeTrigger(java.lang.Object)}{setTimeTrigger}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.setTimeTrigger(java.lang.Object)}}]
+~ The name returned by: \noprint{@link:#getTimeTriggerName(OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getTimeTriggerName(ontologyFramework.OFContextManagement.OWLReferences)}{getTimeTriggerName}}
+ will be used during checking (as an example: 
+ \noprint{@link:ontologyFramework.OFProcedureManagment.OFProcedureImplementation.AlgorithmCheckerJob}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureImplementation.AlgorithmCheckerJob-class}{AlgorithmCheckerJob}})
+ time to retrieve their result through the TimeTrigger list 
+ (\noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}). When its returnig variable 
+ is available this method is called to deal
+ with a possible change of trigger. So, it should 
+ use \noprint{@link:#run()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.run()}{run}} \noprint{@link:#stop()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.stop()}{stop}} or \noprint{@link:#shotdown()}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.shotdown()}{shotdown}} to change
+ the state of the procedure.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[timeTrigger]
+the Trigger Object associate to the TimeTrigger individual
+ which name is given by \noprint{@link:#getEventName( OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}}
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getTimeTrigger()}{getTimeTrigger}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getTimeTrigger()}}]
+~ should return the most up to date Trigger object given by;
+ \noprint{@link:#setEventResult(boolean)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.setEventResult(boolean)}{setEventResult}}
+\begin{description}
+\item[Rückgabewert] 
+the Trigger Object associate to the TimeTrigger individual
+ which name is given by \noprint{@link:#getEventName( OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getEventName(ontologyFramework.OFContextManagement.OWLReferences)}{getEventName}}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getScheduler()}{getScheduler}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getScheduler()}}]
+~ If a scheduler mechanism is used it should return the 
+ instance to scheduler object associate to this procedure
+\begin{description}
+\item[Rückgabewert] 
+the scheduler
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getCheckerJob()}{getCheckerJob}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getCheckerJob()}}]
+~ Since a procedure is always linked to a Checker procedure, which has the 
+ objective to synchronize ontological changes of the procedure individual
+ it is convenient to represent the relate Checker object inside this
+ implementation giving an external access to it througth this method.
+\begin{description}
+\item[Rückgabewert] 
+the checker procedure (must be a runnable implementation)
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getMainJob()}{getMainJob}\label{ontologyFramework.OFProcedureManagment.OFProcedureInterface.getMainJob()}}]
+~ It may be useful to describe a procedure in a way that its
+ computational steps are in an separate runnable class. This
+ allows more flexibility in scheduling and building phases.
+ If this is the case than, this implementaion will define the 
+ shape of a generic algorithm. Than different Instances of
+ this class will be related to particolar scripts pointed by
+ the returning value of this method.
+\begin{description}
+\item[Rückgabewert] 
+the runnable implementation of this specific procedure.
+\end{description}
+\end{description}

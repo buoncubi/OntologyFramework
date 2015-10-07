@@ -1,0 +1,240 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon (noch nicht fertig). 
+\section[OFBuilderCommon]{Klasse \ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon-class}{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon}}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon-class}
+\subsection{Übersicht}
+\par 
+ This is a static class (set as non instanciable) which collects
+ static methods useful during the system initialisation through 
+ builder mechanism. Especially in \noprint{@link:OFInitialiser#buildIndividual(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.buildIndividual(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{buildIndividual}} 
+ 
+ \par 
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\item[Siehe auch] ~
+\noprint, \noprint{@see:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}, \noprint{@see:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}}, \noprint{@see:KeyWordsMapper}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper-class}{KeyWordsMapper}}, \noprint{@see:NameMapper}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper-class}{NameMapper}}, \noprint{@see:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}}\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Variablen}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.CLASSPACKAGE_objProp}{CLASSPACKAGE\_objProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.CLASSPACKAGE_objProp}}]
+~ represents the name of the Object Property which link a builder
+  individual to its Java class. It links to an individual which
+  belongs to the \textquotedbl Name\textquotedbl  ontological class. For this it represents
+  a string which has the complete.java.class.package path to a class
+  that implements \noprint{@link:OFBuilderInterface}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface<T>-class}{OFBuilderInterface}}.
+  By default it is equal to <<@value:#CLASSPACKAGE_objProp>>
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.BUILDLISTNAME_objProp}{BUILDLISTNAME\_objProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.BUILDLISTNAME_objProp}}]
+~ represents the name of the Object Property which link a builder
+  individual to its initialised class inside the Map. It links to an individual which
+  belongs to the \textquotedbl Name\textquotedbl  ontological class. For this, it represents
+  a string which is the key to refer to the output of 
+  \noprint{@link:OFBuilderInterface#getInitialisedClasses()}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.getInitialisedClasses()}{getInitialisedClasses}}
+  from the class \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}.
+  By default it is equal to <<@value:#BUILDLISTNAME_objProp>>
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.HASKEYWORDS_objProp}{HASKEYWORDS\_objProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.HASKEYWORDS_objProp}}]
+~ represents the name of the Object Property which link a builder
+  individual to the key words that we want inject inside the method
+  \noprint{@link:OFBuilderInterface#buildInfo(String[], OWLReferences, OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderInterface.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}}. 
+  It links to an individual which
+  belongs to the \textquotedbl KeyWord\textquotedbl  ontological class. For this, it represents
+  an array of strings which.
+  By default it is equal to <<@value:#HASKEYWORDS_objProp>>
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.CONSOLEFLAG_dataProp}{CONSOLEFLAG\_dataProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.CONSOLEFLAG_dataProp}}]
+~ It is the name of the data propriety which indicates that 
+ the system should print on console. If it is attached to an individual
+ which belongs to the ontological class \textquotedbl Debugger\textquotedbl . 
+ By default it is set to: <<@value:#CONSOLEFLAG_dataProp>>
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.FILEFLAG_dataProp}{FILEFLAG\_dataProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.FILEFLAG_dataProp}}]
+~ It is the name of the data propriety which indicates that 
+ the system should print on file. If it is attached to an individual
+ which belongs to the ontological class \textquotedbl Debugger\textquotedbl .
+ By default it is set to: <<@value:#FILEFLAG_dataProp>>
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.GUIFLAG_dataProp}{GUIFLAG\_dataProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.GUIFLAG_dataProp}}]
+~ It is the name of the data propriety which indicates that 
+ the system should show the GUI on start up. If it is attached to an individual
+ which belongs to the ontological class \textquotedbl Debugger\textquotedbl .
+ By default it is set to: <<@value:#GUIFLAG_dataProp>>
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.PRINTRATE_dataProp}{PRINTRATE\_dataProp}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.PRINTRATE_dataProp}}]
+~ It is the name of the data propriety which indicates that 
+ the system should update the file and show log when
+ their count reach this determinate threshold. If it is attached to an individual
+ which belongs to the ontological class \textquotedbl Debugger\textquotedbl .
+ By default it is set to: <<@value:#PRINTRATE_dataProp>>.
+ Note that if the system is brutally shotted down, some logging
+ text could be still buffered; and they would not be notified.
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWords}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It retrieve the OWLNamedIndividual and calls \noprint{@link:#getKeyWords(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWords}}
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+name of the ontological individual which belongs to \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}} class
+\item[ontoRef]
+reference to the ontology in which the individual is belong to
+\end{description}
+\item[Rückgabewert] 
+keyWords mapped keyWords from Literal to String[]
+ 
+ It retrieves the OWLNamedIndividual using \noprint{@link:OWLLibrary#getOWLIndividual}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLIndividual}},
+ and it calls \noprint{@link:#getKeyWords(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWords}};
+ transferring the returning value.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWords}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getKeyWords(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It maps the literal, described as a keyWord in the ontology,
+ linked to the builder individual.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+ontological individual which belongs to \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}} class
+\item[ontoRef]
+reference to the ontology in which the individual is belong to
+\end{description}
+\item[Rückgabewert] 
+keyWords mapped keyWords from Literal to String[]
+ 
+ Given an individual which represents the builder it gets the individual 
+ which describe the keyWord, through the Object Property defined by the name
+ \noprint{@link:#HASKEYWORDS_objProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.HASKEYWORDS_objProp}{HASKEYWORDS_objProp}}. This, by default has the value <<@value:#HASKEYWORDS_objProp>>.
+ Than, this methods uses \noprint{@link:KeyWordsMapper#getKeyWordFromOntology(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.KeyWordsMapper.getKeyWordFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getKeyWordFromOntology}}
+ to map the actual literal into an array of String.  
+ {\ttfamily
+\mbox{ }	\verb!BuilderIndividual € OFBuilder !\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }[\mbox{ }please\mbox{ }refer\mbox{ }to\mbox{ }...\mbox{ }\noprint{@link:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}]\mbox{}\newline
+\mbox{ }		\verb!hasKeyWords exactly 1 KeyWordInd!\mbox{}\newline
+\mbox{ }			where:	\verb!KeyWordInd € KeyWord!\mbox{}\newline
+\mbox{ }						\verb!KeyWordInd hasTypeKeyWord "key1 key2 key3"^^string!\mbox{ }\mbox{}\newline
+\mbox{ }}
+
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getImplementsName}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It retrieve the OWLNamedIndividual and calls \noprint{@link:#getImplementsName(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getImplementsName}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+name of the ontological individual which belongs to \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}} class
+\item[ontoRef]
+reference to the ontology in which the individual is belong to
+\end{description}
+\item[Rückgabewert] 
+classDirectory the Java package.class path to the class which this individual represents\bl  It computes the individual from its name; using \noprint{@link:OWLLibrary#getOWLIndividual(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLIndividual}}.
+ Then calls \noprint{@link:#getImplementsName(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getImplementsName}}.
+ And propagates its returning value.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getImplementsName}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Retrieve a reference to the class that, the builder individual addresses to
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+ontological individual which belongs to \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}} class
+\item[ontoRef]
+reference to the ontology in which the individual is belong to
+\end{description}
+\item[Rückgabewert] 
+classDirectory the Java package.class path to the class which this individual represents
+ 
+ It retrieves the individual which is linked trough the Object Property named: <<@value:#CLASSPACKAGE_objProp>>
+ (defined in the field \noprint{@link:#CLASSPACKAGE_objProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.CLASSPACKAGE_objProp}{CLASSPACKAGE_objProp}}). Finally, it uses it with
+ \noprint{@link:NameMapper#getNameFromOntology(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getNameFromOntology}}
+ the return the name as a String.
+ {\ttfamily
+\mbox{ }\verb!BuilderIndividual € OFBuilder !\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }[\mbox{ }please\mbox{ }refer\mbox{ }to\mbox{ }...\mbox{ }\noprint{@link:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}]\mbox{}\newline
+\mbox{ }		\verb!implementsOFBuilderName exactly 1 PathName!\mbox{}\newline
+\mbox{ }			where:\mbox{ }	\verb!PathName € Name!\mbox{}\newline
+\mbox{ }						\verb!PathName hasTypeName "complete.path.package.class"^^string!\mbox{}\newline
+\mbox{ }\mbox{ }}
+
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getBuildedListName(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getBuildedListName}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getBuildedListName(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It retrieve the OWLNamedIndividual and calls \noprint{@link:#getBuildedListName(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getBuildedListName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getBuildedListName}}.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individualName]
+name of the ontological individual which belongs to \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}} class
+\item[ontoRef]
+reference to the ontology in which the individual is belong to
+\end{description}
+\item[Rückgabewert] 
+listName the name that will be used as a key in the map \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} to address this data
+ 
+ It computes the individual from its name; using \noprint{@link:OWLLibrary#getOWLIndividual(String, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFContextManagement.OWLLibrary.getOWLIndividual(java.lang.String,ontologyFramework.OFContextManagement.OWLReferences)}{getOWLIndividual}}.
+ Then calls \noprint{@link:#getImplementsName(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getImplementsName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getImplementsName}}.
+ And propagates its returning value.
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getBuildedListName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getBuildedListName}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.getBuildedListName(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It compute the name that will be used to stored the builded classes
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+ontological individual which belongs to \noprint{@link:OFInitialiser#BUILDER_className}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser.BUILDER_className}{BUILDER_className}} class
+\item[ontoRef]
+reference to the ontology in which the individual is belong to
+\end{description}
+\item[Rückgabewert] 
+listName the name that will be used as a key in the map \noprint{@link:OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}} to address this data
+ 
+  It retrieves the individual which is linked trough the Object Property named: <<@value:#BUILDLISTNAME_objProp>>
+ (defined in the field \noprint{@link:#BUILDLISTNAME_objProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.BUILDLISTNAME_objProp}{BUILDLISTNAME_objProp}}). Finally, it uses it with
+ \noprint{@link:NameMapper#getNameFromOntology(OWLNamedIndividual, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.ReservatedDataType.NameMapper.getNameFromOntology(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFContextManagement.OWLReferences)}{getNameFromOntology}}
+ the return the name as a String.
+ {\ttfamily
+\mbox{ }\verb!BuilderIndividual € OFBuilder !\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }\mbox{ }[\mbox{ }please\mbox{ }refer\mbox{ }to\mbox{ }...\mbox{ }\noprint{@link:OFInitialiser}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFInitialiser-class}{OFInitialiser}}]\mbox{}\newline
+\mbox{ }		\verb!hasListName exactly 1 ListName!\mbox{}\newline
+\mbox{ }			where:\mbox{ }	\verb!ListName € Name!\mbox{}\newline
+\mbox{ }						\verb!ListName hasTypeName "StaticBuildedList"^^string!\mbox{}\newline
+\mbox{ }\mbox{ }}
+
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.buildDebugger(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,ontologyFramework.OFContextManagement.OWLReferences)}{buildDebugger}\label{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.buildDebugger(org.semanticweb.owlapi.model.OWLNamedIndividual,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ It initialises the main debugging property
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[individual]
+which defines the debugging Property
+\item[listInvoker]
+to retrieve already builded classes
+\item[ontoRef]
+the reference to the ontology in which the individual belongs to.\bl  It initialises the class \noprint{@link:OFDebugLogger}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger-class}{OFDebugLogger}} with the information stored
+ in the only (if more are available one will be picked up) individual belong to  the ontological class <<@value:ontologyFramework.OFErrorManagement.DebuggingClassFlagData#DEBUGGER_classFlags>>
+ (where its name is described by: \noprint{@link:ontologyFramework.OFErrorManagement.DebuggingClassFlagData#DEBUGGER_classFlags}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.DebuggingClassFlagData.DEBUGGER_classFlags}{DEBUGGER_classFlags}}).
+ In particular, given an individual X, it makes four steps:
+ {\ttfamily
+\mbox{ }	\verb!1 -> get the only individual attached to X trough!\mbox{ }\mbox{}\newline
+\mbox{ }				\noprint{@link:#CONSOLEFLAG_dataProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.CONSOLEFLAG_dataProp}{CONSOLEFLAG_dataProp}},\mbox{ }\verb!which has value!\mbox{ }<<@value:#CONSOLEFLAG_dataProp>>.\mbox{ }\mbox{}\newline
+\mbox{ }				\verb!Compute the boolean value and uses it to call!\mbox{}\newline
+\mbox{ }				\noprint{@link:OFDebugLogger#setPrintOnConsole(Boolean)}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger.setPrintOnConsole(java.lang.Boolean)}{setPrintOnConsole}}\mbox{}\newline
+\mbox{ }	\mbox{}\newline
+\mbox{ }	\verb!2 -> get the only individual attached to X trough!\mbox{}\newline
+\mbox{ }				\noprint{@link:#FILEFLAG_dataProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.FILEFLAG_dataProp}{FILEFLAG_dataProp}},\mbox{ }\verb!which has value!\mbox{ }<<@value:#FILEFLAG_dataProp>>.\mbox{}\newline
+\mbox{ }				\verb!Compute the string value and uses it to call!\mbox{}\newline
+\mbox{ }				\noprint{@link:OFDebugLogger#setPrintOnFile(String)}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger.setPrintOnFile(java.lang.String)}{setPrintOnFile}}\mbox{}\newline
+\mbox{ }\mbox{}\newline
+\mbox{ }\mbox{ }\verb!3 -> get the only individual attached to X trough!\mbox{}\newline
+\mbox{ }				\noprint{@link:#PRINTRATE_dataProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.PRINTRATE_dataProp}{PRINTRATE_dataProp}},\mbox{ }\verb!which has value!\mbox{ }<<@value:#PRINTRATE_dataProp>>.\mbox{}\newline
+\mbox{ }				\verb!Compute the integer value and uses it to call!\mbox{}\newline
+\mbox{ }				\noprint{@link:OFDebugLogger#setOrderPrintingRate(Integer)}\texttt{\hyperlink{ontologyFramework.OFErrorManagement.OFDebugLogger.setOrderPrintingRate(java.lang.Integer)}{setOrderPrintingRate}}\mbox{}\newline
+\mbox{ }\mbox{}\newline
+\mbox{ }\mbox{ }\verb!4 -> get the only individual attached to X trough!\mbox{}\newline
+\mbox{ }				\noprint{@link:#GUIFLAG_dataProp}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInitialising.OFBuilderCommon.GUIFLAG_dataProp}{GUIFLAG_dataProp}},\mbox{ }\verb!which has value!\mbox{ }<<@value:#GUIFLAG_dataProp>>.\mbox{}\newline
+\mbox{ }				\verb!Compute the boolean value and uses it to start the GUI!\mbox{}\newline
+\mbox{ }			\mbox{}\newline
+\mbox{ }}
+
+\end{description}
+\end{description}
+\end{description}

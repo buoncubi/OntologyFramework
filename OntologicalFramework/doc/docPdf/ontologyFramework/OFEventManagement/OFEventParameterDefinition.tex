@@ -1,0 +1,72 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFEventManagement.OFEventParameterDefinition (noch nicht fertig). 
+\section[OFEventParameterDefinition]{Klasse \ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition-class}{ontologyFramework.OFEventManagement.OFEventParameterDefinition}}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition-class}
+\subsection{Übersicht}
+This class defines the definition of a paramiter of a particular Event.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Konstruktoren}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition(java.util.List<java.lang.String>,java.lang.Object,java.lang.String)}{OFEventParameterDefinition}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition(java.util.List<java.lang.String>,java.lang.Object,java.lang.String)}}]
+~ create new parameter definition
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[classpackageName]
+full java qualifyer of the parameter implementstion. Which must implement \noprint{@link:OFEventParameterInterface}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterInterface-class}{OFEventParameterInterface}}
+\item[parameterInput]
+initial input to the parameter implementation
+\item[eventOntoRef]
+ontological reference of this parameter
+\end{description}
+\end{description}
+\end{description}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getClassPackageName()}{getClassPackageName}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getClassPackageName()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the java full qualifyer of the parameter implementation
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getInput()}{getInput}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getInput()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the input to the parameter implementation
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition.setInput(java.lang.Object)}{setInput}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition.setInput(java.lang.Object)}}]
+~ 
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[input]
+set the input to the parameter implementation
+\end{description}
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getOWLReferences()}{getOWLReferences}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getOWLReferences()}}]
+~ 
+\begin{description}
+\item[Rückgabewert] 
+the ontological reference of this parameter
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getParameter()}{getParameter}\label{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getParameter()}}]
+~ Compute the value of the parameter. It instanciate the parameter implentation using \noprint{@link:#getClassPackageName()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getClassPackageName()}{getClassPackageName}}
+ and call \noprint{@link:OFEventParameterInterface#getParameter(Object, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterInterface.getParameter(java.lang.Object,ontologyFramework.OFContextManagement.OWLReferences)}{getParameter}}, Where \noprint{@link:#getInput()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getInput()}{getInput}}
+ and \noprint{@link:#getOWLReferences()}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterDefinition.getOWLReferences()}{getOWLReferences}} are the inputs, respectivaly.
+\begin{description}
+\item[Rückgabewert] 
+the object returned by \noprint{@link:OFEventParameterInterface#getParameter(Object, OWLReferences)}\texttt{\hyperlink{ontologyFramework.OFEventManagement.OFEventParameterInterface.getParameter(java.lang.Object,ontologyFramework.OFContextManagement.OWLReferences)}{getParameter}}
+\end{description}
+\end{description}

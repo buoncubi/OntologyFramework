@@ -1,0 +1,106 @@
+   % /--------------------------------------------\
+   % | API-Dokumentation für einige Java-Packages |
+   % |    (genaueres siehe doku-main.tex).        |
+   % | LaTeX-Ausgabe erstellt von 'ltxdoclet'.    |
+   % | Dieses Programm stammt von Paul Ebermann.  |
+   % \--------------------------------------------/
+
+   % Api-Dokumentation für Klasse ontologyFramework.OFDataMapping.OFDataMapperInterface<OntoEntity extends org.semanticweb.owlapi.model.OWLObject, R> (noch nicht fertig). 
+\section[OFDataMapperInterface]{Interface \ltdHypertarget{ontologyFramework.OFDataMapping.OFDataMapperInterface<OntoEntity extends org.semanticweb.owlapi.model.OWLObject, R>-class}{ontologyFramework.OFDataMapping.OFDataMapperInterface\textless OntoEntity extends org.semanticweb.owlapi.model.OWLObject, R\textgreater }}\label{ontologyFramework.OFDataMapping.OFDataMapperInterface<OntoEntity extends org.semanticweb.owlapi.model.OWLObject, R>-class}
+\subsection{Übersicht}
+This class defines the method that must be created into
+ a class to define a one to one Mapper between an Ontological entity and
+ a Data Type. This allows to standardize the methods for all
+ the mapper that can be used in the framework. By default they are
+ created from \noprint{@link:ontologyFramework.OFDataMapping.OFDataMapperBuilder}\texttt{\hyperlink{ontologyFramework.OFDataMapping.OFDataMapperBuilder-class}{OFDataMapperBuilder}} and stored in 
+ \noprint{@link:ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker}\texttt{\hyperlink{ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker-class}{OFBuildedListInvoker}}.
+\begin{description}
+\item[@author] 
+Buoncomapgni Luca
+\item[@version] 
+1.0
+\end{description}
+\subsection{Inhaltsverzeichnis}
+\subsection{Methoden}
+\begin{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.OFDataMapperInterface.mapFromOntology(OntoEntity,ontologyFramework.OFContextManagement.OWLReferences)}{mapFromOntology}\label{ontologyFramework.OFDataMapping.OFDataMapperInterface.mapFromOntology(OntoEntity,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Get informations from the ontology and returns a Java Object
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entity]
+ontological entity from which retrieve informations.
+\item[ontoRef]
+OWL reference to the ontology
+\end{description}
+\item[Rückgabewert] 
+a Java Object which represent the ontological entity mapped in a Java data type
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.OFDataMapperInterface.mapToOntology(OntoEntity,R,ontologyFramework.OFContextManagement.OWLReferences)}{mapToOntology}\label{ontologyFramework.OFDataMapping.OFDataMapperInterface.mapToOntology(OntoEntity,R,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Store informations given as java Object into the ontology. It returns 
+ \verb!true! if success.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entity]
+ontological entity to create, delete or modify into the description
+\item[value]
+java Object which represent the data in a particular data-type to be added into the ontology
+\item[ontoRef]
+OWL references to the ontology
+\end{description}
+\item[Rückgabewert] 
+true if the operation is successfully completed
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.OFDataMapperInterface.removeFromOntology(OntoEntity,R,ontologyFramework.OFContextManagement.OWLReferences)}{removeFromOntology}\label{ontologyFramework.OFDataMapping.OFDataMapperInterface.removeFromOntology(OntoEntity,R,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Delete from the ontology a particolar entity that is represented
+ by the given Java Object.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entity]
+ontological entity to delete (if it exists) from the description
+\item[value]
+java Object which represent the data in a particular data-type to be added into the ontology
+\item[ontoRef]
+OWL references to the ontology
+\end{description}
+\item[Rückgabewert] 
+true if the operation is successfully completed
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.OFDataMapperInterface.replaceIntoOntology(OntoEntity,R,R,ontologyFramework.OFContextManagement.OWLReferences)}{replaceIntoOntology}\label{ontologyFramework.OFDataMapping.OFDataMapperInterface.replaceIntoOntology(OntoEntity,R,R,ontologyFramework.OFContextManagement.OWLReferences)}}]
+~ Replace the value of an ontological entity in atomic way. 
+ Which means that, given an ontological entity E with a particular
+ property A. The method will assign to A the new value
+ and will remove the old one with no possibilities for the
+ reasoner to update the data structure during those operations.
+ Note that E is given as input while A should be encoded in the 
+ implementation of the interface.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[entity]
+ontological entity for which replace the values
+\item[oldArg]
+value to remove
+\item[newArg]
+value to add
+\item[ontoRef]
+OWL references to the ontology
+\end{description}
+\item[Rückgabewert] 
+true if the operation is successfully completed
+\end{description}
+\item[{\ltdHypertarget{ontologyFramework.OFDataMapping.OFDataMapperInterface.setKeyWords(java.lang.String[])}{setKeyWords}\label{ontologyFramework.OFDataMapping.OFDataMapperInterface.setKeyWords(java.lang.String[])}}]
+~ this method is called from \noprint{@link:OFDataMapperBuilder#buildInfo(String[], OWLReferences, ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}\texttt{\hyperlink{ontologyFramework.OFDataMapping.OFDataMapperBuilder.buildInfo(java.lang.String[],ontologyFramework.OFContextManagement.OWLReferences,ontologyFramework.OFRunning.OFInvokingManager.OFBuildedListInvoker)}{buildInfo}}
+ and should be used to store internally the name of interesting
+ data represented in the ontology. Those data are setted in the
+ ontology itself and are used all the time the mapper is called.
+\begin{description}
+\item[Parameter] ~
+\begin{description}
+\item[kw]
+words used in the ontology
+\end{description}
+\end{description}
+\end{description}
